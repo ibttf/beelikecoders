@@ -1,1 +1,1 @@
-# node-jwt-auth-redis
+# prep-whiz
