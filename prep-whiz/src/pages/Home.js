@@ -10,7 +10,7 @@ const Home = (userId) => {
         <div className="home-left">
           <h4>LET'S WRITE THE BEST ESSAY EVER</h4>
           <h2>Every Essay Can Use a Little Hepl
-              <img src={squiggle} className="squiggle"></img>
+              <img src={squiggle} className="squiggle" alt="red-squiggle"></img>
           </h2>
         
           <h3>Get Your Essay Reviewed Today</h3>
@@ -26,7 +26,7 @@ const Home = (userId) => {
         <div className="home-right">
           <div className="hero-blob"></div>
           <div className="hero-img-container">
-            <img src={hero}></img>
+            <img src={hero} alt="hero-img"></img>
           </div>
         </div>
       </div>

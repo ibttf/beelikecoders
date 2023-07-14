@@ -28,7 +28,7 @@ function Login() {
       </div>
       <div className="login-right">
         <Link to="/">
-          <img src={logo} className="login-img"></img>
+          <img src={logo} className="login-img" alt="logo"></img>
         </Link>
 
         {showLogin ? (
@@ -68,7 +68,7 @@ function Login() {
         <div className="google-btn-container">
           <div className="google-btn" onClick={loginWithGoogle}>
             <div className="google-icon-wrapper">
-              <img className="google-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"/>
+              <img className="google-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="google-logo"/>
             </div>
             <p className="btn-text">Sign in with Google</p>
           </div>

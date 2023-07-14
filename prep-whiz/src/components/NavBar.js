@@ -4,11 +4,7 @@ import {auth} from '../config/firebase'
 import { signOut} from "firebase/auth";
 import logo from "../styles/logo-no-background.png";
 import "../styles/Navbar.css";
-import config from "../baseUrl"
-//bootstrap stuff
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
+// import config from "../baseUrl"
 
 
 function NavBar({ userId }) {
@@ -22,41 +18,41 @@ function NavBar({ userId }) {
   }
   
   return (
-       <Navbar bg="light" expand="lg">
-      <Container>
+       <div bg="light" expand="lg">
+      <div>
 
-        <Navbar.Brand>
+        <div>
           <Link to="/">
-            <img src={logo} className="top-page-img"></img>
+            <img src={logo} className="top-page-img" alt="logo"></img>
           </Link>
-        </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link>
+        </div>
+        <div aria-controls="basic-navbar-nav" />
+        <div id="basic-navbar-nav">
+          <div className="me-auto">
+            <div>
               <Link to={userId ? "/review" : "/"} className="navbar-btn">Review</Link>
-            </Nav.Link>
-            <Nav.Link>
+            </div>
+            <div>
               <Link to={userId ? "/new" : "/"}  className="navbar-btn">Submit</Link>
-            </Nav.Link>
-            <Nav.Link>
+            </div>
+            <div>
               <Link to={userId ? "/my-essays" : "/"}  className="navbar-btn">My Essays</Link>
-            </Nav.Link>
+            </div>
             {userId ? 
-            <Nav.Link onClick={handleLogout}> 
+            <div onClick={handleLogout}> 
               <Link to="/"  className="navbar-btn">Logout</Link>
-            </Nav.Link>
+            </div>
             :
-            <Nav.Link> 
+            <div> 
               <Link to="/login"  className="navbar-btn">Login</Link>
-            </Nav.Link>
+            </div>
             }
 
             
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+          </div>
+        </div>
+      </div>
+    </div>
 
   )  
 }

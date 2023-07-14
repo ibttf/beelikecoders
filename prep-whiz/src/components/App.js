@@ -1,17 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
 import NavBar from "./NavBar";
 import Login from "../pages/Login";
 import Home from "../pages/Home";
 import Loading from "../pages/Loading"
-import 'bootstrap/dist/css/bootstrap.min.css';
 import "../styles/App.css";
 import config from "../baseUrl"
 function App() {
   const [userId, setUserId] = useState("");
   const [isLoading,setIsLoading]=useState(true);
-  const navigate=useNavigate();
   useEffect(() => {
     setIsLoading(true);
     checkLoginStatus();
@@ -46,7 +43,7 @@ function App() {
           <Route path="/login" element={
             <Login />
           } />
-          
+
           <Route path="/" element={
             <>
               <NavBar userId={userId} />
