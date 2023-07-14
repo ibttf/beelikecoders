@@ -1,0 +1,150 @@
+.home {
+  padding: 5% 10% 0% 10%;
+  display: flex;
+  overflow:hidden;
+}
+
+.home-left > h4 {
+  font-family: sans-serif;
+  line-height: 0.7;
+  font-size: 1.2vw;
+  transform: scale(1, 0.9);
+  margin-bottom: 0;
+}
+.home-left > h2 {
+  margin: 0;
+  font-size: 5.5vw;
+  color: rgb(29, 29, 29);
+  position: relative;
+}
+.squiggle {
+  position: relative;
+  height: 3vw;
+  width: 15vw;
+  margin-left: 43%;
+  margin-top: -20%;
+  transform: rotate(-2deg);
+}
+.home-left > h3 {
+  color: rgb(77, 77, 77);
+  font-weight: lighter;
+  font-size: 1.5vw;
+  font-family: sans-serif;
+  margin-bottom: 0;
+  margin-top: -10%;
+}
+.home-btns {
+  padding: 5% 0% 0% 0%;
+}
+.home-btn {
+  border-radius: 100px;
+  padding: 1vw;
+  margin-right: 1vw;
+  font-family: sans-serif;
+  font-weight: bold;
+
+  opacity: .7;
+
+  font-size: .8vw;
+}
+.home-btn:hover {
+  opacity: 1;
+}
+.review-btn {
+  background-color: rgb(120, 120, 250);
+  color: white;
+  border: none;
+}
+.home-right {
+  margin-left: 12%;
+}
+.my-essays-btn {
+  background-color: rgb(208, 236, 245);
+  border: 2px solid rgb(161, 160, 160);
+}
+.hero-blob {
+  height: 30vw;
+  width: 30vw;
+  background-color: rgb(128, 128, 255);
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+}
+.hero-img-container {
+  position: relative;
+  bottom: 33vw;
+  right: 5vw;
+}
+.hero-img-container > img {
+  width: 40vw;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .home{
+    flex-direction: column;
+    text-align :center;
+  }
+  
+.home-left > h4 {
+  margin: 5% 0;
+  font-size: 14px;
+}
+.home-left > h2 {
+  margin-bottom: 5%;
+  font-size: 30px;
+
+}
+
+.home-left > h3 {
+  font-size: 10px;
+  margin: 5% 0;
+}
+
+.home-btn {
+  margin-bottom: 15%;
+  font-size: 10px;
+}
+}
+
+@media only screen and (max-width: 989px) {
+  .home{
+    flex-direction: column;
+    text-align :center;
+    padding-top: 10%;
+  }
+  .home-left > h4{
+    font-size: 3vw;
+  }
+  .home-left > h2{
+    font-size: 9vw;
+  }
+  .home-left > h3{
+    font-size: 2vw;
+    margin-top: -10%;
+  }
+  .home-btn{
+    font-size: 2.5vw;
+    padding: 2% 5%;
+  }
+  .home-right{
+    margin-top: 10%;
+  }
+  .squiggle{
+    height: 5vw;
+    width: 20vw;
+    margin-left: 60%;
+  
+  }
+  .hero-blob{
+    height: 50vw;
+    width: 50vw;
+  }
+  .hero-img-container {
+    bottom: 48vw;
+    right: 0vw;
+  }
+  .hero-img-container > img {
+    width: 60vw;
+  }
+}
