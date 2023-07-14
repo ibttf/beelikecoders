@@ -4,21 +4,22 @@ import { signInWithPopup} from "firebase/auth";
 import logo from "../styles/logo-no-background.png";
 import LoginForm from "../components/LoginForm";
 import SignUpForm from "../components/SignUpForm";
-import { useHistory, Link } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 import "../styles/Login.css";
 function Login() {
-  const history = useHistory();
+  const navigate = useNavigate();
   const [showLogin, setShowLogin] = useState(true);
 
   const loginWithGoogle=async()=>{
     try{
-      await signInWithPopup(auth,googleProvider)
-      history.push("/")
+      const userCredential= await signInWithPopup(auth,googleProvider)
+      localStorage.setItem('accessToken', userCredential.user.accessToken);
+      navigate("/")
+      window.location.reload();
     }catch(err){
     }
   }
-
 
   return (
     <div className="login">
@@ -72,6 +73,7 @@ function Login() {
             <p className="btn-text">Sign in with Google</p>
           </div>
         </div>
+        <button onClick={()=>console.log(auth?.currentUser?.email)}>get current user</button>
       </div>
       
     </div>

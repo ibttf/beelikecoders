@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { Switch, Route } from "react-router-dom";
-import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import { Routes, Route } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import NavBar from "./NavBar";
 import Login from "../pages/Login";
 import Home from "../pages/Home";
@@ -9,55 +9,56 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import "../styles/App.css";
 import config from "../baseUrl"
 function App() {
-  const [user, setUser] = useState(null);
+  const [userId, setUserId] = useState("");
   const [isLoading,setIsLoading]=useState(true);
-  const history=useHistory();
+  const navigate=useNavigate();
   useEffect(() => {
     setIsLoading(true);
-    // auto-login
     checkLoginStatus();
 
   }, []);
 
 
   const checkLoginStatus = async () => {
-    // try {
-    //   const response = await fetch(`${config.baseUrl}/users/current`, {
-    //     headers: { 'Content-Type': 'application/json', 
-    //                 Authorization: `Bearer ${localStorage.getItem('accessToken')}` },
-    //   });
+    try {
+      const response = await fetch(`${config.baseUrl}/users/current`, {
+        headers: { 'Content-Type': 'application/json', 
+                    Authorization: `Bearer ${localStorage.getItem('accessToken')}` },
+      });
 
-    //   if (response.ok) {
-    //     const data = await response.json();
-    //     setUser(data);
-    //   }
-    // }catch(err){
+      if (response.ok) {
+        const data = await response.json();
+        setUserId(data.uid);
+      }
+    }catch(err){
       
-    // }
+    }
     setIsLoading(false);
   };
 
   if (isLoading){
     return <Loading />
   }
-  if (!user){
-    return (
-      <>
-        <main >
-          <Switch>
-            <Route path="/login">
-              <Login />
-            </Route>
+  return (
+    <>
+      <main >
+        <Routes>
+          <Route path="/login" element={
+            <Login />
+          } />
+          
+          <Route path="/" element={
+            <>
+              <NavBar userId={userId} />
+              <Home userId={userId} />
+            </>
+          } />
 
-            <Route path="/">
-              <NavBar user={user} />
-              <Home user={user} />
-            </Route>
-          </Switch>
-        </main>
-      </>
-    );
-  }
+        </Routes>
+      </main>
+    </>
+  );
 }
+
 
 export default App;

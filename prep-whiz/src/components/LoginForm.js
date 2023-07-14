@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import {auth} from '../config/firebase'
 import { signInWithEmailAndPassword } from "firebase/auth";
 import "../styles/LoginForm.css";
 function LoginForm() {
-  const history = useHistory();
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState([]);
@@ -17,9 +17,10 @@ function LoginForm() {
     try{
       await signInWithEmailAndPassword(auth,email,password)
       .then(userCredential=>{
-        localStorage.setItem('accessToken', userCredential.accessToken);
+        localStorage.setItem('accessToken', userCredential.user.accessToken);
       })
-      history.push("/")
+      navigate("/")
+      window.location.reload();
     }catch(err){
       setErrors([err])
 
