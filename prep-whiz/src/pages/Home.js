@@ -6,30 +6,9 @@ import squiggle from "../styles/red-squiggle.png";
 import "../styles/Home.css";
 const Home = (userId) => {
     return (
-      <div className="home">
-        <div className="home-left">
-          <h4>LET'S WRITE THE BEST ESSAY EVER</h4>
-          <h2>Every Essay Can Use a Little Hepl
-              <img src={squiggle} className="squiggle" alt="red-squiggle"></img>
-          </h2>
-        
-          <h3>Get Your Essay Reviewed Today</h3>
-          <div className="home-btns">
-            <Link to={userId ? "/review" : "/"}>
-              <button className="home-btn review-btn">Review Essays</button>
-            </Link>
-            <Link to={userId ? "/my-essays" : "/"}>
-              <button className="home-btn my-essays-btn">See My Essays</button>
-            </Link>
-          </div>
-        </div>
-        <div className="home-right">
-          <div className="hero-blob"></div>
-          <div className="hero-img-container">
-            <img src={hero} alt="hero-img"></img>
-          </div>
-        </div>
-      </div>
+      <h1 className="text-3xl font-bold underline">
+      Hello world!
+    </h1>
     );
 
 };
