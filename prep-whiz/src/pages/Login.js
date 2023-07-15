@@ -1,6 +1,6 @@
 import { useState } from "react";
 import {auth, googleProvider} from '../config/firebase'
-import { signInWithPopup} from "firebase/auth";
+import { signInWithPopup, signOut} from "firebase/auth";
 import logo from "../styles/logo-no-background.png";
 import LoginForm from "../components/LoginForm";
 import SignUpForm from "../components/SignUpForm";
@@ -74,6 +74,7 @@ function Login() {
           </div>
         </div>
         <button onClick={()=>console.log(auth?.currentUser?.email)}>get current user</button>
+        <button onClick={()=>signOut(auth)}>Logout</button>
       </div>
       
     </div>

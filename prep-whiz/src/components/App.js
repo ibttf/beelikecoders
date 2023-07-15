@@ -4,6 +4,11 @@ import NavBar from "./NavBar";
 import Login from "../pages/Login";
 import Home from "../pages/Home";
 import Loading from "../pages/Loading"
+
+// SAT PREP STUFF
+import Sidebar from "../sat-prep/components/Sidebar"
+import Dashboard from "../sat-prep/pages/Dashboard"
+
 import "../styles/App.css";
 import config from "../baseUrl"
 function App() {
@@ -12,7 +17,6 @@ function App() {
   useEffect(() => {
     setIsLoading(true);
     checkLoginStatus();
-
   }, []);
 
 
@@ -40,6 +44,12 @@ function App() {
     <>
       <main >
         <Routes>
+        <Route path="/testprep/:name" element={
+          <>
+            <Sidebar />
+            <Dashboard />
+          </>
+          } />
           <Route path="/login" element={
             <Login />
           } />
