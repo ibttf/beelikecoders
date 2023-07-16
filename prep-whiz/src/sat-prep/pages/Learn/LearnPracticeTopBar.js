@@ -14,7 +14,7 @@ const LearnPracticeTopBar = (props) => {
                 <h2 onClick={()=>{navigate("/testprep/sat")}}
                     className="font-bold text-3xl cursor-pointer hover:text-blue-700">PrepWhiz</h2>
                 <h1 onClick={()=>navigate("/testprep/sat/learn/math")}
-                    className={`font-semibold hover:underline`}>
+                    className={`font-semibold text-gray-500 cursor-pointer hover:text-gray-900 hover:underline`}>
                     Exit this Practice</h1>
             </div>
             <hr className="my-8"></hr>
