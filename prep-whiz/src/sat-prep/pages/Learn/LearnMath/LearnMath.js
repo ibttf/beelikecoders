@@ -3,7 +3,7 @@ import {AiOutlineArrowDown} from "react-icons/ai"
 import {BsFillPlayCircleFill ,BsPencilFill} from "react-icons/bs"
 import { Link, useNavigate } from 'react-router-dom';
 
-import Loading from '../../../pages/Loading';
+import Loading from '../../../../pages/Loading';
 const LearnMath = () => {
     const navigate=useNavigate();
     const [isLoading,setIsLoading]=useState(true);
@@ -87,13 +87,13 @@ const LearnMath = () => {
                     {topic.lessons.map((lesson, j)=>(
                         <div className={`${checkExpandedTopic(i)?"h-full overflow-auto":"h-0 overflow-hidden hidden"}`}>
                             <div className="m-3 flex items-center hover:bg-gray-200 rounded-xl group">
-                                <h1 onClick={()=>{navigate("/testprep/sat/learn/math/practice/"+lesson.name.toLowerCase().replace(/\s/g, ''))}}
+                                <h1 onClick={()=>{navigate("/testprep/sat/learn/math/practice/"+lesson.name)}}
                                     className={`text-lg font-normal w-9/12 p-3 group-hover:underline`} >{j+1 + ". " + lesson.name}</h1>
-                                <BsPencilFill onClick={()=>{navigate("/testprep/sat/learn/math/practice/"+lesson.name.toLowerCase().replace(/\s/g, ''))}}
+                                <BsPencilFill onClick={()=>{navigate("/testprep/sat/learn/math/practice/"+lesson.name)}}
                                               className="ml-8 cursor-pointer border-2 border-white bg-gray-900 rounded-3xl text-white p-2 hover:bg-gray-200 hover:text-gray-900 hover:border-gray-900" size="36"/>
                                 <BsFillPlayCircleFill onClick={(e)=>{
                                     e.stopPropagation()
-                                    navigate("/testprep/sat/learn/math/video/"+lesson.name.toLowerCase().replace(/\s/g, ''))
+                                    navigate("/testprep/sat/learn/math/video/"+lesson.name)
                             
                                 }} className="ml-8 cursor-pointer border-2 border-white rounded-3xl" size="36"/>
                                 <h1 className={`text-center text-lg font-bold ml-8 border py-1 px-4 bg-green-${5+"00"} text-gray-300 rounded-3xl`}>5</h1>

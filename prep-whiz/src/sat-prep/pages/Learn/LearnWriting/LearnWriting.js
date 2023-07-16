@@ -1,8 +1,8 @@
 import React, {useState,useEffect} from 'react';
 import {AiOutlineArrowDown} from "react-icons/ai"
 import {BsFillPlayCircleFill} from "react-icons/bs"
-import Loading from '../../../pages/Loading';
-const LearnReading = () => {
+import Loading from '../../../../pages/Loading';
+const LearnWriting = () => {
     const [isLoading,setIsLoading]=useState(true);
     const [isTopicZeroExpanded,setIsTopicZeroExpanded]=useState(false);
     const [isTopicOneExpanded,setIsTopicOneExpanded]=useState(false);
@@ -64,7 +64,7 @@ const LearnReading = () => {
     if (isLoading) return <Loading />
     return (
         <div className="mx-60 mt-24">
-            <h1 className="text-left font-extrabold text-5xl text-gray-700">Reading</h1>
+            <h1 className="text-left font-extrabold text-5xl text-gray-700">Writing</h1>
             <div className="flex flex-col">
                 {topics.map((topic,i)=>(
                 <div className="border border-gray-400 rounded p-4 mt-12">
@@ -99,4 +99,4 @@ const LearnReading = () => {
     );
 }
 
-export default LearnReading;
+export default LearnWriting;

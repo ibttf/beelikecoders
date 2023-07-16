@@ -5,16 +5,28 @@ import Login from "../pages/Login";
 import Home from "../pages/Home";
 import Loading from "../pages/Loading"
 import EditProfile from "../pages/EditProfile";
-// SAT PREP STUFF
+// SAT PREP
 import Sidebar from "../sat-prep/components/Sidebar"
 import Dashboard from "../sat-prep/pages/Dashboard"
-import Learn from "../sat-prep/pages/Learn/Learn";
 import Practice from "../sat-prep/pages/Practice/Practice";
 
-// SAT PREP LEARN
-import LearnMath from "../sat-prep/pages/Learn/LearnMath";
-import LearnReading from "../sat-prep/pages/Learn/LearnReading";
-import LearnWriting from "../sat-prep/pages/Learn/LearnWriting";
+  // SAT PREP LEARN
+  import Learn from "../sat-prep/pages/Learn/Learn";
+import Video from "../sat-prep/pages/Learn/LearnVideo";
+import LearnPracticeTopBar from "../sat-prep/pages/Learn/LearnPracticeTopBar";
+
+    //SAT LEARN MATH
+import LearnMath from "../sat-prep/pages/Learn/LearnMath/LearnMath";
+import LearnMathPractice from "../sat-prep/pages/Learn/LearnMath/LearnMathPractice";
+
+    //SAT LEARN READING
+import LearnReading from "../sat-prep/pages/Learn/LearnReading/LearnReading";
+
+    //SAT LEARN WRITING
+import LearnWriting from "../sat-prep/pages/Learn/LearnWriting/LearnWriting";
+
+
+
 
 
 import "../styles/App.css";
@@ -54,52 +66,103 @@ function App() {
     <>
       <main >
         <Routes>
-        <Route path="/testprep/:name/practice" element={
+          {/* PRACTICE ROUTES */}
+        <Route path="/testprep/sat/practice" element={
           <>
             <Sidebar />
             <Practice />
           </>
           } />
-          <Route path="/testprep/:name/learn/reading" element={
+
+    {/* LEARN ROUTES */}
+          {/* PRACTICE ROUTES */}
+          <Route path="/testprep/sat/learn/reading/practice/:lesson" element={
+          <>
+            <LearnPracticeTopBar />
+
+          </>
+          } />
+          <Route path="/testprep/sat/learn/writing/practice/:lesson" element={
+          <>
+            <LearnPracticeTopBar />
+
+          </> 
+          } />
+          <Route path="/testprep/sat/learn/math/practice/:lesson" element={
+          <>
+            <LearnPracticeTopBar />
+            <LearnMathPractice />
+          </>
+          } />
+          {/* VIDEO ROUTES */}
+          <Route path="/testprep/sat/learn/reading/video/:lesson" element={
+          <>
+            <Sidebar />
+            <Video />
+          </>
+          } />
+          <Route path="/testprep/sat/learn/writing/video/:lesson" element={
+          <>
+            <Sidebar />
+            <Video />
+          </> 
+          } />
+          <Route path="/testprep/sat/learn/math/video/:lesson" element={
+          <>
+            <Sidebar />
+            <Video />
+          </>
+          } />
+        {/* BASE ROUTES */}
+          <Route path="/testprep/sat/learn/reading" element={
           <>
             <Sidebar />
             <LearnReading />
           </>
           } />
-          <Route path="/testprep/:name/learn/writing" element={
+          <Route path="/testprep/sat/learn/writing" element={
           <>
             <Sidebar />
             <LearnWriting />
           </>
           } />
-          <Route path="/testprep/:name/learn/math" element={
+          <Route path="/testprep/sat/learn/math" element={
           <>
             <Sidebar />
             <LearnMath />
           </>
           } />
-        <Route path="/testprep/:name/learn" element={
+        <Route path="/testprep/sat/learn" element={
           <>
             <Sidebar />
             <Learn />
           </>
           } />
-        <Route path="/testprep/:name" element={
+
+          {/* DASHBOARD */}
+        <Route path="/testprep/sat" element={
           <>
             <Sidebar />
             <Dashboard />
           </>
           } />
+
+
+          {/* EDIT PROFILE */}
           <Route path="/edit-profile" element={
             <>
               <Sidebar />
               <EditProfile user={user}/>
             </>
           } />
+
+          {/* AUTH */}
           <Route path="/login" element={
             <Login />
           } />
 
+
+          {/* HOME PAGE */}
           <Route path="/" element={
             <>
               <NavBar userId={userId} />

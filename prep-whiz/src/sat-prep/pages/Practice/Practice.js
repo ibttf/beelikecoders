@@ -1,7 +1,6 @@
 import React, {useState,useEffect} from 'react';
 import {AiOutlineCheck} from "react-icons/ai"
 import {SlDoc, SlDocs} from "react-icons/sl"
-
 import { Link } from 'react-router-dom';
 
 const Practice = () => {
@@ -71,11 +70,11 @@ const Practice = () => {
 
             {/* INDIVIDUAL SECTION SELECTION MENU */}
             <div className={`text-center ${isIndividualClicked ? "h-full" : "h-0 overflow-hidden"}`}>
-                <div className="grid grid-cols-3 grid-flow-col gap-8 my-16 px-48">
+                <div className="grid grid-cols-4 grid-flow-col gap-8 my-16 px-48">
                     <div className="flex flex-col justify-center">
-                        <label for="countries" class="text-center block mb-2 text-sm font-medium text-gray-900">Section</label>
+                        <label for="countries" className="text-center block mb-2 text-sm font-medium text-gray-900">Section</label>
                         <select  onChange={e=>setSelectedSection(e.target.value)} 
-                            id="section" class=" border border-black text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full px-2.5 py-6">
+                            id="section" className=" border border-black text-gray-900 text-md rounded-lg focus:ring-gray-500 focus:border-gray-500 block w-full px-2.5 py-6">
                             <option selected>Choose a section</option>
                             <option value="reading">Reading</option>
                             <option value="writing">Writing</option>
@@ -84,10 +83,19 @@ const Practice = () => {
                         </select>
                     </div>
                     {returnQuestionsOptionsBasedOnSelectedSection()}
-
+                    <div className="flex flex-col justify-center">
+                        <label for="countries" className="text-center block mb-2 text-sm font-medium text-gray-900">Timed</label>
+                        <select  onChange={e=>setIsTimed(Boolean(e.target.value))} 
+                            id="timed" className=" border border-black text-gray-900 text-md rounded-lg focus:ring-gray-500 focus:border-gray-500 block w-full px-2.5 py-6">
+                            <option selected>Select</option>
+                            <option value="true">Timed</option>
+                            <option value="false">Not Timed</option>
+                        </select>
+                    </div>
                 </div>
-                <div>
-                    <button className="bg-gray-700 text-gray-200 py-3 px-6 rounded-3xl text-md font-bold cursor-pointer border-2 border-white hover:bg-gray-900">
+                <div className="flex flex-col items-center">
+
+                    <button className="w-min bg-gray-700 text-gray-200 py-3 px-6 rounded-3xl text-md font-bold cursor-pointer border-2 border-white hover:bg-gray-900">
                         Continue
                     </button>
                 </div>
@@ -97,18 +105,19 @@ const Practice = () => {
             <div className={`text-center ${isFullClicked ? "h-full" : "h-0 overflow-hidden"}`}>
                 <div className="my-16 px-48">
                     <div className="flex flex-col justify-center">
-                        <label for="countries" class="text-center block mb-2 text-sm font-medium text-gray-900">Test</label>
+                        <label for="countries" className="text-center block mb-2 text-sm font-medium text-gray-900">Test</label>
                         <select
-                            id="countries" class=" border border-black text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full px-2.5 py-6">
+                            id="countries" className=" border border-black text-gray-900 text-md rounded-lg focus:ring-gray-500 focus:border-gray-500 block w-full px-2.5 py-6">
                             <option selected>Choose a test</option>
-                            <option value="US">Reading</option>
-                            <option value="CA">Writing</option>
-                            <option value="FR">Math - No Calculator</option>
-                            <option value="DE">Math - Calculator</option>
+                            <option value="1">Practice Test 1</option>
+                            <option value="2">Practice Test 2</option>
+                            <option value="3">Practice Test 3</option>
+                            <option value="4">Practice Test 4</option>
                         </select>
                     </div>
                 </div>
                 <div>
+
                     <button className="bg-gray-700 text-gray-200 py-3 px-6 rounded-3xl text-md font-bold cursor-pointer border-2 border-white hover:bg-gray-900">
                         Continue
                     </button>
@@ -126,8 +135,8 @@ const Practice = () => {
                 return (
                     <>
                     <div className="flex flex-col justify-center">
-                        <label for="reading-articles" class="text-center block mb-2 text-sm font-medium text-gray-900">Number of Articles</label>
-                        <select id="reading-articles" class=" border border-black text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full px-2.5 py-6">
+                        <label for="reading-articles" className="text-center block mb-2 text-sm font-medium text-gray-900">Number of Articles</label>
+                        <select id="reading-articles" className=" border border-black text-gray-900 text-md rounded-lg focus:ring-gray-500 focus:border-gray-500 block w-full px-2.5 py-6">
                             <option selected>Select</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -136,16 +145,13 @@ const Practice = () => {
                         </select>
                     </div>
                     <div className="flex flex-col justify-center">
-                        <label for="reading-subject" class="text-center block mb-2 text-sm font-medium text-gray-900">Subject</label>
-                        <select
-                            data-te-select-init
-                            data-te-select-placeholder="Example placeholder"
-                            multiple>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                            <option value="4">Four</option>
-                            <option value="5">Five</option>
+                        <label for="reading-subject" className="text-center block mb-2 text-sm font-medium text-gray-900">Subject</label>
+                        <select id="reading-subject" className=" border border-black text-gray-900 text-md rounded-lg focus:ring-gray-500 focus:border-gray-500 block w-full px-2.5 py-6">
+                            <option selected value="random">Random</option>
+                            <option value="literature">Literature</option>
+                            <option value="science">Science</option>
+                            <option value="social-science">Social Science</option>
+                            <option value="history">History</option>
                         </select>
                     </div>
                     </>
@@ -155,8 +161,8 @@ const Practice = () => {
                 return (
                     <>
                     <div className="flex flex-col justify-center">
-                        <label for="writing-articles" class="text-center block mb-2 text-sm font-medium text-gray-900">Number of Articles</label>
-                        <select id="writing-articles" class=" border border-black text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full px-2.5 py-6">
+                        <label for="writing-articles" className="text-center block mb-2 text-sm font-medium text-gray-900">Number of Articles</label>
+                        <select id="writing-articles" className=" border border-black text-gray-900 text-md rounded-lg focus:ring-gray-500 focus:border-gray-500 block w-full px-2.5 py-6">
                             <option selected>Select</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -165,9 +171,9 @@ const Practice = () => {
                         </select>
                     </div>
                     <div className="flex flex-col justify-center">
-                        <label for="writing-topic" class="text-center block mb-2 text-sm font-medium text-gray-900">Topic</label>
-                        <select id="writing-topic" class=" border border-black text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full px-2.5 py-6">
-                            <option selected>Select</option>
+                        <label for="writing-topic" className="text-center block mb-2 text-sm font-medium text-gray-900">Topic</label>
+                        <select id="writing-topic" className=" border border-black text-gray-900 text-md rounded-lg focus:ring-gray-500 focus:border-gray-500 block w-full px-2.5 py-6">
+                            <option selected value="random">Random</option>
                             <option value="">Grammar Topic 1</option>
                             <option value="">Grammar Topic 2</option>
                             <option value="">Grammar Topic 3</option>
@@ -180,34 +186,77 @@ const Practice = () => {
             
             case "mathnc":
                 return (
+                    <>
                     <div className="flex flex-col justify-center">
-                        <label for="mathnc-questions" class="text-center block mb-2 text-sm font-medium text-gray-900">Number of Questions</label>
-                        <select id="mathnc-questions" class=" border border-black text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full px-2.5 py-6">
+                        <label for="mathnc-questions" className="text-center block mb-2 text-sm font-medium text-gray-900">Number of Questions</label>
+                        <select id="mathnc-questions" className=" border border-black text-gray-900 text-md rounded-lg focus:ring-gray-500 focus:border-gray-500 block w-full px-2.5 py-6">
                             <option selected>Select</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
                             <option value="4">4</option>
+                            <option value="4">5</option>
+                            <option value="4">10</option>
+                            <option value="4">15</option>
+                            <option value="4">20</option>
                         </select>
                     </div>
+                    <div className="flex flex-col justify-center">
+                        <label for="mathnc-topics" className="text-center block mb-2 text-sm font-medium text-gray-900">Topics</label>
+                        <select id="mathnc-topics" className=" border border-black text-gray-900 text-md rounded-lg focus:ring-gray-500 focus:border-gray-500 block w-full px-2.5 py-6">
+                            <option selected value="random">Random</option>
+                            <option value="">Math Topic 1</option>
+                            <option value="">Math Topic 2</option>
+                            <option value="">Math Topic 3</option>
+                            <option value="">Math Topic 4</option>
+                        </select>
+                    </div>
+                    </>
                 )
 
             
             case "mathc":
-                console.log("mathc");
+                return(
+                    <>
+                    <div className="flex flex-col justify-center">
+                        <label for="mathc-questions" className="text-center block mb-2 text-sm font-medium text-gray-900">Number of Questions</label>
+                        <select id="mathc-questions" className=" border border-black text-gray-900 text-md rounded-lg focus:ring-gray-500 focus:border-gray-500 block w-full px-2.5 py-6">
+                            <option selected>Select</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="4">5</option>
+                            <option value="4">10</option>
+                            <option value="4">15</option>
+                            <option value="4">38</option>
+                        </select>
+                    </div>
+                    <div className="flex flex-col justify-center">
+                        <label for="mathc-topics" className="text-center block mb-2 text-sm font-medium text-gray-900">Topics</label>
+                        <select id="mathc-topics" className=" border border-black text-gray-900 text-md rounded-lg focus:ring-gray-500 focus:border-gray-500 block w-full px-2.5 py-6">
+                            <option selected value="random">Random</option>
+                            <option value="">Math Topic 1</option>
+                            <option value="">Math Topic 2</option>
+                            <option value="">Math Topic 3</option>
+                            <option value="">Math Topic 4</option>
+                        </select>
+                    </div>
+                    </>
+                )
 
             default:
                 return(
                 <>
                     <div className="flex flex-col justify-center">
-                        <label for="reading-questions" class="text-center block mb-2 text-sm font-medium text-gray-900">Number of Articles</label>
-                        <select disabled id="reading-questions" class="bg-gray-200 border border-black text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full px-2.5 py-6">
+                        <label for="reading-questions" className="text-center block mb-2 text-sm font-medium text-gray-900">Number of Articles</label>
+                        <select disabled id="reading-questions" className="bg-gray-200 border border-black text-gray-900 text-md rounded-lg focus:ring-gray-500 focus:border-gray-500 block w-full px-2.5 py-6">
                             <option selected>Locked</option>
                         </select>
                     </div>
                     <div className="flex flex-col justify-center">
-                        <label for="reading-questions" class="text-center block mb-2 text-sm font-medium text-gray-900">Subject</label>
-                        <select disabled id="reading-questions" class="bg-gray-200 border border-black text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full px-2.5 py-6">
+                        <label for="reading-questions" className="text-center block mb-2 text-sm font-medium text-gray-900">Subject</label>
+                        <select disabled id="reading-questions" className="bg-gray-200 border border-black text-gray-900 text-md rounded-lg focus:ring-gray-500 focus:border-gray-500 block w-full px-2.5 py-6">
                             <option selected>Locked</option>
                         </select>
                     </div>
