@@ -1,4 +1,6 @@
 import React, {useState,useEffect} from 'react';
+import { Link } from 'react-router-dom';
+import { BsFillLightningFill} from 'react-icons/bs';
 import Loading from '../../pages/Loading';
 import config from '../../baseUrl';
 const Dashboard = () => {
@@ -26,7 +28,24 @@ const Dashboard = () => {
     },[])
     if (isLoading) return (<Loading />)
     return (
-        <div>
+        <div className="ml-60 mt-24 ">
+            <Link to="/testprep/sat/learn" className="flex justify-between mr-60">
+                <h1 className="font-extrabold text-5xl text-gray-700">Welcome back, {user.email}</h1>
+                <div className={`relative flex items-center 
+                        h-12 w-36 mt-2 mb-2  
+                        ml-2
+                        bg-gray-600 hover:bg-black
+                        text-white
+                        rounded-3xl
+                        transition-all duration-300 ease-linear
+                        cursor-pointer shadow-lg  group justify-center p-2`}>
+                <BsFillLightningFill size="32" /> <h1 className='text-2xl font-extrabold ml-2'>Learn</h1>
+                </div>
+            </Link>
+            <div>
+
+            </div>
+
         </div>
     );
 }
