@@ -13,6 +13,7 @@ const LearnMathPractice = (props) => {
 
     // TO RENDER DYNAMICALLY ON USE EFFECT
     const isCalculator=false
+    const isInteractionExists=false
     const question={
         question_content: "x + 2 = 14",
         question: "What is x?",
@@ -57,6 +58,14 @@ const LearnMathPractice = (props) => {
         }
     }
     
+    const handleQuestionSubmit=async()=>{
+        //send a post request to create a new question interaction with
+        // USER ID, QUESTION ID, isCorrect, 
+            //
+    }
+
+
+
     return (
         <>
         {/*  INNER TOP BAR AND QUESTION */}
@@ -98,7 +107,7 @@ const LearnMathPractice = (props) => {
                     {question.choices.length===4?
                     <div className="flex flex-col justify-evenly w-full font-serif">
                         <h1 onClick={()=>{changeQuestionChoice("A");}}
-                            className={`py-3 rounded border-2 ${isASelected ? "bg-blue-200 border-blue-700" : "border-white"}`}>
+                            className={`py-3 rounded border-2  ${isASelected ? "bg-blue-200 border-blue-700" : "border-white  hover:bg-gray-200" }`}>
                             <span className={`${isASelected ? "bg-blue-600 text-white" :"text-blue-700"} font-sans border-2 border-blue-700  p-2 rounded-full m-2`}>
                                 A
                             </span> 
@@ -107,7 +116,7 @@ const LearnMathPractice = (props) => {
                             </span>
                         </h1>
                         <h1 onClick={()=>{changeQuestionChoice("B");}}
-                            className={`py-3 rounded border-2 ${isBSelected ? "bg-blue-200 border-blue-700" : "border-white"}`}>
+                            className={`py-3 rounded border-2 ${isBSelected ? "bg-blue-200 border-blue-700" : "border-white  hover:bg-gray-200" }`}>
                             <span className={`${isBSelected ? "bg-blue-600 text-white" :"text-blue-700"} font-sans border-2 border-blue-700  p-2 rounded-full m-2`}>
                                 B
                             </span> 
@@ -116,7 +125,7 @@ const LearnMathPractice = (props) => {
                             </span>
                         </h1>
                         <h1 onClick={()=>{changeQuestionChoice("C");}}
-                            className={`py-3 rounded border-2 ${isCSelected ? "bg-blue-200 border-blue-700" : "border-white"}`}>
+                            className={`py-3 rounded border-2 ${isCSelected ? "bg-blue-200 border-blue-700" : "border-white  hover:bg-gray-200" }`}>
                             <span className={`${isCSelected ? "bg-blue-600 text-white" :"text-blue-700"} font-sans border-2 border-blue-700  p-2 rounded-full m-2`}>
                                 C
                             </span> 
@@ -125,7 +134,7 @@ const LearnMathPractice = (props) => {
                             </span>
                         </h1>
                         <h1 onClick={()=>{changeQuestionChoice("D");}}
-                            className={`py-3 rounded border-2 ${isDSelected ? "bg-blue-200 border-blue-700" : "border-white"}`}>
+                            className={`py-3 rounded border-2 ${isDSelected ? "bg-blue-200 border-blue-700" : "border-white  hover:bg-gray-200" }`}>
                             <span className={`${isDSelected ? "bg-blue-600 text-white" :"text-blue-700"} font-sans border-2 border-blue-700  p-2 rounded-full m-2`}>
                                 D
                             </span> 
@@ -172,8 +181,15 @@ const LearnMathPractice = (props) => {
 
                 </h2>
 
+                {isInteractionExists ?
                 
-                <button className="border-2 px-4 py-3 rounded-xl bg-blue-700 text-gray-300 font-bold whitespace-nowrap first-letter:hover:bg-blue-900 ">Next Question</button>
+                <button onClick={()=>{}}
+                        className="border-2 px-4 py-3 rounded-xl bg-blue-700 text-gray-300 font-bold whitespace-nowrap hover:bg-blue-900 ">Next Question</button>
+                :
+                <button onClick={()=>handleQuestionSubmit()}
+                        className="border-2 px-4 py-3 rounded-xl bg-blue-700 text-gray-300 font-bold whitespace-nowrap hover:bg-blue-900 ">Check Answer</button>
+                }
+                
                 
             </div>
 

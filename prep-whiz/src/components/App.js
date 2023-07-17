@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import NavBar from "./NavBar";
 import Login from "../pages/Login";
 import Home from "../pages/Home";
+import Footer from "./Footer";
 import Loading from "../pages/Loading"
 import EditProfile from "../pages/EditProfile";
 // SAT PREP
@@ -32,8 +33,7 @@ import LearnWriting from "../sat-prep/pages/Learn/LearnWriting/LearnWriting";
 import "../styles/App.css";
 import config from "../baseUrl"
 function App() {
-  const [userId, setUserId] = useState("");
-  const [user,setUser]=useState({})
+  const [user,setUser]=useState(null)
   const [isLoading,setIsLoading]=useState(true);
   useEffect(() => {
     setIsLoading(true);
@@ -50,17 +50,40 @@ function App() {
 
       if (response.ok) {
         const data = await response.json();
-        setUserId(data.uid);
         setUser(data);
       }
     }catch(err){
-      console.log(err);
+      setUser(null);
     }
     setIsLoading(false);
   };
 
   if (isLoading){
     return <Loading />
+  }
+  if(!user){
+    {console.log("hello")}
+    return(
+    <>
+      <main>
+      <Routes>
+          {/* AUTH */}
+          <Route path="/login" element={
+            <Login />
+          } />
+
+
+          {/* HOME PAGE */}
+          <Route path="/" element={
+            <>
+              <NavBar user={user} />
+              <Home user={user} />
+            </>
+          } />
+
+        </Routes>
+      </main>
+    </>)
   }
   return (
     <>
@@ -161,12 +184,19 @@ function App() {
             <Login />
           } />
 
+          {/* TUTORING PAGE */}
+          <Route path="/tutoring" element={
+            <>
+              <NavBar user={user} />
+            </>
+          } />
 
           {/* HOME PAGE */}
           <Route path="/" element={
             <>
-              <NavBar userId={userId} />
-              <Home userId={userId} />
+              <NavBar user={user} />
+              <Home user={user} />
+              <Footer />
             </>
           } />
 

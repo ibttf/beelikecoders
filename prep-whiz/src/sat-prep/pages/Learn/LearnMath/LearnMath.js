@@ -1,5 +1,5 @@
 import React, {useState,useEffect} from 'react';
-import {AiOutlineArrowDown} from "react-icons/ai"
+import {AiOutlineArrowDown, AiOutlinePlus} from "react-icons/ai"
 import {BsFillPlayCircleFill ,BsPencilFill} from "react-icons/bs"
 import { Link, useNavigate } from 'react-router-dom';
 
@@ -67,18 +67,21 @@ const LearnMath = () => {
 
     if (isLoading) return <Loading />
     return (
-        <div className="mx-60 mt-24">
-            <h1 className="text-left font-extrabold text-5xl text-gray-700">Math</h1>
+        <div className="mx-60 my-24">
+            <h1 className="text-left font-extrabold text-5xl text-red-800 flex items-center">
+            <AiOutlinePlus size="48" className="border-2 border-white rounded-xl p-1 mx-2 bg-red-800 text-white"/>
+                Math
+            </h1>
             <div className="flex flex-col">
                 {topics.map((topic,i)=>(
-                <div className="border border-gray-400 rounded p-4 mt-12">
+                <div className="border border-gray-800 rounded p-4 mt-12">
                     <div className="flex items-center" onClick={()=>expandTopic(i)}>
-                        <h1 className="text-2xl font-bold w-9/12">{i+1 + ". " +topic.name}</h1>
-                        <button className="mx-2 text-gray-600 font-light">Practice</button>
-                        <button className="mx-2 text-gray-600 font-light">Video</button>
-                        <h1 className="mx-2 text-gray-600 font-light">Mastery</h1>
+                        <h1 className="text-2xl font-bold w-9/12 text-gray-800">{i+1 + ". " +topic.name}</h1>
+                        <button className="mx-2 text-gray-800 font-semibold">Practice</button>
+                        <button className="mx-2 text-gray-800 font-semibold">Video</button>
+                        <h1 className="mx-2 text-gray-800 font-semibold">Mastery</h1>
                         <AiOutlineArrowDown size="12" onClick={()=>expandTopic(i)}
-                        className={`text-gray-600 hover:text-black
+                        className={`text-gray-800 hover:text-gray-900
                                     transition-all duration-100 ease-linear
                                     cursor-pointer group ml-2 p-3 h-12 w-12 mt-2 mb-2 ${checkExpandedTopic(i) ? "rotate-180" : ""}`}>
                         </AiOutlineArrowDown>
@@ -88,14 +91,14 @@ const LearnMath = () => {
                         <div className={`${checkExpandedTopic(i)?"h-full overflow-auto":"h-0 overflow-hidden hidden"}`}>
                             <div className="m-3 flex items-center hover:bg-gray-200 rounded-xl group">
                                 <h1 onClick={()=>{navigate("/testprep/sat/learn/math/practice/"+lesson.name)}}
-                                    className={`text-lg font-normal w-9/12 p-3 group-hover:underline`} >{j+1 + ". " + lesson.name}</h1>
+                                    className={`text-lg text-gray-800 font-normal w-9/12 p-3 group-hover:underline`} >{j+1 + ". " + lesson.name}</h1>
                                 <BsPencilFill onClick={()=>{navigate("/testprep/sat/learn/math/practice/"+lesson.name)}}
                                               className="ml-8 cursor-pointer border-2 border-white bg-gray-900 rounded-3xl text-white p-2 hover:bg-gray-200 hover:text-gray-900 hover:border-gray-900" size="36"/>
                                 <BsFillPlayCircleFill onClick={(e)=>{
                                     e.stopPropagation()
                                     navigate("/testprep/sat/learn/math/video/"+lesson.name)
                             
-                                }} className="ml-8 cursor-pointer border-2 border-white rounded-3xl" size="36"/>
+                                }} className="ml-8 cursor-pointer border-2 border-white rounded-3xl text-gray-900" size="36"/>
                                 <h1 className={`text-center text-lg font-bold ml-8 border py-1 px-4 bg-green-${5+"00"} text-gray-300 rounded-3xl`}>5</h1>
                             </div>
                             <hr className={`border border-gray-200 rounded-full mx-2`} />

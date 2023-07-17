@@ -74,7 +74,7 @@ function Login() {
           </div>
         </div>
         <button onClick={()=>console.log(auth?.currentUser?.email)}>get current user</button>
-        <button onClick={()=>signOut(auth)}>Logout</button>
+        <button onClick={()=>{signOut(auth); localStorage.clear()}}>Logout</button>
       </div>
       
     </div>

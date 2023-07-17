@@ -13,10 +13,10 @@ const NavBar = (props) => {
         {Head:"SAT",
         },
         {
-          Head: "ACT"
+          Head: "ACT -- Coming Soon"
         },
         {
-          Head: "DSAT"
+          Head: "DSAT -- Coming Soon"
         }
       ]
     },
@@ -35,12 +35,12 @@ const NavBar = (props) => {
     return ("")
   }
   return (
-  
-    <nav className="bg-white">
+  <>
+    <nav className="bg-gray-200">
       <div className="flex items-center font-medium justify-around">
-        <div className='z-50 md:w-auto w-full flex justify-between'>
+        <div className='md:w-auto w-full flex justify-between z-50 p-6'>
           <div className="md:cursor-pointer h-9 flex items-center">
-            <h2 className="font-bold text-3xl">
+            <h2 className="font-bold text-3xl ">
               PrepWhiz
             </h2>
           </div>
@@ -74,25 +74,29 @@ const NavBar = (props) => {
 
             </h1>
             {link.submenu && (
-              <div>
-                <div className="absolute bg-white top-20 py-4 px-20 left-0 mx-40 hidden group-hover:md:block hover:md:block">
-                  <h1 className="text-3xl capitalize font-normal py-5">
-                    Test Prep
-                  </h1>
-                  <h3 className="normal-case font-normal font-sans py-2">
-                    PrepWhiz's AI-powered online prep course is designed to calculate your strengths and weaknesses and customize your practice for your abilities.
-                    Make faster progress with less time and less money than all the other prep courses. If you would like private tutoring
-                    as a supplement to your AI education, make a request for guided instruction with one of our 99th percentile tutors.
-                  </h3>
-                  <div className= "grid grid-cols-3 gap-3 py-2">
-                    {link.sublinks.map((mysublinks) => (
-                      <Link to={`/testprep/${mysublinks.Head}`} className="bg-blue-600 text-white text-center p-2 px-6 rounded font-thin hover:bg-blue-800 duration-300">
-                        <h1 className="text-md font-medium">
-                          {mysublinks.Head}
-                        </h1>
-                      </Link>
-                    ))}
+              <div className="z-20 absolute bg-gray-300 border-2 border-gray-700  top-20 py-4 px-20 left-0 mx-40 hidden group-hover:md:block hover:md:block">
+                <h1 className="text-3xl capitalize font-normal py-5">
+                  Test Prep
+                </h1>
+                <h3 className="normal-case font-normal font-sans py-2">
+                  PrepWhiz's AI-powered online prep course is designed to calculate your strengths and weaknesses and customize your practice for your abilities.
+                  Make faster progress with less time and less money than all the other prep courses. If you would like private tutoring
+                  as a supplement to your AI education, make a request for guided instruction with one of our 99th percentile tutors.
+                </h3>
+                <div className= "grid grid-cols-3 gap-3 py-2">
+                  {link.sublinks.map((mysublinks) => (
+                    mysublinks.Head==="SAT" ? 
+                    <Link to={`/testprep/${mysublinks.Head}`} className={` text-white text-center p-2 px-6 rounded font-thin duration-300 bg-gray-600 hover:bg-gray-800`}>
+                    <h1 className="text-md font-medium">
+                      {mysublinks.Head}
+                    </h1>
+                  </Link> :
+                  <div className="text-white text-center p-2 px-6 rounded font-thin duration-300 bg-gray-400 cursor-default">
+                    <h1 className="text-md font-medium">
+                      {mysublinks.Head}
+                    </h1>
                   </div>
+                  ))}
                 </div>
               </div>
             )}
@@ -141,7 +145,7 @@ const NavBar = (props) => {
       ))}
         </ul>
         <div className="md:block hidden">
-          {props.userId?
+          {props.user?
           <Link to="/testprep/sat" className="bg-gray-700 hover:bg-gray-900 text-white px-6 py-2 rounded-full">
             Go to Dashboard
           </Link>       
@@ -153,7 +157,7 @@ const NavBar = (props) => {
 
         </div>
         {/* MOBILE NAV */}
-        <ul className={`md:hidden bg-white absolute w-full h-full bottom-0 py-24 pl-4
+        <ul className={`md:hidden bg-gray-200 absolute w-full h-full bottom-0 py-24 pl-4
         duration-500 ${open ? 'left-0' : 'left-[-100%]'}
         `}
         >
@@ -203,10 +207,17 @@ const NavBar = (props) => {
                         : setSubHeading("")
                     }
                     className="py-4 pl-7 font-semibold md:pr-0 pr-5 flex justify-between items-center md:pr-0 pr-5"
-                  >
-                        <Link to={`/testprep/${slinks.Head}`} className="text-lg font-semibold ">
+                  >     
+                  {
+                    slinks.Head==="SAT" ? 
+                        <Link to={`/testprep/${slinks.Head}`} className="text-md font-semibold ">
                           {slinks.Head}
-                        </Link>
+                        </Link>  :
+                        <div className="text-md font-semibold text-gray-500">
+                          {slinks.Head}
+                        </div>
+                  }
+                        
 
                   </h1>
               </div>
@@ -215,7 +226,7 @@ const NavBar = (props) => {
         </div>
       ))}
         <div className="py-5 mt-5 text-center">
-        {props.userId?
+        {props.user?
           <Link to="/testprep/sat" className="bg-cyan-950 text-white px-6 py-2 rounded-full">
             Go to Dashboard
           </Link>       
@@ -227,8 +238,10 @@ const NavBar = (props) => {
         </div>
         </ul>
       </div>
-
+      <hr className="relative z-10 bg-gray-500 h-1"></hr>
     </nav>
+
+  </>
   );
 }
 

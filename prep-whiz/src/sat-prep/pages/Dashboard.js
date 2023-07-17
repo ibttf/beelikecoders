@@ -28,10 +28,9 @@ const Dashboard = () => {
     },[])
     if (isLoading) return (<Loading />)
     return (
-        <div className="ml-60 mt-24 flex justify-between mr-60 items-center">
-
-                <h1 className="font-extrabold text-5xl text-gray-700">Welcome back, {user.email}</h1>
-                <Link to="/testprep/sat/learn">
+        <div className="ml-60 mt-24 flex justify-between">
+                <h1 className="font-extrabold text-5xl text-gray-700 w-full">Welcome back, {user.email}</h1>
+                <Link to="/testprep/sat/learn" className="w-full flex justify-end px-72">
                     <div className={`relative flex items-center 
                             h-12 w-36 mt-2 mb-2  
                             ml-2
@@ -44,7 +43,7 @@ const Dashboard = () => {
                     </div>
                 </Link>
             <div>
-
+                
             </div>
 
         </div>

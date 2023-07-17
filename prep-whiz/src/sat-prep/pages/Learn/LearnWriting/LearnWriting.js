@@ -63,7 +63,7 @@ const LearnWriting = () => {
 
     if (isLoading) return <Loading />
     return (
-        <div className="mx-60 mt-24">
+        <div className="mx-60 my-24">
             <h1 className="text-left font-extrabold text-5xl text-gray-700">Writing</h1>
             <div className="flex flex-col">
                 {topics.map((topic,i)=>(

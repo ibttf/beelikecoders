@@ -15,14 +15,12 @@ function LoginForm() {
     e.preventDefault();
     setIsLoading(true);
     try{
-      await signInWithEmailAndPassword(auth,email,password)
-      .then(userCredential=>{
-        localStorage.setItem('accessToken', userCredential.user.accessToken);
-      })
+      const userCredential = await signInWithEmailAndPassword(auth,email,password)
+      localStorage.setItem('accessToken', userCredential.user.accessToken);
       navigate("/")
       window.location.reload();
     }catch(err){
-      setErrors([err])
+      setErrors(["Invalid username or password."])
 
     }
     setIsLoading(false);
@@ -54,9 +52,9 @@ function LoginForm() {
           onChange={(e) => setPassword(e.target.value)}
         />
 
-        <button type="submit">{isLoading ? "Loading..." : "Sign In"}</button>
+        <button className="cursor-poitner" type="submit">{isLoading ? "Loading..." : "Sign In"}</button>
 
-        <div className="errors">
+        <div className="errors mt-8">
           {errors ? (
             errors.map((err) => <div key={err}>Oops! {err}</div>)
           ) : (
