@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import {auth} from '../config/firebase'
 import { createUserWithEmailAndPassword } from "firebase/auth";
+import config from "../baseUrl";
 function SignUpForm() {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");

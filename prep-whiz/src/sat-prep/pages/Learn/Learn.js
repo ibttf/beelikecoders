@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 
 const Learn = () => {
     return (
-        <div className="mx-60 mt-24 ">
+        <div className="mx-36 mt-24 ">
             <h1 className="text-center font-extrabold text-5xl text-gray-700">Learn</h1>
-            <div className="grid grid-col-3 grid-flow-col text-center mt-24">
+            <div className="grid grid-col-3 grid-flow-col text-center mt-24 gap-3">
                 <Link to="/testprep/sat/learn/reading">
                     <div className={`relative flex items-center 
                                 h-full w-96 mt-2 

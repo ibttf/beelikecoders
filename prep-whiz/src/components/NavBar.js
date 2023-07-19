@@ -39,19 +39,22 @@ const NavBar = (props) => {
     <nav className="bg-gray-200">
       <div className="flex items-center font-medium justify-around">
         <div className='md:w-auto w-full flex justify-between z-50 p-6'>
-          <div className="md:cursor-pointer h-9 flex items-center">
-            <h2 className="font-bold text-3xl ">
-              PrepWhiz
-            </h2>
-          </div>
+          <Link to ="/">
+            <div className="md:cursor-pointer h-9 flex items-center">
+              <h2 className="font-bold text-3xl ">
+              
+                PrepWhiz
+              </h2>
+            </div>
+          </Link>
           <div className="text-3xl md:hidden" onClick={()=>setOpen(!open)}>
             <ion-icon name={`${open ? 'close': "menu"}`}></ion-icon>
           </div>
         </div>
         <ul className="md:flex hidden uppercase items-center gap-8">
           <li className="hover:bg-gray-100">
-            <Link to="/" className="py-7 px-3 inline-block">
-              Home
+            <Link to="/about" className="py-7 px-3 inline-block">
+              About
             </Link>
           </li>
         {links.map((link) => (
@@ -64,7 +67,16 @@ const NavBar = (props) => {
                 setSubHeading("");
               }}
             >
-              {link.name}
+              
+              {link.name==='Test Prep' ?
+                <>{link.name}</>:
+                <Link to={`/${link.name.replace(" ","").toLowerCase()}`}>
+                  {link.name}
+                </Link>
+              }
+              
+
+
               {
                 link.submenu &&
                 <span className="text-xl md:mt-1 md:ml-2  md:block hidden group-hover:rotate-180 group-hover:-mt-2 duration-300">
@@ -162,8 +174,8 @@ const NavBar = (props) => {
         `}
         >
           <li>
-            <Link to="/" className="py-7 px-3 inline-block ">
-              Home
+            <Link to="/about" className="py-7 px-3 inline-block ">
+              About
             </Link>
           </li>
                 {links.map((link) => (

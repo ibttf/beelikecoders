@@ -6,7 +6,7 @@ import hero2 from "../styles/hero2.png"
 import squiggle from "../styles/red-squiggle.png";
 
 import "../styles/Home.css";
-const Home = (user) => {
+const Home = (props) => {
     return (
       <div>
         {/* HERO SECTION */}
@@ -20,7 +20,7 @@ const Home = (user) => {
                 Get access to the best resources and tutors on the market for less than everyone else
               </h2>
               <div className="grid grid-cols-4 grid-flow-col ">
-                <Link to ="/testprep/sat">
+                <Link to ={props.user ? "/testprep/sat" :"/login"}>
                   <button className="w-10/12 border-2 border-gray-900 p-2 text-gray-900 font-semibold text-lg rounded-3xl">Test Prep</button>
                 </Link>
                 <Link to="/tutoring">
@@ -47,7 +47,7 @@ const Home = (user) => {
               <h2 className="font-semibold text-xl text-gray-600 py-12">
                 Start studying today. Cancel anytime.
               </h2>
-              <Link to ="/testprep/sat">
+              <Link to={props.user ? "/testprep/sat" :"/login"}>
                 <button className="w-8/12 border-2 border-gray-900 p-2 text-gray-900 font-semibold text-lg rounded-3xl">Compare Plans</button>
               </Link>
 
@@ -108,7 +108,7 @@ const Home = (user) => {
               <h2 className="font-semibold text-xl text-gray-600 py-12">
                 Not happy? Tell us within 30 days and get a full refund on your purchase.
               </h2>
-              <Link to ="/testprep/sat">
+              <Link to={props.user ? "/testprep/sat" :"/login"}>
                 <button className="w-8/12 border-2 border-gray-900 p-2 text-gray-900 font-semibold text-lg rounded-3xl">Compare Plans</button>
               </Link>
 

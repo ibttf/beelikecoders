@@ -2,11 +2,19 @@ import React, {useState,useEffect} from 'react';
 import {AiOutlineArrowDown, AiOutlinePlus} from "react-icons/ai"
 import {BsFillPlayCircleFill ,BsPencilFill} from "react-icons/bs"
 import { Link, useNavigate } from 'react-router-dom';
+import config from '../../../../baseUrl';
 
 import Loading from '../../../../pages/Loading';
 const LearnMath = () => {
     const navigate=useNavigate();
     const [isLoading,setIsLoading]=useState(true);
+
+    const[topics,setTopics]=useState([])
+    const [lessonInteractions,setLessonInteractions]=useState([])
+    const [lessonCount,setLessonCount]=useState(0);
+
+
+
     const [isTopicZeroExpanded,setIsTopicZeroExpanded]=useState(false);
     const [isTopicOneExpanded,setIsTopicOneExpanded]=useState(false);
     const [isTopicTwoExpanded,setIsTopicTwoExpanded]=useState(false);
@@ -14,20 +22,7 @@ const LearnMath = () => {
     const [isTopicFourExpanded,setIsTopicFourExpanded]=useState(false);
     const [isTopicFiveExpanded,setIsTopicFiveExpanded]=useState(false);
     const [isTopicSixExpanded,setIsTopicSixExpanded]=useState(false);
-    const topics=[{name: "Linear Equations",
-                   lessons: [
-                    {name: "Solving 1-Variable Linear Equations"},
-                    {name: "Solving 4-Variable Linear Equations"},
-                   ]},
-                   {name: "Linear Equations 2",
-                   lessons: [
-                    {name: "Solving 2-Variable Linear Equations"}
-                   ]},
-                   {name: "Linear Equations 3",
-                   lessons: [
-                    {name: "Solving 3-Variable Linear Equations"}
-                   ]},
-                ]
+
     const expandTopic=async(id)=>{
         switch(id){
             case 0:
@@ -62,8 +57,40 @@ const LearnMath = () => {
     }
 
     useEffect(()=>{
+        setIsLoading(true);
+        
+        const getSubjectTopics=async()=>{
+            try{
+              const response = await fetch(`${config.baseUrl}/subjects/math/topics`);
+              const topics=await response.json()
+              setTopics([...topics])
+            }catch(err){
+              console.log(err)
+            }
+          }
+
+        const getLessonInteractionsBySubject=async()=>{
+            try{
+            const response = await fetch(`${config.baseUrl}/users/math/lesson-interactions`, {
+                headers: { 'Content-Type': 'application/json', 
+                            Authorization: `Bearer ${localStorage.getItem('accessToken')}` },
+            });
+            const data=await response.json()
+            setLessonInteractions([...data]);
+
+            }catch(err){
+            }
+        }
+        getSubjectTopics();
+        getLessonInteractionsBySubject();
+
         setIsLoading(false);
+        
     },[])
+
+
+
+
 
     if (isLoading) return <Loading />
     return (
@@ -87,26 +114,40 @@ const LearnMath = () => {
                         </AiOutlineArrowDown>
 
                     </div>
-                    {topic.lessons.map((lesson, j)=>(
+                    {topic.lessonNames.map((lessonName, j)=>(
                         <div className={`${checkExpandedTopic(i)?"h-full overflow-auto":"h-0 overflow-hidden hidden"}`}>
-                            <div className="m-3 flex items-center hover:bg-gray-200 rounded-xl group">
-                                <h1 onClick={()=>{navigate("/testprep/sat/learn/math/practice/"+lesson.name)}}
-                                    className={`text-lg text-gray-800 font-normal w-9/12 p-3 group-hover:underline`} >{j+1 + ". " + lesson.name}</h1>
-                                <BsPencilFill onClick={()=>{navigate("/testprep/sat/learn/math/practice/"+lesson.name)}}
+                            <div className={`m-3 flex items-center rounded-xl group ${lessonInteractions.includes(lessonName) ? "bg-green-100 " : "hover:bg-gray-200 "}`}>
+                                <h1 onClick={()=>{navigate("/testprep/sat/learn/math/practice/"+lessonName)}}
+                                    className={`text-lg text-gray-800 font-normal w-9/12 p-3  ${lessonInteractions.includes(lessonName) ? "" : "group-hover:underline"}`} >{j+1 + ". " + lessonName}</h1>
+                                <BsPencilFill onClick={()=>{navigate("/testprep/sat/learn/math/practice/"+topic.name+"/"+lessonName)}}
                                               className="ml-8 cursor-pointer border-2 border-white bg-gray-900 rounded-3xl text-white p-2 hover:bg-gray-200 hover:text-gray-900 hover:border-gray-900" size="36"/>
                                 <BsFillPlayCircleFill onClick={(e)=>{
                                     e.stopPropagation()
-                                    navigate("/testprep/sat/learn/math/video/"+lesson.name)
+                                    navigate("/testprep/sat/learn/math/video/"+lessonName)
                             
                                 }} className="ml-8 cursor-pointer border-2 border-white rounded-3xl text-gray-900" size="36"/>
-                                <h1 className={`text-center text-lg font-bold ml-8 border py-1 px-4 bg-green-${5+"00"} text-gray-300 rounded-3xl`}>5</h1>
+                                {lessonInteractions.map((lessonInteraction)=>{
+                                    if (lessonInteraction.lessonName===lessonName){
+                                        return (
+                                            <h1 className={`text-center text-lg font-bold ml-8 border py-1 px-4 bg-green-${lessonInteraction.mastery}00 border-gray-900 text-gray-900 rounded-3xl`}>
+                                                {lessonInteraction.mastery}
+                                            </h1>
+                                            )
+                                        }return (
+                                            <h1 className={`text-center text-lg font-bold ml-8 border py-1 px-4 border-gray-900 text-gray-900 rounded-3xl`}>
+                                                0
+                                            </h1>
+                                            )
+                                    })
+
+                                }
+
                             </div>
                             <hr className={`border border-gray-200 rounded-full mx-2`} />
                         </div>
                     ))}
                 </div>
                 ))}
-
             </div>
         </div>
     );

@@ -1,6 +1,6 @@
 import {useState} from "react"
 import { Link } from "react-router-dom";
-import { BsFillClockFill, BsFillLightningFill, BsGearFill, BsSpeedometer2 } from 'react-icons/bs';
+import { BsFillClockFill, BsFillLightningFill, BsGearFill, BsSpeedometer2, BsFillPencilFill } from 'react-icons/bs';
 import {AiOutlineArrowRight} from "react-icons/ai"
 const SideBar = () => {
   const [isExpanded,setIsExpanded]=useState(false);
@@ -25,19 +25,31 @@ const SideBar = () => {
             </AiOutlineArrowRight>
         </div>
         {isExpanded ?<></>: <Divider />}
-        <div className={`w-full ${isExpanded? "hover:bg-gray-700": ""}`}>
+
+
+
+
+
+
+
+
+
+
+        <div className={`w-full group ${isExpanded? "hover:bg-gray-700": ""}`}>
             <Link to="/testprep/sat">
                 
                 <div className={`relative flex items-center 
                             h-12 w-12 mt-2 mb-2  
-                            ml-2
+                            ml-2 group-hover:bg-gray-500
+                                 group-hover:text-white
+                                   group-hover:rounded-xl
                             bg-gray-800 hover:bg-gray-500
                             text-gray-500 hover:text-white
                             hover:rounded-xl rounded-3xl
                             transition-all duration-300 ease-linear
                             cursor-pointer shadow-lg  group justify-center  ${isExpanded ? "p-3" : "p-2"}`}>
                     <BsSpeedometer2 size="32" />
-                    <span class={`absolute w-auto p-2 m-2 min-w-max  rounded-md shadow-md
+                    <span className={`absolute w-auto p-2 m-2 min-w-max  rounded-md shadow-md
                                 scale-0 origin-left; 
                                 ${isExpanded ? "scale-100 left-12 text-md font-medium capitalize font-sans tracking-wide text-gray-400 group hover:bold": "text-gray-800  transition-all font-bold text-xs group-hover:scale-100 left-14 duration-100"}` 
                                 }>
@@ -46,6 +58,16 @@ const SideBar = () => {
                 </div>
             </Link>
         </div>
+
+
+
+
+
+
+
+
+
+
         <div className={`w-full ${isExpanded? "hover:bg-gray-700": ""}`}>
             <Link to="/testprep/sat/learn">
                 
@@ -58,7 +80,7 @@ const SideBar = () => {
                             transition-all duration-300 ease-linear
                             cursor-pointer shadow-lg  group justify-center  ${isExpanded ? "p-3" : "p-2"}`}>
                     <BsFillLightningFill size="32" />
-                    <span class={`absolute w-auto p-2 m-2 min-w-max  rounded-md shadow-md
+                    <span className={`absolute w-auto p-2 m-2 min-w-max  rounded-md shadow-md
                                 scale-0 origin-left; 
                                 ${isExpanded ? "scale-100 left-12 text-md font-medium capitalize font-sans tracking-wide text-gray-400 group hover:bold": "text-gray-800  transition-all font-bold text-xs group-hover:scale-100 left-14 duration-100"}` 
                                 }>
@@ -78,8 +100,8 @@ const SideBar = () => {
                             hover:rounded-xl rounded-3xl
                             transition-all duration-300 ease-linear
                             cursor-pointer shadow-lg  group justify-center  ${isExpanded ? "p-3" : "p-2"}`}>
-                    <BsFillClockFill size="32" />
-                    <span class={`absolute w-auto p-2 m-2 min-w-max  rounded-md shadow-md
+                    <BsFillPencilFill  size="32" />
+                    <span className={`absolute w-auto p-2 m-2 min-w-max  rounded-md shadow-md
                                 scale-0 origin-left; 
                                 ${isExpanded ? "scale-100 left-12 text-md font-medium capitalize font-sans tracking-wide text-gray-400 group hover:bold": "text-gray-800  transition-all font-bold text-xs group-hover:scale-100 left-14 duration-100"}` 
                                 }>
@@ -101,7 +123,7 @@ const SideBar = () => {
                             transition-all duration-300 ease-linear
                             cursor-pointer shadow-lg  group justify-center  ${isExpanded ? "p-3" : "p-2"}`}>
                     <BsGearFill size="32" />
-                    <span class={`absolute w-auto p-2 m-2 min-w-max  rounded-md shadow-md
+                    <span className={`absolute w-auto p-2 m-2 min-w-max  rounded-md shadow-md
                                 scale-0 origin-left; 
                                 ${isExpanded ? "scale-100 left-12 text-md font-medium capitalize font-sans tracking-wide text-gray-400 group hover:bold": "text-gray-800  transition-all font-bold text-xs group-hover:scale-100 left-14 duration-100"}` 
                                 }>

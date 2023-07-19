@@ -10,7 +10,6 @@ import EditProfile from "../pages/EditProfile";
 import Sidebar from "../sat-prep/components/Sidebar"
 import Dashboard from "../sat-prep/pages/Dashboard"
 import Practice from "../sat-prep/pages/Practice/Practice";
-
   // SAT PREP LEARN
   import Learn from "../sat-prep/pages/Learn/Learn";
 import Video from "../sat-prep/pages/Learn/LearnVideo";
@@ -62,22 +61,44 @@ function App() {
     return <Loading />
   }
   if(!user){
-    {console.log("hello")}
     return(
     <>
       <main>
       <Routes>
+
           {/* AUTH */}
           <Route path="/login" element={
             <Login />
           } />
 
+          {/* TUTORING PAGE */}
+          <Route path="/tutoring" element={
+            <>
+              <NavBar user={user} />
+              <Footer />
+            </>
+          } />
+          {/* ABOUT PAGE */}
+          <Route path="/about" element={
+            <>
+              <NavBar user={user} />
+              <Footer />
+            </>
+          } />
+          {/* CONTACT PAGE */}
+          <Route path="/contact" element={
+            <>
+              <NavBar user={user} />
+              <Footer />
+            </>
+          } />
 
           {/* HOME PAGE */}
           <Route path="/" element={
             <>
               <NavBar user={user} />
               <Home user={user} />
+              <Footer />
             </>
           } />
 
@@ -89,7 +110,7 @@ function App() {
     <>
       <main >
         <Routes>
-          {/* PRACTICE ROUTES */}
+      {/* PRACTICE ROUTES */}
         <Route path="/testprep/sat/practice" element={
           <>
             <Sidebar />
@@ -111,7 +132,7 @@ function App() {
 
           </> 
           } />
-          <Route path="/testprep/sat/learn/math/practice/:lesson" element={
+          <Route path="/testprep/sat/learn/:subject/practice/:topic/:lesson" element={
           <>
             <LearnPracticeTopBar />
             <LearnMathPractice />
@@ -188,6 +209,21 @@ function App() {
           <Route path="/tutoring" element={
             <>
               <NavBar user={user} />
+              <Footer />
+            </>
+          } />
+          {/* ABOUT PAGE */}
+          <Route path="/about" element={
+            <>
+              <NavBar user={user} />
+              <Footer />
+            </>
+          } />
+          {/* CONTACT PAGE */}
+          <Route path="/contact" element={
+            <>
+              <NavBar user={user} />
+              <Footer />
             </>
           } />
 

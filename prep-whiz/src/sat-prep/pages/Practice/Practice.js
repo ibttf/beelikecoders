@@ -70,7 +70,7 @@ const Practice = () => {
 
             {/* INDIVIDUAL SECTION SELECTION MENU */}
             <div className={`text-center ${isIndividualClicked ? "h-full" : "h-0 overflow-hidden"}`}>
-                <div className="grid grid-cols-4 grid-flow-col gap-8 my-16 px-48">
+                <div className="grid grid-cols-3 grid-flow-col gap-8 my-16 px-48">
                     <div className="flex flex-col justify-center">
                         <label for="countries" className="text-center block mb-2 text-sm font-medium text-gray-900">Section</label>
                         <select  onChange={e=>setSelectedSection(e.target.value)} 
@@ -144,16 +144,7 @@ const Practice = () => {
                             <option value="4">4</option>
                         </select>
                     </div>
-                    <div className="flex flex-col justify-center">
-                        <label for="reading-subject" className="text-center block mb-2 text-sm font-medium text-gray-900">Subject</label>
-                        <select id="reading-subject" className=" border border-black text-gray-900 text-md rounded-lg focus:ring-gray-500 focus:border-gray-500 block w-full px-2.5 py-6">
-                            <option selected value="random">Random</option>
-                            <option value="literature">Literature</option>
-                            <option value="science">Science</option>
-                            <option value="social-science">Social Science</option>
-                            <option value="history">History</option>
-                        </select>
-                    </div>
+
                     </>
                 )
             
@@ -170,16 +161,7 @@ const Practice = () => {
                             <option value="4">4</option>
                         </select>
                     </div>
-                    <div className="flex flex-col justify-center">
-                        <label for="writing-topic" className="text-center block mb-2 text-sm font-medium text-gray-900">Topic</label>
-                        <select id="writing-topic" className=" border border-black text-gray-900 text-md rounded-lg focus:ring-gray-500 focus:border-gray-500 block w-full px-2.5 py-6">
-                            <option selected value="random">Random</option>
-                            <option value="">Grammar Topic 1</option>
-                            <option value="">Grammar Topic 2</option>
-                            <option value="">Grammar Topic 3</option>
-                            <option value="">Grammar Topic 4</option>
-                        </select>
-                    </div>
+
                     </>
                 )
 
@@ -191,26 +173,13 @@ const Practice = () => {
                         <label for="mathnc-questions" className="text-center block mb-2 text-sm font-medium text-gray-900">Number of Questions</label>
                         <select id="mathnc-questions" className=" border border-black text-gray-900 text-md rounded-lg focus:ring-gray-500 focus:border-gray-500 block w-full px-2.5 py-6">
                             <option selected>Select</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="4">5</option>
-                            <option value="4">10</option>
-                            <option value="4">15</option>
-                            <option value="4">20</option>
+                            <option value="5">5</option>
+                            <option value="10">10</option>
+                            <option value="15">15</option>
+                            <option value="20">20</option>
                         </select>
                     </div>
-                    <div className="flex flex-col justify-center">
-                        <label for="mathnc-topics" className="text-center block mb-2 text-sm font-medium text-gray-900">Topics</label>
-                        <select id="mathnc-topics" className=" border border-black text-gray-900 text-md rounded-lg focus:ring-gray-500 focus:border-gray-500 block w-full px-2.5 py-6">
-                            <option selected value="random">Random</option>
-                            <option value="">Math Topic 1</option>
-                            <option value="">Math Topic 2</option>
-                            <option value="">Math Topic 3</option>
-                            <option value="">Math Topic 4</option>
-                        </select>
-                    </div>
+
                     </>
                 )
 
@@ -222,24 +191,12 @@ const Practice = () => {
                         <label for="mathc-questions" className="text-center block mb-2 text-sm font-medium text-gray-900">Number of Questions</label>
                         <select id="mathc-questions" className=" border border-black text-gray-900 text-md rounded-lg focus:ring-gray-500 focus:border-gray-500 block w-full px-2.5 py-6">
                             <option selected>Select</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="4">5</option>
-                            <option value="4">10</option>
-                            <option value="4">15</option>
-                            <option value="4">38</option>
-                        </select>
-                    </div>
-                    <div className="flex flex-col justify-center">
-                        <label for="mathc-topics" className="text-center block mb-2 text-sm font-medium text-gray-900">Topics</label>
-                        <select id="mathc-topics" className=" border border-black text-gray-900 text-md rounded-lg focus:ring-gray-500 focus:border-gray-500 block w-full px-2.5 py-6">
-                            <option selected value="random">Random</option>
-                            <option value="">Math Topic 1</option>
-                            <option value="">Math Topic 2</option>
-                            <option value="">Math Topic 3</option>
-                            <option value="">Math Topic 4</option>
+                            <option value="5">5</option>
+                            <option value="10">10</option>
+                            <option value="15">15</option>
+                            <option value="20">20</option>
+                            <option value="25">25</option>
+                            <option value="38">38</option>
                         </select>
                     </div>
                     </>
