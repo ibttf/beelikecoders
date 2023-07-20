@@ -211,12 +211,6 @@ const Practice = () => {
                             <option selected>Locked</option>
                         </select>
                     </div>
-                    <div className="flex flex-col justify-center">
-                        <label for="reading-questions" className="text-center block mb-2 text-sm font-medium text-gray-900">Subject</label>
-                        <select disabled id="reading-questions" className="bg-gray-200 border border-black text-gray-900 text-md rounded-lg focus:ring-gray-500 focus:border-gray-500 block w-full px-2.5 py-6">
-                            <option selected>Locked</option>
-                        </select>
-                    </div>
                     </>
                 )
 
