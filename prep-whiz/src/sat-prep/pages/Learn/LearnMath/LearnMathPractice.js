@@ -90,7 +90,21 @@ const LearnMathPractice = (props) => {
     }
 
     const handleNextQuestionClick=async()=>{
-        console.log("hey")
+            try{
+              const response = await fetch(`${config.baseUrl}/questions/next-question`,{
+                method: "POST",
+                headers: { 'Content-Type': 'application/json', 
+                            Authorization: `Bearer ${localStorage.getItem('accessToken')}` },
+                body: JSON.stringify({
+                    qid: questionDetails._id
+                })
+              });
+              const jsonResponse=await response.json()
+              console.log(jsonResponse);
+            }catch(err){
+                console.log(err);
+            }
+
     }
     
     function getCorrectChoices(){
@@ -142,15 +156,15 @@ const LearnMathPractice = (props) => {
     }
 
     useEffect(()=>{
-        const getQuestionQuestionInteractionAndLessonDetailsByLessonName=async()=>{
+        const getQuestionQILessonLIWithName=async()=>{
             try{
-              const response = await fetch(`${config.baseUrl}/lessons/question-interactions/${lesson}/${qid.current}/${questionCounter.current}`,{
+              const response = await fetch(`${config.baseUrl}/lessons/question-interactions/${lesson}`,{
                 headers: { 'Content-Type': 'application/json', 
                             Authorization: `Bearer ${localStorage.getItem('accessToken')}` },
               });
               
               const jsonResponse=await response.json()
-              console.log(jsonResponse);
+              console.log(jsonResponse.message);
               
               if (jsonResponse.message){
                 setQuestionDetails(jsonResponse)
@@ -166,14 +180,13 @@ const LearnMathPractice = (props) => {
             }
           }
 
-        getQuestionQuestionInteractionAndLessonDetailsByLessonName();
+        getQuestionQILessonLIWithName();
 
         
 
     },[toggle])
 
-    if (!questionDetails || !lessonDetails){
-        {console.log(questionDetails)}
+    if (!questionDetails){
         return <Loading />
     } 
     
