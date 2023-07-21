@@ -100,9 +100,7 @@ const LearnMathPractice = (props) => {
                 })
               });
               const jsonResponse=await response.json()
-              console.log(jsonResponse);
             }catch(err){
-                console.log(err);
             }
 
     }
@@ -164,7 +162,6 @@ const LearnMathPractice = (props) => {
               });
               
               const jsonResponse=await response.json()
-              console.log(jsonResponse.message);
               
               if (jsonResponse.message){
                 setQuestionDetails(jsonResponse)
@@ -175,7 +172,6 @@ const LearnMathPractice = (props) => {
               }
 
             }catch(err){
-                console.log("hello")
                 setQuestionDetails({message: "All out of questions."})
             }
           }
@@ -200,7 +196,6 @@ const LearnMathPractice = (props) => {
     }
 
     if (isShowingSolution.current){
-        console.log("hello2")
         return(
             <div>
             {/*  INNER TOP BAR AND QUESTION */}

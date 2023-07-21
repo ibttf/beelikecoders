@@ -5,7 +5,6 @@ import hero from "../styles/hero.png";
 import hero2 from "../styles/hero2.png"
 import squiggle from "../styles/red-squiggle.png";
 
-import "../styles/Home.css";
 const Home = (props) => {
     return (
       <div>
