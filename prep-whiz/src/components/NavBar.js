@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import logo from "../styles/logo-no-background.png"
 const NavBar = (props) => {
-  const[open,setOpen]=useState(false);
   const [heading, setHeading] = useState("");
   const [subHeading, setSubHeading] = useState("");
   const links=[
@@ -36,19 +35,18 @@ const NavBar = (props) => {
   }
   return (
   <>
-    <nav className="bg-gray-200">
+    <nav className={`bg-gray-200`}>
       <div className="flex items-center font-medium justify-around">
         <div className='md:w-auto w-full flex justify-between z-50 p-6'>
           <Link to ="/">
             <div className="md:cursor-pointer h-9 flex items-center">
               <h2 className="font-bold text-3xl ">
-              
                 PrepWhiz
               </h2>
             </div>
           </Link>
-          <div className="text-3xl md:hidden" onClick={()=>setOpen(!open)}>
-            <ion-icon name={`${open ? 'close': "menu"}`}></ion-icon>
+          <div className="text-3xl md:hidden" onClick={()=>props.setOpen(!props.open)}>
+            <ion-icon name={`${props.open ? 'close': "menu"}`}></ion-icon>
           </div>
         </div>
         <ul className="md:flex hidden uppercase items-center gap-8">
@@ -87,7 +85,7 @@ const NavBar = (props) => {
             </h1>
             {link.submenu && (
               <div className="z-20 absolute bg-gray-300 border-2 border-gray-700  top-20 py-4 px-20 left-0 mx-40 hidden group-hover:md:block hover:md:block">
-                <h1 className="text-3xl capitalize font-normal py-5">
+                <h1 className="text-3xl capitalize font-normal py-5 whitespace-nowrap">
                   Test Prep
                 </h1>
                 <h3 className="normal-case font-normal font-sans py-2">
@@ -169,8 +167,8 @@ const NavBar = (props) => {
 
         </div>
         {/* MOBILE NAV */}
-        <ul className={`md:hidden bg-gray-200 absolute w-full h-full bottom-0 py-24 pl-4
-        duration-500 ${open ? 'left-0' : 'left-[-100%]'}
+        <ul className={`md:hidden bg-gray-200 bg-opacity-80 absolute w-full h-screen bottom-0 py-24 pl-4 z-10 md:overscroll-contain
+        duration-500 ${props.open ? 'left-0' : 'left-[-100%]'}
         `}
         >
           <li>
@@ -182,7 +180,7 @@ const NavBar = (props) => {
         <div>
           <div className="px-3 text-left md:cursor-pointer group">
             <h1
-              className="py-7 flex justify-between items-center md:pr-0 pr-5 group cursor-pointer"
+              className="py-7 flex justify-between items-center mdl:pr-0 pr-5 group cursor-pointer whitespace-nowrap"
               onClick={() => {
                 heading !== link.name ? setHeading(link.name) : setHeading("");
                 setSubHeading("");

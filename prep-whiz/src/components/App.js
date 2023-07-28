@@ -34,6 +34,9 @@ function App() {
   const [user,setUser]=useState(null)
   const [isLoading,setIsLoading]=useState(true);
   const [isExpanded,setIsExpanded]=useState(false);
+  const[open,setOpen]=useState(false);
+
+
   useEffect(() => {
     setIsLoading(true);
     checkLoginStatus();
@@ -74,7 +77,7 @@ function App() {
           {/* TUTORING PAGE */}
           <Route path="/tutoring" element={
             <>
-              <NavBar user={user} />
+              <NavBar user={user} open={open} setOpen={setOpen}/>
               <Footer />
             </>
           } />
@@ -96,8 +99,8 @@ function App() {
           {/* HOME PAGE */}
           <Route path="/" element={
             <>
-              <NavBar user={user} />
-              <Home user={user} />
+              <NavBar user={user} open={open} setOpen={setOpen}/>
+              <Home user={user} open={open}/>
               <Footer />
             </>
           } />
@@ -207,8 +210,8 @@ function App() {
           {/* HOME PAGE */}
           <Route path="/" element={
             <>
-              <NavBar user={user} />
-              <Home user={user} />
+              <NavBar user={user} open={open} setOpen={open}/>
+              <Home user={user} open={open}/>
               <Footer />
             </>
           } />
