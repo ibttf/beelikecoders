@@ -1,14 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Learn = () => {
+const Learn = (props) => {
     return (
-        <div className="mx-36 mt-24 ">
+        <div className={`${props.isExpanded ? "ml-60":"mx-24"}  duration-100 mt-24`}>
             <h1 className="text-center font-extrabold text-5xl text-gray-700">Learn</h1>
             <div className="grid grid-col-3 grid-flow-col text-center mt-24 gap-3">
                 <Link to="/testprep/sat/learn/reading">
                     <div className={`relative flex items-center 
-                                h-full w-96 mt-2 
+                                h-full ${props.isExpanded ? "w-88":"w-96"}
+                                text-center
                                 bg-gray-700 hover:bg-gray-900
                                 text-white hover:text-white
                                 rounded-3xl
@@ -23,7 +24,9 @@ const Learn = () => {
                 </Link>
                 <Link to="/testprep/sat/learn/writing">
                     <div className={`relative flex items-center 
-                                h-full w-96 mt-2 
+                                ${props.isExpanded ? "w-88":"w-96"}
+                                text-center
+                                h-full 
                                 bg-gray-700 hover:bg-gray-900
                                 text-white hover:text-white
                                 rounded-3xl
@@ -38,7 +41,9 @@ const Learn = () => {
                 </Link>
                 <Link to="/testprep/sat/learn/math">
                     <div className={`relative flex items-center 
-                                h-full w-96 mt-2 
+                                ${props.isExpanded ? "w-88":"w-96"}
+                                text-center
+                                h-full
                                 bg-gray-700 hover:bg-gray-900
                                 text-white hover:text-white
                                 rounded-3xl

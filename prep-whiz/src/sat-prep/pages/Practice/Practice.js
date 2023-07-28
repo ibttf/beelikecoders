@@ -3,14 +3,14 @@ import {AiOutlineCheck} from "react-icons/ai"
 import {SlDoc, SlDocs} from "react-icons/sl"
 import { Link } from 'react-router-dom';
 
-const Practice = () => {
+const Practice = (props) => {
      const[isIndividualClicked,setIsIndividualClicked]=useState(false);
      const [isFullClicked,setIsFullClicked]=useState(false);
      const [selectedSection, setSelectedSection]=useState("")
      const [isTimed,setIsTimed]=useState(false);
      
     return (
-        <div className="mx-60 mt-24 ">
+        <div className={`${props.isExpanded ? "ml-72": ""} mx-48 mt-24 duration-300`}>
         <h1 className="text-center font-extrabold text-5xl text-gray-700">Practice</h1>
         <div className="grid grid-col-2 grid-flow-col text-center mt-24 gap-16 auto-cols-fr">
         
@@ -18,21 +18,21 @@ const Practice = () => {
             <div onClick={()=>{setIsFullClicked(false); setIsIndividualClicked(true)}}
             className={`relative flex items-center 
                             h-full w-11/12 mt-2 
-                            border-2 hover:border-gray-900
+                            border-2 hover:border-gray-900 
                             bg-gray-200
                             text-gray-700
                             rounded-3xl
                             transition-all duration-300 ease-linear
                             cursor-pointer shadow-lg  group justify-center p-2
                             py-12 flex-col group`}>
-                    <SlDoc size="48" className="mb-8"/>
+                    <SlDoc size="48" className="mb-8 h-16"/>
                     <div className="flex items-center">
-                        <div className={`relative items-center opacity-0 
-                        bg-gray-800 text-white  left-72 bottom-24
+                        <div className={`relative items-center bottom-28 left-4 opacity-0 
+                        bg-gray-800 text-white 
                         rounded-3xl shadow-lg  group justify-center p-2 group-hover:opacity-100`}>
                             <AiOutlineCheck size="24" />
                         </div>
-                        <h1 className="text-3xl font-bold w-full">Individual Section</h1>
+                        <h1 className="text-3xl font-bold w-88">Individual Section</h1>
                     </div>
 
 
@@ -44,23 +44,23 @@ const Practice = () => {
                 <div onClick={()=>{setIsIndividualClicked(false); setIsFullClicked(true)}}
                     className={`relative flex items-center 
                             h-full w-11/12 mt-2 
-                            border-2 hover:border-gray-900
+                            border-2 hover:border-gray-900 
                             bg-gray-200
                             text-gray-700
                             rounded-3xl
                             transition-all duration-300 ease-linear
                             cursor-pointer shadow-lg  group justify-center p-2
                             py-12 flex-col group`}>
-                    <SlDocs size="48" className="mb-8"/>
+                    <SlDocs size="48" className="mb-8 h-16"/>
                     <div className="flex items-center">
-                        <div className={`relative items-center opacity-0 
-                        bg-gray-800 text-white  left-64 bottom-24
+                        <div className={`relative items-center bottom-28 left-4 opacity-0 
+                        bg-gray-800 text-white 
                         rounded-3xl shadow-lg  group justify-center p-2 group-hover:opacity-100`}>
                             <AiOutlineCheck size="24" />
                         </div>
-                        <h1 className="text-3xl font-bold w-full">Full Test</h1>
+                        <h1 className="text-3xl font-bold w-88">Full Test</h1>
                     </div>
-                    <p className="py-4 px-4 text-left"> Emulate the real testing environment with a full test
+                    <p className="py-4 px-4 text-left whitespace-nowrap"> Emulate the real testing environment with a full test
                     </p>
                 </div>
 

@@ -4,8 +4,8 @@ const Footer = () => {
     return (
 
     <footer className="bg-gray-900">
-        <div className="mx-auto w-full max-w-screen-xl">
-        <div className="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
+        <div className="mx-auto w-full max-w-screen-xl md:px-12">
+        <div className="grid  grid-flow-col grid-cols-2  px-4 py-6 lg:gap-48 lg:py-8 sm:gap-8">
             <div>
                 <h2 className="mb-6 text-sm font-semibold uppercase text-white">Company</h2>
                 <ul className="text-gray-400 font-medium">
@@ -16,17 +16,6 @@ const Footer = () => {
                         <a href="/" className="hover:underline">Careers</a>
                     </li>
                     
-                </ul>
-            </div>
-            <div>
-                <h2 className="mb-6 text-sm font-semibold uppercase text-white">Help center</h2>
-                <ul className="text-gray-400 font-medium">
-                    <li className="mb-4">
-                        <a href="/" className="hover:underline">Ask a Question</a>
-                    </li>
-                    <li className="mb-4">
-                        <a href="/" className="hover:underline">Contact Us</a>
-                    </li>
                 </ul>
             </div>
             <div>
@@ -41,16 +30,17 @@ const Footer = () => {
                 </ul>
             </div>
             <div>
-                <h2 className="mb-6 text-sm font-semibold uppercase text-white">Download</h2>
+                <h2 className="mb-6 text-sm font-semibold uppercase text-white">Help center</h2>
                 <ul className="text-gray-400 font-medium">
                     <li className="mb-4">
-                        <p className="cursor-default">iOS — Coming Soon</p>
+                        <a href="/" className="hover:underline">Ask a Question</a>
                     </li>
                     <li className="mb-4">
-                        <p className="cursor-default">Android — Coming Soon</p>
+                        <a href="/" className="hover:underline">Contact Us</a>
                     </li>
                 </ul>
             </div>
+
         </div>
         <div className="px-12 py-6 bg-gray-700 flex flex-col md:flex md:items-center md:justify-between">
             <span className="text-sm text-gray-300 text-center w-full">© 2023 PrepWhiz™ All Rights Reserved.

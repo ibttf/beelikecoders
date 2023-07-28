@@ -8,7 +8,7 @@ const LearnPracticeTopBar = (props) => {
         <>
             <div className="grid grid-cols-3 grid-flow-col items-center text-center gap-16 mt-8">
                 <div className="font-semibold text-gray-500 flex items-center justify-center">
-                    <AiOutlinePlus size="32" className="border-2 border-white rounded-xl p-1 mx-2 bg-red-800 text-white"/>
+                    {getCorrectIcon(props.subject)}
                     <h2>{lesson}</h2>
                 </div>
                 <h2 onClick={()=>{navigate("/testprep/sat")}}
@@ -20,6 +20,15 @@ const LearnPracticeTopBar = (props) => {
             <hr className="my-8"></hr>
         </>
     )
+    function getCorrectIcon(subject){
+        if (subject=="math"){
+            return (<AiOutlinePlus size="32" className="border-2 border-white rounded-xl p-1 mx-2 bg-red-800 text-white"/>)
+        }else if (subject=="writing"){
+
+        }else{
+            
+        }
+    }
 }
 
 export default LearnPracticeTopBar;

@@ -2,3 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components{
+    .w-88{
+      width: 22rem;
+    }
+  }
+   

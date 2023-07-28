@@ -5,7 +5,7 @@ import {BsFillPlayCircleFill} from "react-icons/bs"
 import {TbCalculator, TbCalculatorOff} from 'react-icons/tb'
 import Loading from '../../../../pages/Loading';
 import config from '../../../../baseUrl';
-const LearnMathPractice = (props) => {
+const LearnReadingPractice = (props) => {
     const {lesson}=useParams();
     const [lessonDetails,setLessonDetails]=useState(null)
     const [questionDetails,setQuestionDetails]=useState(null)
@@ -127,7 +127,7 @@ const LearnMathPractice = (props) => {
                         {/* CHANGE THIS RIGHT HERE TO HAVE QUESTION BE DYNAMICALLY LOADED IDK HOW YET THO */}
                         <h2 className="mx-4 font-normal text-md text-gray-500 w-11/12">Question {lessonDetails.questionCounter % 5} of 5 <span className="text-red-700 font-bold">{lessonDetails.isReviewing ? `INCORRECT`:`` }</span></h2>
                         <div className="flex items-center">
-                            <div onClick={()=>{navigate("/testprep/sat/learn/math/video/"+lesson)}}
+                            <div onClick={()=>{navigate("/testprep/sat/learn/reading/video/"+lesson)}}
                                 className="flex items-center mx-2">
                                 <BsFillPlayCircleFill size="24" className="text-gray-500 hover:text-gray-900"/>
                                 <h1 className="mx-1 font-light text-xs ">Video</h1>
@@ -212,7 +212,7 @@ const LearnMathPractice = (props) => {
                         {/* CHANGE THIS RIGHT HERE TO HAVE QUESTION BE DYNAMICALLY LOADED IDK HOW YET THO */}
                         <h2 className="mx-4 font-normal text-md text-gray-500 w-11/12">Question {lessonDetails.questionCounter % 5} of 5</h2>
                         <div className="flex items-center">
-                            <div onClick={()=>{navigate("/testprep/sat/learn/math/video/"+lesson)}}
+                            <div onClick={()=>{navigate("/testprep/sat/learn/reading/video/"+lesson)}}
                                 className="flex items-center mx-2">
                                 <BsFillPlayCircleFill size="24" className="text-gray-500 hover:text-gray-900"/>
                                 <h1 className="mx-1 font-light text-xs ">Video</h1>
@@ -311,7 +311,6 @@ const LearnMathPractice = (props) => {
 
                     </h2>
 
-                    {displayButtonOnAnswerChoiceAndNextQuestionPending()}
                     {answerChoice.current? 
                      <button onClick={()=>{handleQuestionSubmit()}}
                      className="border-2 px-4 py-3 my-2 rounded-xl bg-blue-700 text-gray-300 font-bold whitespace-nowrap hover:bg-blue-900 ">Check Answer</button>
@@ -407,12 +406,8 @@ function changeQuestionChoice(choice){
     }
 }
 
-function displayButtonOnAnswerChoiceAndNextQuestionPending(){
-    
-}
-
 }
     
 
 
-export default LearnMathPractice;
+export default LearnReadingPractice;

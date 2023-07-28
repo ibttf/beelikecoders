@@ -16,15 +16,14 @@ import Video from "../sat-prep/pages/Learn/LearnVideo";
 import LearnPracticeTopBar from "../sat-prep/pages/Learn/LearnPracticeTopBar";
 
     //SAT LEARN MATH
-import LearnMath from "../sat-prep/pages/Learn/LearnMath/LearnMath";
+import LearnSubject from "../sat-prep/pages/Learn/LearnSubject";
 import LearnMathPractice from "../sat-prep/pages/Learn/LearnMath/LearnMathPractice";
 
     //SAT LEARN READING
-import LearnReading from "../sat-prep/pages/Learn/LearnReading/LearnReading";
+import LearnReadingPractice from "../sat-prep/pages/Learn/LearnReading/LearnReadingPractice";
 
-    //SAT LEARN WRITING
-import LearnWriting from "../sat-prep/pages/Learn/LearnWriting/LearnWriting";
-
+    //SAT LEARN WRITING=
+import LearnWritingPractice from "../sat-prep/pages/Learn/LearnWriting/LearnWritingPractice";
 
 
 
@@ -34,6 +33,7 @@ import config from "../baseUrl"
 function App() {
   const [user,setUser]=useState(null)
   const [isLoading,setIsLoading]=useState(true);
+  const [isExpanded,setIsExpanded]=useState(false);
   useEffect(() => {
     setIsLoading(true);
     checkLoginStatus();
@@ -108,86 +108,63 @@ function App() {
   }
   return (
     <>
-      <main >
+      <main className="overflow-x-hidden">
         <Routes>
       {/* PRACTICE ROUTES */}
         <Route path="/testprep/sat/practice" element={
           <>
-            <Sidebar />
-            <Practice />
+            <Sidebar isExpanded={isExpanded} setIsExpanded={setIsExpanded}/>
+            <Practice isExpanded={isExpanded}/>
           </>
           } />
 
     {/* LEARN ROUTES */}
           {/* PRACTICE ROUTES */}
+
           <Route path="/testprep/sat/learn/reading/practice/:lesson" element={
           <>
-            <LearnPracticeTopBar />
-
+            <LearnPracticeTopBar subject={"reading"}/>
+            <LearnReadingPractice />
           </>
           } />
           <Route path="/testprep/sat/learn/writing/practice/:lesson" element={
           <>
-            <LearnPracticeTopBar />
-
-          </> 
+            <LearnPracticeTopBar subject={"writing"}/>
+            <LearnWritingPractice />
+          </>
           } />
-          <Route path="/testprep/sat/learn/:subject/practice/:topic/:lesson" element={
+          <Route path="/testprep/sat/learn/math/practice/:lesson" element={
           <>
-            <LearnPracticeTopBar />
+            <LearnPracticeTopBar subject={"math"}/>
             <LearnMathPractice />
           </>
           } />
           {/* VIDEO ROUTES */}
-          <Route path="/testprep/sat/learn/reading/video/:lesson" element={
+          <Route path="/testprep/sat/learn/:subject/video/:lesson" element={
           <>
-            <Sidebar />
-            <Video />
-          </>
-          } />
-          <Route path="/testprep/sat/learn/writing/video/:lesson" element={
-          <>
-            <Sidebar />
-            <Video />
-          </> 
-          } />
-          <Route path="/testprep/sat/learn/math/video/:lesson" element={
-          <>
-            <Sidebar />
-            <Video />
+            <Sidebar isExpanded={isExpanded} setIsExpanded={setIsExpanded}/>
+            <Video isExpanded={isExpanded}/>
           </>
           } />
         {/* BASE ROUTES */}
-          <Route path="/testprep/sat/learn/reading" element={
+          <Route path="/testprep/sat/learn/:subject" element={
           <>
-            <Sidebar />
-            <LearnReading />
-          </>
-          } />
-          <Route path="/testprep/sat/learn/writing" element={
-          <>
-            <Sidebar />
-            <LearnWriting />
-          </>
-          } />
-          <Route path="/testprep/sat/learn/math" element={
-          <>
-            <Sidebar />
-            <LearnMath />
+            <Sidebar isExpanded={isExpanded} setIsExpanded={setIsExpanded}/>
+            <LearnSubject isExpanded={isExpanded}/>
           </>
           } />
         <Route path="/testprep/sat/learn" element={
           <>
-            <Sidebar />
-            <Learn />
+            <Sidebar isExpanded={isExpanded} setIsExpanded={setIsExpanded}/>
+            <Learn isExpanded={isExpanded}/>
           </>
           } />
 
           {/* DASHBOARD */}
         <Route path="/testprep/sat" element={
           <>
-            <Sidebar />
-            <Dashboard />
+            <Sidebar isExpanded={isExpanded} setIsExpanded={setIsExpanded}/>
+            <Dashboard isExpanded={isExpanded}/>
           </>
           } />
 
@@ -195,7 +172,7 @@ function App() {
           {/* EDIT PROFILE */}
           <Route path="/edit-profile" element={
             <>
-              <Sidebar />
+              <Sidebar isExpanded={isExpanded} setIsExpanded={setIsExpanded}/>
               <EditProfile user={user}/>
             </>
           } />
