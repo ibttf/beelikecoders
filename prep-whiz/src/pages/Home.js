@@ -7,8 +7,8 @@ const Home = (props) => {
     return (
       <div className={`${props.open ? "overscroll-none" : ""} overflow-x-hidden`}>
         {/* HERO SECTION */}
-        <div className="grid md:grid-cols-2 md:h-screen  bg-gray-200 md:px-0 min-w-screen gap-8 px-10 py-16 text-center md:text-left">
-          <div className="flex lg:w-108 md:h-108 my-auto pl-2 mx-auto">
+        <div className="grid md:grid-cols-2 min-h-screen bg-gray-200 md:px-0 min-w-screen gap-8 px-10 py-16 text-center md:text-left">
+          <div className="flex lg:w-10/12 md:h-108 my-auto pl-2 mx-auto">
             <div className="flex flex-col">
               <h1 className="md:text-7xl  text-5xl font-extrabold">
                 Don't Pay Thousands for Personalized Test Prep

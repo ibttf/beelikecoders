@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {Link, useNavigate} from "react-router-dom"
 import {PiStudent, PiChalkboardTeacherLight} from "react-icons/pi"
 import {HiOutlineDocumentSearch} from "react-icons/hi"
-import { AiOutlinePlus, AiOutlineMinus } from 'react-icons/ai';
+import { AiOutlinePlus, AiOutlineMinus, AiOutlineRobot } from 'react-icons/ai';
 import TutorProfile from '../components/TutorProfile';
 import person1 from '../styles/person1.jpeg'
 
@@ -21,7 +21,7 @@ const About = (props) => {
                 {/* INTRO HEADER */}
                 <div>
                     <h1 className="text-4xl font-extrabold text-gray-700 md:py-12 py-8">Who We Are</h1>
-                    <p className="lg:w-7/12 w-10/12 mx-auto font-semibold text-gray-700">Learn how we can help you ace your standardized tests. </p>
+                    <p className="lg:w-7/12 w-10/12 mx-auto font-semibold text-xl text-gray-700">Learn how we can help you ace your standardized tests. </p>
                 </div>
                 {/* THREE GRID HERO */}
                 <div>
@@ -56,160 +56,94 @@ const About = (props) => {
                     </div>
                 </div>
 
+                {/*  */}
 
+
+
+
+
+                {/* OUR SERVICES */}
                 <div className="py-12">
-                    <h1 className="text-4xl font-extrabold text-gray-700 md:py-12 py-8">Our Services</h1>
-                    <div className="w-9/12 mx-auto grid grid-cols-2 gap-8 py-8">
+                    <h1 className="text-4xl font-extrabold text-gray-700 md:pb-12 pb-8">Our Services</h1>
+                    <div className="w-11/12 mx-auto grid md:grid-cols-2 gap-8 py-8">
                         <div className=" border-2 border-gray-700 rounded-3xl py-4 bg-gray-700">
-                            
-                            <h1 className="text-center font-semibold text-gray-200 text-3xl">
-                                AI-Powered SAT Practice Tool
+                            <AiOutlineRobot size="72" className="relative bottom-12 bg-gray-900 mx-auto text-center p-3 text-gray-200 border-2 rounded-full"/>
+                            <h1 className="text-center font-semibold text-gray-200 text-3xl pb-12 h-16">
+                                AI-Powered Courses
                             </h1>
-                            <p className="w-9/12 mx-auto py-2 text-gray-300">
-                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-                            </p>
+                            <div className="w-9/12 mx-auto md:h-80 h-72 text-gray-300 text-left font-semibold">
+                                <p className="text-lg font-normal">
+                                    Study for standardized tests with the most advanced AI on the planet for <span className="font-bold underline">90% off</span> from our competitors.
+                                </p>
+                                <br></br>
+                                <ul className="text-md h-60">
+                                    <h3 className="text-lg pb-4">
+                                        Features
+                                    </h3>
+                                    <li className=''>
+                                        <span className="text-xl">&#8226;</span> 2,000+ Practice Questions
+                                    </li>
+                                    <li className=''>
+                                        <span className="text-xl">&#8226;</span> 12 Full-Length New Practice Tests
+                                    </li>
+                                    <li className=''>
+                                        <span className="text-xl">&#8226;</span> AI-Powered Score Prediction 
+                                    </li>
+                                    <li className=''>
+                                        <span className="text-xl">&#8226;</span> Personalized Study Roadmap
+                                    </li>
+                                    <li className=''>
+                                        <span className="text-xl">&#8226;</span> 24/7 Helpline
+                                    </li>
+                                </ul>
+                                
+                            </div>
+                            <div className="w-full text-center pb-12">
+                                    <button onClick={()=>navigate("/testprep")} className="cursor-pointer py-2 px-12 font-extrabold text-xl border-1 bg-gray-200 rounded-3xl text-gray-700 ">Try it Now</button>
+                            </div>
                         </div>
                         <div className=" border-2 border-gray-700 rounded-3xl py-4 bg-gray-700">
-                            <h1 className="text-center font-semibold text-gray-200 text-3xl">
-                                One on One Tutoring
+                            <PiChalkboardTeacherLight size="72" className="relative bottom-12 bg-gray-900 mx-auto text-center p-3 text-gray-200 border-2 rounded-full"/>
+                            <h1 className="text-center font-semibold text-gray-200 text-3xl pb-12 h-16">
+                                SAT/ACT Tutoring
                             </h1>
-                            <p className="w-9/12 mx-auto py-auto">
-                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-                            
-                            </p>
+                            <div className="w-9/12 mx-auto md:h-80 h-72 text-gray-300 text-left font-semibold">
+                                <p className="text-lg font-normal">
+                                    Get one-on-one or group tutoring with one of our 99th percentile tutors for <span className="font-bold underline">50% off</span> from our competitors.
+                                </p>
+                                <br></br>
+                                <ul className="text-md h-60">
+                                    <h3 className="text-lg pb-4">
+                                        What We Offer
+                                    </h3>
+                                    <li className=''>
+                                        <span className="text-xl">&#8226;</span> Free Diagnostic Test
+                                    </li>
+                                    <li className=''>
+                                        <span className="text-xl">&#8226;</span> 1 on 1 Lessons
+                                    </li>
+                                    <li className=''>
+                                        <span className="text-xl">&#8226;</span> Group lessons of 2-3
+                                    </li>
+                                    <li className=''>
+                                        <span className="text-xl">&#8226;</span> Standardized Test Bootcamps
+                                    </li>
+                                    <li className=''>
+                                        <span className="text-xl">&#8226;</span> 24/7 Helpline
+                                    </li>
+                                </ul>
+                                
+
+                            </div>
+                            <div className="w-full text-center pb-12">
+                                    <button onClick={()=>navigate("/tutoring")} className="cursor-pointer py-2 px-12 font-extrabold text-xl border-1 bg-gray-200 rounded-3xl text-gray-700 ">Get Tutoring</button>
+                                </div>
                         </div>
-                        <div className=" border-2 border-gray-700 rounded-3xl py-4 bg-gray-700">
-                            <h1 className="text-center font-semibold text-gray-200 text-3xl">
-                                Group Tutoring
-                            </h1>
-                        </div>http://localhost:3000/static/media/hero.07fd6fbcaa29e89de971.png
-                        <div className=" border-2 border-gray-700 rounded-3xl py-4 bg-gray-700">
-                            <h1 className="text-center font-semibold text-gray-200 text-3xl">
-                                Bootcamps
-                            </h1>
-                        </div>
+                        
                         
                     </div>
                 </div>    
 
-
-                {/* FREQUENTLY ASKED QUESTIONS */}
-                <div className="w-full bg-gray-700">
-                    <div className="grid grid-cols-1 grid-flow-row gap-2 py-12 md:w-7/12 w-11/12 mx-auto text-left">
-                        <h1 className="font-semibold md:text-3xl text-2xl text-gray-200 font-mono text-center md:pb-12 pb-6">FREQUENTLY ASKED QUESTIONS</h1>
-                        <hr className="h-0.5 bg-gray-400 w-full mx-auto"></hr>
-                        
-                        
-                        
-                        <div onClick={()=>setOpen1(!open1)}
-                            className={`md:text-2xl text-lg text-gray-300 font-semibold py-2 flex justify-between transition-all duration-300`}>
-                            How much does it cost to work with an individual tutor?
-                            {open1?
-                            <AiOutlineMinus size="24" className=""/>
-                                :
-                            
-                            <AiOutlinePlus size="24" className=""/>
-                            }
-                            
-                        </div>
-                        <div className={`${open1? "h-full": "h-0"} overflow-hidden pl-2 text-gray-400`}>
-                            explanation about the level blah blah blah
-                        </div>
-                        <hr className="h-0.5 bg-gray-400 w-full mx-auto"></hr>
-
-
-
-
-                        <div onClick={()=>setOpen2(!open2)}
-                            className={`md:text-2xl text-lg text-gray-300 font-semibold py-2 flex justify-between transition-all duration-300`}>
-                            What do I get in each membership level?
-                            {open2?
-                            <AiOutlineMinus size="24" className=""/>
-                                :
-                            
-                            <AiOutlinePlus size="24" className=""/>
-                            }
-                            
-                        </div>
-                        <div className={`${open2? "h-full": "h-0"} overflow-hidden pl-2 text-gray-400`}>
-                            explanation about the level blah blah blah
-                        </div>
-                        <hr className="h-0.5 bg-gray-400 w-full mx-auto"></hr>
-                        
-                        
-                        
-                        <div onClick={()=>setOpen3(!open3)}
-                            className={`md:text-2xl text-lg text-gray-300 font-semibold py-2 flex justify-between transition-all duration-300`}>
-                            Do you offer payment plans?
-                            {open3?
-                            <AiOutlineMinus size="24" className=""/>
-                                :
-                            
-                            <AiOutlinePlus size="24" className=""/>
-                            }
-                            
-                        </div>
-                        <div className={`${open3? "h-full": "h-0"} overflow-hidden pl-2 text-gray-400`}>
-                            explanation about the level blah blah blah
-                        </div>
-                        <hr className="h-0.5 bg-gray-400 w-full mx-auto"></hr>
-
-
-                        
-                        <div onClick={()=>setOpen4(!open4)}
-                            className={`md:text-2xl text-lg text-gray-300 font-semibold py-2 flex justify-between transition-all duration-300`}>
-                            Do you require a subscription to work with your tutors?
-                            {open4?
-                            <AiOutlineMinus size="24" className=""/>
-                                :
-                            
-                            <AiOutlinePlus size="24" className=""/>
-                            }
-                            
-                        </div>
-                        <div className={`${open4? "h-full": "h-0"} overflow-hidden pl-2 text-gray-400`}>
-                            explanation about the level blah blah blah
-                        </div>
-                        <hr className="h-0.5 bg-gray-400 w-full mx-auto"></hr>
-
-                        
-                        <div onClick={()=>setOpen5(!open5)}
-                            className={`md:text-2xl text-lg text-gray-300 font-semibold py-2 flex justify-between transition-all duration-300`}>
-                            Can I work with more than one tutor?
-                            {open5?
-                            <AiOutlineMinus size="24" className=""/>
-                                :
-                            
-                            <AiOutlinePlus size="24" className=""/>
-                            }
-                            
-                        </div>
-                        <div className={`${open5? "h-full": "h-0"} overflow-hidden pl-2 text-gray-400`}>
-                            explanation about the level blah blah blah
-                        </div>
-                        <hr className="h-0.5 bg-gray-400 w-full mx-auto"></hr>
-
-                        
-                        
-                        <div onClick={()=>setOpen6(!open6)}
-                            className={`md:text-2xl text-lg text-gray-300 font-semibold py-2 flex justify-between transition-all duration-300`}>
-                            Do you have a cancellation policy?
-                            {open6?
-                            <AiOutlineMinus size="24" className=""/>
-                                :
-                            
-                            <AiOutlinePlus size="24" className=""/>
-                            }
-                            
-                        </div>
-                        <div className={`${open6? "h-full": "h-0"} overflow-hidden pl-2 text-gray-400`}>
-                            explanation about the level blah blah blah
-                        </div>
-                        <hr className="h-0.5 bg-gray-400 w-full mx-auto"></hr>
-
-
-                    </div>
-                </div>
 
             </div>
     );

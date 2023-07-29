@@ -9,6 +9,7 @@ import Loading from "../pages/Loading"
 import EditProfile from "../pages/EditProfile";
 import NotFound from "../pages/NotFound";
 import Tutoring from "../pages/Tutoring";
+import AboutTestPrep from "../pages/AboutTestPrep";
 
 // SAT PREP
 import Sidebar from "../sat-prep/components/Sidebar"
@@ -93,6 +94,14 @@ function App() {
             <>
               <NavBar user={user} open={open} setOpen={setOpen} />
               <About />
+              <Footer />
+            </>
+          } />
+          {/* TEST PREP ABOUT PAGE */}
+            <Route path="/testprep" element={
+            <>
+              <NavBar user={user} open={open} setOpen={setOpen} />
+              <AboutTestPrep />
               <Footer />
             </>
           } />
@@ -210,6 +219,21 @@ function App() {
             <>
               <NavBar user={user} open={open} setOpen={setOpen} />
               <About />
+              <Footer />
+            </>
+          } />
+          {/* OPTIONS PAGE */}
+          <Route path="/options" element={
+            <>
+              <NavBar user={user} open={open} setOpen={setOpen} />
+              <Footer />
+            </>
+          } />
+          {/* TEST PREP ABOUT PAGE */}
+          <Route path="/testprep" element={
+            <>
+              <NavBar user={user} open={open} setOpen={setOpen} />
+              <AboutTestPrep />
               <Footer />
             </>
           } />
