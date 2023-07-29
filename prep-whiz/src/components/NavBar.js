@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
-import logo from "../styles/logo-no-background.png"
 const NavBar = (props) => {
   const [heading, setHeading] = useState("");
   const [subHeading, setSubHeading] = useState("");
   const links=[
+    {name: "About"},
     {name:'Test Prep',
       submenu: true, 
       sublinks: 
@@ -35,7 +35,7 @@ const NavBar = (props) => {
   }
   return (
   <>
-    <nav className={`bg-gray-200`}>
+    <nav className={` bg-gray-200`}>
       <div className="flex items-center font-medium justify-around">
         <div className='md:w-auto w-full flex justify-between z-50 p-6'>
           <Link to ="/">
@@ -50,11 +50,7 @@ const NavBar = (props) => {
           </div>
         </div>
         <ul className="md:flex hidden uppercase items-center gap-8">
-          <li className="hover:bg-gray-100">
-            <Link to="/about" className="py-7 px-3 inline-block">
-              About
-            </Link>
-          </li>
+          
         {links.map((link) => (
         <div>
           <div className="px-3 text-left md:cursor-pointer group hover:bg-gray-100">
@@ -66,7 +62,7 @@ const NavBar = (props) => {
               }}
             >
               
-              {link.name==='Test Prep' ?
+              {link.submenu ?
                 <>{link.name}</>:
                 <Link to={`/${link.name.replace(" ","").toLowerCase()}`}>
                   {link.name}
@@ -127,7 +123,7 @@ const NavBar = (props) => {
                         ? setSubHeading(slinks.Head)
                         : setSubHeading("")
                     }
-                    className="py-4 pl-7 font-semibold md:pr-0 pr-5 flex justify-between items-center md:pr-0 pr-5"
+                    className="py-4 pl-7 font-semibold flex justify-between items-center md:pr-0 pr-5"
                   >
                     {slinks.Head}
 
@@ -167,16 +163,12 @@ const NavBar = (props) => {
 
         </div>
         {/* MOBILE NAV */}
-        <ul className={`md:hidden bg-gray-200 bg-opacity-80 absolute w-full h-screen bottom-0 py-24 pl-4 z-10 md:overscroll-contain
+        <ul className={`md:hidden bg-gray-200 bg-opacity-90 absolute w-full h-screen bottom-0 py-24 pl-4 z-10 md:overscroll-contain
         duration-500 ${props.open ? 'left-0' : 'left-[-100%]'}
         `}
         >
-          <li>
-            <Link to="/about" className="py-7 px-3 inline-block ">
-              About
-            </Link>
-          </li>
-                {links.map((link) => (
+    
+        {links.map((link) => (
         <div>
           <div className="px-3 text-left md:cursor-pointer group">
             <h1

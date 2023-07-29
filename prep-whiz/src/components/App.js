@@ -3,9 +3,13 @@ import { Routes, Route } from "react-router-dom";
 import NavBar from "./NavBar";
 import Login from "../pages/Login";
 import Home from "../pages/Home";
+import About from "../pages/About";
 import Footer from "./Footer";
 import Loading from "../pages/Loading"
 import EditProfile from "../pages/EditProfile";
+import NotFound from "../pages/NotFound";
+import Tutoring from "../pages/Tutoring";
+
 // SAT PREP
 import Sidebar from "../sat-prep/components/Sidebar"
 import Dashboard from "../sat-prep/pages/Dashboard"
@@ -71,27 +75,31 @@ function App() {
 
           {/* AUTH */}
           <Route path="/login" element={
-            <Login />
+            <>
+              <Login />
+            </>
           } />
 
           {/* TUTORING PAGE */}
           <Route path="/tutoring" element={
             <>
               <NavBar user={user} open={open} setOpen={setOpen}/>
+              <Tutoring />
               <Footer />
             </>
           } />
           {/* ABOUT PAGE */}
           <Route path="/about" element={
             <>
-              <NavBar user={user} />
+              <NavBar user={user} open={open} setOpen={setOpen} />
+              <About />
               <Footer />
             </>
           } />
           {/* CONTACT PAGE */}
           <Route path="/contact" element={
             <>
-              <NavBar user={user} />
+              <NavBar user={user} open={open} setOpen={setOpen} />
               <Footer />
             </>
           } />
@@ -105,6 +113,8 @@ function App() {
             </>
           } />
 
+          {/* NOT FOUND */}
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
     </>)
@@ -182,27 +192,31 @@ function App() {
 
           {/* AUTH */}
           <Route path="/login" element={
-            <Login />
+            <>
+              <Login />
+            </>
           } />
 
           {/* TUTORING PAGE */}
           <Route path="/tutoring" element={
             <>
-              <NavBar user={user} />
+              <NavBar user={user} open={open} setOpen={setOpen} />
+              <Tutoring />
               <Footer />
             </>
           } />
           {/* ABOUT PAGE */}
           <Route path="/about" element={
             <>
-              <NavBar user={user} />
+              <NavBar user={user} open={open} setOpen={setOpen} />
+              <About />
               <Footer />
             </>
           } />
           {/* CONTACT PAGE */}
           <Route path="/contact" element={
             <>
-              <NavBar user={user} />
+              <NavBar user={user} open={open} setOpen={setOpen} />
               <Footer />
             </>
           } />
@@ -210,11 +224,13 @@ function App() {
           {/* HOME PAGE */}
           <Route path="/" element={
             <>
-              <NavBar user={user} open={open} setOpen={open}/>
+              <NavBar user={user} open={open} setOpen={setOpen}/>
               <Home user={user} open={open}/>
               <Footer />
             </>
           } />
+          {/* NOT FOUND */}
+          <Route path="*" element={<NotFound />} />
 
         </Routes>
       </main>

@@ -1,11 +1,9 @@
 import { useState } from "react";
 import {auth, googleProvider} from '../config/firebase'
 import { signInWithPopup, signOut, signInWithEmailAndPassword, createUserWithEmailAndPassword} from "firebase/auth";
-import logo from "../styles/logo-no-background.png";
 import {BsGoogle} from "react-icons/bs";
 import { useNavigate, Link } from "react-router-dom";
 
-import "../styles/Login.css";
 function Login() {
   const navigate = useNavigate();
   const [showLogin, setShowLogin] = useState(true);
@@ -66,32 +64,38 @@ function Login() {
   };
 
   return(
-  <div className="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8 bg-gray-50">
+  <div className="flex min-h-full flex-col justify-center px-6 py-6 lg:px-8 bg-gray-200">
     <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-      <h1 onClick={()=>navigate('/')} className="text-center cursor-pointer font-bold text-3xl" >PrepWhiz</h1>
-      <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-600">
+      <h1 onClick={()=>navigate('/')} className="text-center cursor-pointer font-bold text-3xl text-gray-600" >PrepWhiz</h1>
+
+      <hr className="bg-gray-500 h-1 my-4 rounded-xl"></hr>
+    
+      <h2 className="text-center text-2xl font-bold leading-9 tracking-tight text-gray-600">
         {showLogin ? 
-        "Welcome Back":
+        "Log In":
         "Create an Account"}
       </h2>
     </div>
     
     {showLogin ? 
-      <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm border border-gray-400 bg-white p-8 rounded-xl">
-        <form onSubmit={handleLogin} className="space-y-6 ">
+      <div className="mt-5 border-gray-400 bg-gray-200 p-8 rounded-xl lg:w-4/12 md:7/12 w-10/12 mx-auto">
+        <form onSubmit={handleLogin} className="space-y-6">
           <div>
-            <label for="email" className="block text-sm font-medium leading-6 text-gray-900">Email address</label>
-            <div className="mt-2">
-              <input onChange={(e)=>setEmail(e.target.value)} id="email" name="email" type="email" autocomplete="email" required className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-600 sm:text-sm sm:leading-6" />
+            <div className="h-12 pointer-events-none focus-within:text-xs mt-2  text-lg font-medium leading-6">
+              <input className="peer pointer-events-auto bg-gray-200 block w-full py-1.5 font-normal text-gray-900 border-b-2 border-0 border-gray-500 focus:border-gray-900 focus:ring-0 placeholder:text-gray-400 sm:text-sm sm:leading-6"
+                      onChange={(e)=>setEmail(e.target.value)} id="email" name="email" type="email" autocomplete="email" required /> 
+              <label for="email" className="block text-gray-700 relative -top-7 peer-focus:-top-12 duration-300">Email address</label>  
             </div>
           </div>
 
           <div>
             <div className="flex items-center justify-between">
-              <label for="password" className="block text-sm font-medium leading-6 text-gray-900">Password</label>
             </div>
-            <div className="mt-2">
-              <input onChange={(e)=>setPassword(e.target.value)} id="password" name="password" type="password" autocomplete="current-password" required className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-600 sm:text-sm sm:leading-6" />
+            <div className="h-12 pointer-events-none focus-within:text-xs mt-2  text-lg font-medium leading-6">
+              <input onChange={(e)=>setPassword(e.target.value)} id="password" name="password" type="password" autocomplete="current-password" required className="h-full peer pointer-events-auto bg-gray-200 block w-full py-1.5 font-normal text-gray-900 border-b-2 border-0 border-gray-500 focus:border-gray-900 focus:ring-0 placeholder:text-gray-400 sm:text-sm sm:leading-6"
+                       />
+              
+              <label for="password" className="block text-gray-700 relative -top-7  peer-focus:-top-12 duration-300">Password</label>
             </div>
           </div>
           <div className="flex w-full justify-center items-center">
@@ -122,33 +126,37 @@ function Login() {
           </div>
         </div>
       </div>:
-      <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm border border-gray-400 bg-white p-8 rounded-xl">
+      <div className="mt-5  border-gray-400 bg-gray-200 p-8 rounded-xl lg:w-4/12 md:7/12 w-10/12 mx-auto">
         <form onSubmit={handleSignup} className="space-y-6 ">
-          <div>
-            <label for="email" className="block text-sm font-medium leading-6 text-gray-900">Email address</label>
-            <div className="mt-2">
-              <input onChange={(e)=>setEmail(e.target.value)} id="email" name="email" type="email" autocomplete="email" required className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-600 sm:text-sm sm:leading-6" />
-            </div>
-          </div>
-  
-          <div>
-            <div className="flex items-center justify-between">
-              <label for="password" className="block text-sm font-medium leading-6 text-gray-900">Password</label>
-            </div>
-            <div className="mt-2">
-              <input onChange={(e)=>setPassword(e.target.value)} id="password" name="password" type="password" autocomplete="current-password" required className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-600 sm:text-sm sm:leading-6" />
+        <div>
+            <div className="h-12 pointer-events-none focus-within:text-xs mt-2  text-lg font-medium leading-6">
+              <input className="peer pointer-events-auto bg-gray-200 block w-full py-1.5 font-normal text-gray-900 border-b-2 border-0 border-gray-500 focus:border-gray-900 focus:ring-0 placeholder:text-gray-400 sm:text-sm sm:leading-6"
+                      onChange={(e)=>setEmail(e.target.value)} id="email" name="email" type="email" autocomplete="email" required /> 
+              <label for="email" className="block text-gray-700 relative -top-7 peer-focus:-top-12 duration-300">Email address</label>  
             </div>
           </div>
 
           <div>
             <div className="flex items-center justify-between">
-              <label for="password" className="block text-sm font-medium leading-6 text-gray-900">Confirm Password</label>
             </div>
-            <div className="mt-2">
-              <input onChange={(e)=>setPasswordConfirmation(e.target.value)} id="password" name="password" type="password" autocomplete="current-password" required className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-600 sm:text-sm sm:leading-6" />
+            <div className="h-12 pointer-events-none focus-within:text-xs mt-2  text-lg font-medium leading-6">
+              <input onChange={(e)=>setPassword(e.target.value)} id="password" name="password" type="password" autocomplete="current-password" required className="h-full peer pointer-events-auto bg-gray-200 block w-full py-1.5 font-normal text-gray-900 border-b-2 border-0 border-gray-500 focus:border-gray-900 focus:ring-0 placeholder:text-gray-400 sm:text-sm sm:leading-6"
+                       />
+              
+              <label for="password" className="block text-gray-700 relative -top-7  peer-focus:-top-12 duration-300">Password</label>
             </div>
           </div>
 
+          <div>
+            <div className="flex items-center justify-between">
+            </div>
+            <div className="h-12 pointer-events-none focus-within:text-xs mt-2  text-lg font-medium leading-6">
+              <input onChange={(e)=>setPassword(e.target.value)} id="confirmPassword" name="confirmPassword" type="password" autocomplete="current-password" required className="h-full peer pointer-events-auto bg-gray-200 block w-full py-1.5 font-normal text-gray-900 border-b-2 border-0 border-gray-500 focus:border-gray-900 focus:ring-0 placeholder:text-gray-400 sm:text-sm sm:leading-6"
+                       />
+              
+              <label for="confirmPassword" className="block text-gray-700 relative -top-7 peer-focus:-top-12 duration-300">Confirm Password</label>
+            </div>
+          </div>
           <div className="flex w-full justify-center items-center">
             {errors.map((err)=>{
               <div className="text-red-600 py-4">{err}</div>

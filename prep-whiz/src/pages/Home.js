@@ -2,14 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 import {AiOutlineCheckCircle} from "react-icons/ai"
 import hero from "../styles/hero.png";
-import hero2 from "../styles/hero2.png"
-import squiggle from "../styles/red-squiggle.png";
 
 const Home = (props) => {
     return (
       <div className={`${props.open ? "overscroll-none" : ""} overflow-x-hidden`}>
         {/* HERO SECTION */}
-        <div className="grid md:grid-cols-2 h-screen bg-gray-200 md:px-0 min-w-screen gap-8 px-10 py-16 text-center md:text-left">
+        <div className="grid md:grid-cols-2 md:h-screen  bg-gray-200 md:px-0 min-w-screen gap-8 px-10 py-16 text-center md:text-left">
           <div className="flex lg:w-108 md:h-108 my-auto pl-2 mx-auto">
             <div className="flex flex-col">
               <h1 className="md:text-7xl  text-5xl font-extrabold">
@@ -28,7 +26,7 @@ const Home = (props) => {
               </div>
             </div>
           </div>
-          <div className="md:h-108 md:my-auto">
+          <div className="md:h-108 md:my-auto md:pr-8">
             <img src={hero} className="relative rounded-3xl shadow-lg z-2"></img>
           </div>
         </div>
