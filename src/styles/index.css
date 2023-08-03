@@ -15,5 +15,24 @@
     .h-108{
       height:32rem;
     }
+    .hexagon {
+      position: relative;
+      width: 100%;
+      padding-bottom: 115.47%; /* (2 * tan(30deg) + 1) * 50% */
+      background-color: #3498db;
+      overflow: hidden;
+  }
+
+  .hexagon-inner {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
   }
    

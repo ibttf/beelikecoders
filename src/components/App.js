@@ -19,7 +19,7 @@ function App() {
 
   return(
   <>
-    <main className="bg-yellow-50">
+    <main className="bg-blue-100">
     <Routes>
 
         {/* CONTACT PAGE */}

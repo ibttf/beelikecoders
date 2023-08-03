@@ -26,23 +26,36 @@ module.exports = {
       'light-bubble': ['Noto Sans Vithkuqi', 'sans-serif'],
     },
     animation: {
-      wiggle: 'wiggle 0.5s ease-out',
+      wiggle: 'wiggle 0.1s infinite',
+      drop: 'drop 3s',
+      hover: 'hover 3s infinite ease-in-out'
     },
     extend: {
       keyframes: {
+        hover: {
+          '0%': { transform: 'rotate(0)' },
+          '25%': { transform: 'rotate(1deg)' },
+          '50%': {transform: 'rotate(0deg)'},
+          '75%': { transform: 'rotate(-1deg)' },
+          '100%': { transform: 'rotate(0)' },
+        },
         wiggle: {
           '0%': { transform: 'rotate(0)' },
-          '10%': {transform: 'rotate(1deg)'},
-          '20%': { transform: 'rotate(0deg)' },
-          '30%': { transform: 'rotate(-1deg)' },
-          '40%': { transform: 'rotate(0)' },
-          '50%': {transform: 'rotate(1deg)'},
-          '60%': { transform: 'rotate(-1deg)' },
-          '70%': { transform: 'rotate(0)' },
-          '80%': {transform: 'rotate(1deg)'},
-          '90%': { transform: 'rotate(0deg)' },
-          '100%': { transform: 'rotate(-1)' },
-        }},
+          '30%': {transform: 'rotate(1deg)'},
+          '60%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(-1deg)' },
+        },
+
+        drop:{
+          '0%': {  transform: 'rotate(10deg)' },
+          '5%': {transform: 'rotate(-15deg)'},
+          '10%': { transform: 'rotate(5deg)' },
+          '15%': { transform: 'rotate(-10deg)' },
+          '20%': { transform: 'rotate(0)' },
+          '100%': { transform: 'translate3D(0, 100vh, 0) rotate(0)' }, 
+        }
+      
+      },
       colors: {
         gray: {
           900: '#202225',
