@@ -41,14 +41,17 @@ const NavBar = () => {
           <Link to ="/#about" className="px-4 hover:text-yellow-900 hover:scale-110 duration-200">
             About
           </Link>
-          <Link to ="/schedule" className="px-4 hover:text-yellow-900 hover:scale-110 duration-200">
+          <Link to ="/#schedule" className="px-4 hover:text-yellow-900 hover:scale-110 duration-200">
             Schedule
           </Link>
-          <Link to ="/Judges" className="px-4 hover:text-yellow-900 hover:scale-110 duration-200">
+          <Link to ="/#judges" className="px-4 hover:text-yellow-900 hover:scale-110 duration-200">
             Judges
           </Link>
-          <Link to ="/sponsors" className="px-4 hover:text-yellow-900 hover:scale-110 duration-200">
+          <Link to ="/#sponsors" className="px-4 hover:text-yellow-900 hover:scale-110 duration-200">
             Sponsors
+          </Link>
+          <Link to ="/#faq" className="px-4 hover:text-yellow-900 hover:scale-110 duration-200">
+            FAQ
           </Link>
           <button onClick={()=>{navigate("/apply")}}className="mx-4 bg-yellow-800 text-yellow-100 rounded-3xl px-4 py-2 hover:bg-yellow-900">
             Register

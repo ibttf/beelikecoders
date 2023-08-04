@@ -1,6 +1,7 @@
 import React, {useState,useEffect} from "react";
 import { Link } from "react-router-dom";
 import {BsHammer} from "react-icons/bs"
+import aslc from "../styles/ASLC.png"
 import "../styles/animations.css"
 const Home = () => {
   // STATES TO MANAGE HONEYCOMB
@@ -179,6 +180,7 @@ const Home = () => {
                   <path d="M58.15 87.35 c-5.05 -4.05 -9.30 -10.60 -11.45 -17.60 -1.25 -4.05 -1.20 -13.75 0 -18 2.50 -8.50 8.05 -15.25 15.60 -18.85 l4.45 -2.15 6.75 0 c5.85 0 7.15 0.15 9.75 1.15 5.95 2.30 11 6.05 14.55 10.80 4.85 6.40 6.90 12.50 6.95 20.45 l0 5 -7.40 2.35 c-6.50 2.10 -7.45 2.30 -7.70 1.55 -4.15 -11.90 -10.45 -23 -16 -28.10 -2.50 -2.30 -4.15 -2.50 -5.90 -0.70 -1.90 1.85 -1.60 3.30 1.30 6.60 4.85 5.55 8.90 12.55 12.25 21.25 0.95 2.40 1.70 4.45 1.70 4.60 0 0.15 -2.50 1.55 -5.60 3.10 -3.05 1.60 -7.90 4.40 -10.80 6.35 -2.90 1.90 -5.50 3.55 -5.80 3.65 -0.30 0.10 -1.50 -0.55 -2.65 -1.45z"/>
                 </g>
               </svg>
+          {/* CLOUDS */}
           <div className="absolute top-0">
 
 
@@ -194,9 +196,13 @@ const Home = () => {
                 <div class="cloud"></div>
             </div>
           </div>
-          
+          <div className="absolute top-3/4">
+            <div class="x4">
+                <div class="cloud"></div>
+            </div>
+          </div>
 
-          {/* BEE LIKE CODERS HERO TEXT IMAGE */}
+          {/* HERO TEXT IMAGE */}
           <div className="grid grid-cols-3 w-10/12 mx-auto text-center">
             <div></div>
             <div className="relative flex flex-col col-span-2 w-10/12 mx-auto">
@@ -223,6 +229,7 @@ const Home = () => {
 
 
         {/* BRIEF ABOUT US */}
+
         <div className=" text-center relative z-10 mt-12 flex flex-col w-9/12 mx-auto justify-between" id="about">
           {/* DRIPPING HONEY */}
           <div>
@@ -392,11 +399,12 @@ const Home = () => {
 
 
 
-
-
-        {/* SCHEDULE */}
+        {/* SCHEDULE*/}
         {/* winking bee face */}
-        <svg className="relative mx-auto top-40" version="1.0" xmlns="http://www.w3.org/2000/svg" width="250px" height="250px" viewBox="0 0 250 250" preserveAspectRatio="xMidYMid meet">
+        <div class="x2">
+            <div class="cloud"></div>
+        </div>
+        <svg className="relative mx-auto top-32" version="1.0" xmlns="http://www.w3.org/2000/svg" width="250px" height="250px" viewBox="0 0 250 250" preserveAspectRatio="xMidYMid meet">
           <g fill="#000000">
             <path d="M62 122.5 c0 -11.3 0.4 -20.5 0.9 -20.5 0.5 0 1.2 -1.2 1.6 -2.7 2.7 -11.2 14.7 -26.5 25.3 -32.5 3.5 -2 5.2 -3.6 5.2 -4.9 0 -4.7 -7.6 -15.5 -13.4 -19 -2.9 -1.7 -2.9 -1.7 -6.1 1.7 -3.8 4 -7.9 4.5 -11.9 1.3 -3.6 -2.8 -3.6 -7.7 0 -11.3 3.3 -3.3 7.3 -3.4 11.1 -0.2 1.5 1.3 5.1 3.8 8 5.5 6.1 3.7 10 8.3 13.9 16.4 2.1 4.3 3.2 5.6 4.4 5.1 7.1 -3.2 24.6 -4.1 34.1 -1.8 2.3 0.5 2.8 0.1 5.3 -5 1.5 -3 4.6 -7.1 6.8 -9.1 5 -4.2 13.3 -8.5 16.6 -8.5 1.3 0 3.7 -1.1 5.4 -2.5 3.6 -3 6.7 -3.2 10.2 -0.4 2 1.6 2.6 2.9 2.6 5.8 0 4.7 -2.4 7.1 -7.1 7.1 -3.8 -0.1 -6 -1.4 -7.8 -4.8 -0.9 -1.8 -1.7 -2.1 -3.9 -1.6 -8.3 2 -18.7 10.5 -21 17.4 -1 2.8 -0.9 2.9 7.5 7.6 10.9 6.1 20.4 16.1 25.6 26.8 2.1 4.1 3.7 8.2 3.7 9 0 0.9 0.4 1.6 0.9 1.6 0.5 0 1.1 2.6 1.4 5.8 0.3 3.1 1 8 1.5 10.7 0.6 2.8 1.1 9.1 1.1 14.2 l0.1 9.2 -14.5 0 c-13.1 -0.1 -14.5 -0.3 -14.5 -1.9 0 -1.1 1.4 -2.1 4.3 -3 2.3 -0.7 7.2 -2.8 11 -4.6 l6.7 -3.4 -0.6 -4.3 c-0.8 -5.8 -4 -19.6 -5.3 -23 -2 -5.2 -15.9 -8.7 -34.1 -8.7 -24.5 0 -49.7 7 -65 18.1 l-4.1 3 0.3 10.2 0.3 10.2 4.2 2 c2.3 1.1 4.2 2.7 4.3 3.6 0 1.3 -1.3 1.7 -7.5 1.8 l-7.5 0.2 0 -20.6z m25.5 -32.9 c5 -1.4 12.4 -3.3 16.5 -4.1 9.4 -2 42.3 -3 50.5 -1.7 3.3 0.5 6.2 0.8 6.4 0.6 1 -0.9 -8.4 -9.3 -14.2 -12.8 -8.6 -5.1 -17.6 -7.7 -26.7 -7.8 -9.6 0 -15.5 1.6 -17.6 4.7 -1.2 1.9 -2.5 2.5 -5.1 2.5 -5.8 0 -17.5 10.6 -22.4 20.2 l-2 3.9 2.8 -1.4 c1.5 -0.8 6.9 -2.6 11.8 -4.1z"/>
             <path d="M116 141 c-0.6 -1.2 -1 -4.2 -0.8 -6.8 0.3 -4.7 0.3 -4.7 4.2 -5 3.3 -0.3 4.3 0.1 6.2 2.5 l2.4 2.8 2.4 -2.7 c1.9 -2.2 3.4 -2.8 6.5 -2.8 4 0 4 0 4.3 -4.2 l0.3 -4.3 5.5 -0.8 c3 -0.4 10.2 -0.6 16 -0.5 l10.5 0.3 0 4.5 0 4.4 -4.5 0.8 c-2.5 0.5 -9.6 0.9 -15.7 1.1 l-11.3 0.2 0 4.6 c0 7.1 -1.5 7.9 -14.3 7.9 -9.7 0 -10.7 -0.2 -11.7 -2z"/>
@@ -427,10 +435,11 @@ const Home = () => {
           </g>
         </svg>
 
-        <div className="relative text-center z-10 mt-12 flex flex-col w-8/12 border-8 rounded-xl border-black  bg-black p-0 mx-auto justify-between" id="schedule">
+        <div className="relative text-center mt-6 z-10 flex flex-col w-8/12 border-8 rounded-xl border-black  bg-black p-0 mx-auto justify-between" id="schedule">
+
           <div className="m-0 py-12 ">
             <h1 className="text-yellow-400 font-bubble text-7xl">
-              2024 SCHEDULE
+              SCHEDULE
             </h1>
           </div>
           <div className="w-full bg-yellow-400">
@@ -444,6 +453,56 @@ const Home = () => {
                   In the meantime, click <a href="https://docs.google.com/document/d/1hrnKy7hEBFc7_Ellov7c_5sDgelJ7kfoM5kcCFzk3LA/edit" target="_blank" className="underline cursor-pointer">here</a> to see the 2023 schedule.
                 </h2>
           </div>
+         
+        </div>
+
+        <div class="x4">
+            <div class="cloud"></div>
+        </div>
+
+
+      {/* JUDGES */}
+        <div className="relative text-center mt-48 z-10 flex flex-col w-10/12 border-8 rounded-xl border-black  bg-yellow-400 p-0 mx-auto justify-between" id="judges">
+          <div className="m-0 py-12 ">
+            <h1 className=" font-bubble text-7xl">
+              JUDGES
+            </h1>
+          </div>
+          <div className="w-full bg-black">
+                <h2 className="py-12 font-light-bubble text-3xl">
+                  <div className="flex w-full justify-center items-center text-4xl text-yellow-400">
+                    COMING SOON!
+                  </div>
+                 </h2>
+          </div>
+        </div>
+
+
+      {/* SPONSORS */}
+        <div class="x4">
+              <div class="cloud"></div>
+        </div>
+        <div class="x5">
+              <div class="cloud"></div>
+        </div>
+        <div class="x2">
+              <div class="cloud"></div>
+        </div>
+        <div className="relative text-center mt-48 z-10 flex flex-col h-96 p-0 mx-auto" id="judges">
+          <div className="absolute bottom-36 left-48 right-48">
+            <h1 className="text-blue-900 font-bubble text-7xl">
+              SPONSORS
+            </h1>
+            <h2 className="font-light-bubble text-blue-950 text-3xl py-8">
+              Interested in sponsoring BeeLikeCoders? Email us at <span className="hover:underline cursor-pointer">beelikecoders@gmail.com</span>
+            </h2>
+            <div className="flex justify-center w-full text-center">
+              <img src={aslc} className=""/>
+            </div>
+
+          </div>
+
+
         </div>
 
 
@@ -452,197 +511,204 @@ const Home = () => {
 
 
         {/* FREQUENTLY ASKED QUESTIONS */}
-          <div className="w-full my-36" id="faq">
-              <div className=" w-11/12 bg-yellow-900 text-left pb-24 rounded-r-xl px-24">
-                  <h1 className="font-bubble text-center text-7xl text-amber-400 py-12 drop-shadow-xl">
-                    FAQ</h1>
+        <div className="w-full my-36" id="faq">
+            <div className=" w-11/12 bg-yellow-900 text-left pb-24 rounded-r-xl px-24">
+                <h1 className="font-bubble text-center text-7xl text-amber-400 py-12 drop-shadow-xl">
+                  FAQ</h1>
 
-              
-                  
-                  <div className="flex items-start">
-                    {/* GENERAL QUESTIONS */}
-                    <div className="flex flex-col mr-16 w-full">
-                      <h1 className="font-bubble text-center text-4xl text-amber-400 py-4 drop-shadow-xl">GENERAL</h1>
-                      {/* WHAT IS A HACKATHON? */}
-                      <div className="h-full">
-                        <div onClick={()=>setGenOpen1(!genOpen1)}
-                            className={`hover:text-amber-200 cursor-pointer md:text-2xl text-lg items-center flex text-amber-400 font-light-bubble font-semibold py-2 transition-all duration-300`}>
-                          <span className="text-4xl items-center mr-2">•</span> What is a hackathon?
-                            
-                        </div>
-                        <div className={`${genOpen1? "h-full": "h-0"} font-light-bubble ml-2 text-xl overflow-hidden pl-2 text-yellow-100`}>
-                        A hackathon is where you transform your crazy ideas into real projects. 
-                        <br></br>Hundreds of students from across California form teams around an idea and collaboratively create technical solutions to various problems and challenges. 
-                        <br></br>These ideas turn into websites, mobile apps, hardware, and more!
-                        </div>
+            
+                
+                <div className="flex items-start w-9/12 mx-auto">
+                  {/* GENERAL QUESTIONS */}
+                  <div className="flex flex-col mr-16">
+                    <h1 className="font-bubble text-left text-4xl text-amber-400 py-4 drop-shadow-xl">GENERAL</h1>
+                    {/* WHAT IS A HACKATHON? */}
+                    <div className="h-full">
+                      <div onClick={()=>setGenOpen1(!genOpen1)}
+                          className={`hover:text-amber-200 cursor-pointer md:text-2xl text-lg items-center flex text-amber-400 font-light-bubble font-semibold py-2 transition-all duration-300`}>
+                        <span className="text-4xl items-center mr-2">•</span> What is a hackathon?
+                          
                       </div>
-                      {/* CAN I ATTEND? */}
-                      <div className="h-full">
-                        <div onClick={()=>setGenOpen2(!genOpen2)}
-                            className={`hover:text-amber-200 cursor-pointer md:text-2xl text-lg items-center flex text-amber-400 font-light-bubble font-semibold py-2 transition-all duration-300`}>
-                          <span className="text-4xl items-center mr-2">•</span> Can I attend?
-                            
-                        </div>
-                        <div className={`${genOpen2? "h-full": "h-0"} font-light-bubble ml-2 text-xl overflow-hidden pl-2 text-yellow-100`}>
-                        BeeLikeCoders is open to all two-year, four-year, and high-school students over the age of 18 from any majors and any schools, as well as graduates who have completed their degrees within the past year. 
-
-                        </div>
+                      <div className={`${genOpen1? "h-full": "h-0"} font-light-bubble ml-2 text-xl overflow-hidden pl-2 text-yellow-100`}>
+                      A hackathon is where you transform your crazy ideas into real projects. 
+                      <br></br>Hundreds of students from across California form teams around an idea and collaboratively create technical solutions to various problems and challenges. 
+                      <br></br>These ideas turn into websites, mobile apps, hardware, and more!
                       </div>
-
-
-                      {/* Is it ok if I don't know how to code? */}
-                      <div className="h-full">
-                        <div onClick={()=>setGenOpen3(!genOpen3)}
-                            className={`hover:text-amber-200 cursor-pointer md:text-2xl text-lg items-center flex text-amber-400 font-light-bubble font-semibold py-2 transition-all duration-300`}>
-                          <span className="text-4xl items-center mr-2">•</span> Is it ok if I don't know how to code?
-                            
-                        </div>
-                        <div className={`${genOpen3? "h-full": "h-0"} font-light-bubble ml-2 text-xl overflow-hidden pl-2 text-yellow-100`}>
-                          Absolutely! BeeLikeCoders is proud to be a beginner-friendly hackathon.
-                          <br></br>
-                          You don't need to know any code, but you should be willing to learn.
-                          <br></br>
-                          Our mentors host beginner-friendly workshops for everyone to be able to build a project they can be proud of.
-                        </div>
+                    </div>
+                    {/* CAN I ATTEND? */}
+                    <div className="h-full">
+                      <div onClick={()=>setGenOpen2(!genOpen2)}
+                          className={`hover:text-amber-200 cursor-pointer md:text-2xl text-lg items-center flex text-amber-400 font-light-bubble font-semibold py-2 transition-all duration-300`}>
+                        <span className="text-4xl items-center mr-2">•</span> Can I attend?
+                          
                       </div>
+                      <div className={`${genOpen2? "h-full": "h-0"} font-light-bubble ml-2 text-xl overflow-hidden pl-2 text-yellow-100`}>
+                      BeeLikeCoders is open to all two-year, four-year, and high-school students over the age of 18 from any majors and any schools, as well as graduates who have completed their degrees within the past year. 
 
-                      {/* What am I even supposed to make? */}
-                      <div className="h-full">
-                        <div onClick={()=>setGenOpen4(!genOpen4)}
-                            className={`hover:text-amber-200 cursor-pointer md:text-2xl text-lg items-center flex text-amber-400 font-light-bubble font-semibold py-2 transition-all duration-300`}>
-                          <span className="text-4xl items-center mr-2">•</span> What am I even supposed to make?
-                            
-                        </div>
-                        <div className={`${genOpen4? "h-full": "h-0"} font-light-bubble ml-2 text-xl overflow-hidden pl-2 text-yellow-100`}>
-                          Every year we have a general problem for our applicants to try and tackle any way they see fit.
-                          <br></br>
-                          For example, last year, we asked participants to 
-                          <br></br><span className="text-yellow-600">build something to help Laney College</span>
-                          <br></br>
-                          Lots of room to explore, right? We keep our problems general to give participants as much creative flexibility as we can.
-                        </div>
-                      </div>
-
-                      {/* How do teams work? */}
-                      <div className="h-full">
-                        <div onClick={()=>setGenOpen5(!genOpen5)}
-                            className={`hover:text-amber-200 cursor-pointer md:text-2xl text-lg items-center flex text-amber-400 font-light-bubble font-semibold py-2 transition-all duration-300`}>
-                          <span className="text-4xl items-center mr-2">•</span> How do teams work?
-                            
-                        </div>
-                        <div className={`${genOpen5? "h-full": "h-0"} font-light-bubble ml-2 text-xl overflow-hidden pl-2 text-yellow-100`}>
-                          A single team can have anywhere between 1 and 4 members and should expect to submit one project per team. 
-                          <br></br>
-                          It's okay to participate by yourself, but we recommend finding or creating a team for the full BeeLikeCoders experience.
-                          <br></br>
-                        </div>
-                      </div>
-                      
-
-                      {/* Do I have to submit a project? */}
-                      <div className="h-full">
-                        <div onClick={()=>setGenOpen6(!genOpen6)}
-                            className={`hover:text-amber-200 cursor-pointer md:text-2xl text-lg items-center flex text-amber-400 font-light-bubble font-semibold py-2 transition-all duration-300`}>
-                          <span className="text-4xl items-center mr-2">•</span> Do I have to submit a project?
-                            
-                        </div>
-                        <div className={`${genOpen6? "h-full": "h-0"} font-light-bubble ml-2 text-xl overflow-hidden pl-2 text-yellow-100`}>
-                          Nope.
-                          <br></br>
-                          While we encourage everyone to try and submit something, it's totally fine to attend the hackathon as a spectator.
-                          <br></br>
-                        </div>
-                      </div>
-                    
-                    
-                      {/* How can I help? */}
-                      <div className="h-full">
-                        <div onClick={()=>setGenOpen7(!genOpen7)}
-                            className={`hover:text-amber-200 cursor-pointer md:text-2xl text-lg items-center flex text-amber-400 font-light-bubble font-semibold py-2 transition-all duration-300`}>
-                          <span className="text-4xl items-center mr-2">•</span>How can I help?
-                            
-                        </div>
-                        <div className={`${genOpen7? "h-full": "h-0"} font-light-bubble ml-2 text-xl overflow-hidden pl-2 text-yellow-100`}>
-                          BeeLikeCoders is always looking for new mentors and judges!
-                          <br></br>
-                          If you're interested in helping out as either, please send us an email at  
-                          <span className="underline text-white"> beelikecoders@gmail.com.</span>
-                        </div>
                       </div>
                     </div>
 
 
-                    {/* OTHER */}
-                    <div className="flex flex-col ml-16 w-full">
-                      <h1 className="font-bubble text-center text-4xl text-amber-400 py-4 drop-shadow-xl">OTHER</h1>
-
-                      {/* How do I register? */}
-                      <div className="h-full">
-                        <div onClick={()=>setLogOpen1(!logOpen1)}
-                            className={`hover:text-amber-200 cursor-pointer md:text-2xl text-lg items-center flex text-amber-400 font-light-bubble font-semibold py-2 transition-all duration-300`}>
-                          <span className="text-4xl items-center mr-2">•</span> How do I register?
-                            
-                        </div>
-                        <div className={`${logOpen1? "h-full": "h-0"} font-light-bubble ml-2 text-xl overflow-hidden pl-2 text-yellow-100`}>
-                          Simple!
-                          <br></br>
-                          Click <span className="cursor-pointer text-3xl text-white">here</span> to register and fill out the form. Easy peasy.
-                          <br></br>
-                        </div>
+                    {/* Is it ok if I don't know how to code? */}
+                    <div className="h-full">
+                      <div onClick={()=>setGenOpen3(!genOpen3)}
+                          className={`hover:text-amber-200 cursor-pointer md:text-2xl text-lg items-center flex text-amber-400 font-light-bubble font-semibold py-2 transition-all duration-300`}>
+                        <span className="text-4xl items-center mr-2">•</span> Is it ok if I don't know how to code?
+                          
                       </div>
-                      
-
-
-                      {/* How much will it cost? */}
-                      <div className="h-full">
-                        <div onClick={()=>setLogOpen2(!logOpen2)}
-                            className={`hover:text-amber-200 cursor-pointer md:text-2xl text-lg items-center flex text-amber-400 font-light-bubble font-semibold py-2 transition-all duration-300`}>
-                          <span className="text-4xl items-center mr-2">•</span> How much will it cost?
-                            
-                        </div>
-                        <div className={`${logOpen2? "h-full": "h-0"} font-light-bubble ml-2 text-xl overflow-hidden pl-2 text-yellow-100`}>
-                          Absolutely nothing.
-                          <br></br>
-                          BeeLikeCoders is proud to be a completely free hackathon. As long as you can make it here, we'll cover everything else.
-                          <br></br>
-                        </div>
+                      <div className={`${genOpen3? "h-full": "h-0"} font-light-bubble ml-2 text-xl overflow-hidden pl-2 text-yellow-100`}>
+                        Absolutely! BeeLikeCoders is proud to be a beginner-friendly hackathon.
+                        <br></br>
+                        You don't need to know any code, but you should be willing to learn.
+                        <br></br>
+                        Our mentors host beginner-friendly workshops for everyone to be able to build a project they can be proud of.
                       </div>
-                      
-                      {/* Where is BeeLikeCoders? */}
-                      <div className="h-full">
-                        <div onClick={()=>setLogOpen3(!logOpen3)}
-                            className={`hover:text-amber-200 cursor-pointer md:text-2xl text-lg items-center flex text-amber-400 font-light-bubble font-semibold py-2 transition-all duration-300`}>
-                          <span className="text-4xl items-center mr-2">•</span> Where is BeeLikeCoders?
-                            
-                        </div>
-                        <div className={`${logOpen3? "h-full": "h-0"} font-light-bubble ml-2 text-xl overflow-hidden pl-2 text-yellow-100`}>
-                          This year, BeeLikeCoders will be held at _____.
-                        </div>
-                      </div>
-                      {/* When is the application deadline? */}
-                      <div className="h-full">
-                        <div onClick={()=>setLogOpen4(!logOpen4)}
-                            className={`hover:text-amber-200 cursor-pointer md:text-2xl text-lg items-center flex text-amber-400 font-light-bubble font-semibold py-2 transition-all duration-300`}>
-                          <span className="text-4xl items-center mr-2">•</span> When is the application deadline?
-                            
-                        </div>
-                        <div className={`${logOpen4? "h-full": "h-0"} font-light-bubble ml-2 text-xl overflow-hidden pl-2 text-yellow-100`}>
-                          This year, registration is due by _____.
-                        </div>
-                      </div>
-
-
                     </div>
 
+                    {/* What am I even supposed to make? */}
+                    <div className="h-full">
+                      <div onClick={()=>setGenOpen4(!genOpen4)}
+                          className={`hover:text-amber-200 cursor-pointer md:text-2xl text-lg items-center flex text-amber-400 font-light-bubble font-semibold py-2 transition-all duration-300`}>
+                        <span className="text-4xl items-center mr-2">•</span> What am I even supposed to make?
+                          
+                      </div>
+                      <div className={`${genOpen4? "h-full": "h-0"} font-light-bubble ml-2 text-xl overflow-hidden pl-2 text-yellow-100`}>
+                        Every year we have a general problem for our applicants to try and tackle any way they see fit.
+                        <br></br>
+                        For example, last year, we asked participants to 
+                        <br></br><span className="text-yellow-600">build something to help Laney College</span>
+                        <br></br>
+                        Lots of room to explore, right? We keep our problems general to give participants as much creative flexibility as we can.
+                      </div>
+                    </div>
+
+                    {/* How do teams work? */}
+                    <div className="h-full">
+                      <div onClick={()=>setGenOpen5(!genOpen5)}
+                          className={`hover:text-amber-200 cursor-pointer md:text-2xl text-lg items-center flex text-amber-400 font-light-bubble font-semibold py-2 transition-all duration-300`}>
+                        <span className="text-4xl items-center mr-2">•</span> How do teams work?
+                          
+                      </div>
+                      <div className={`${genOpen5? "h-full": "h-0"} font-light-bubble ml-2 text-xl overflow-hidden pl-2 text-yellow-100`}>
+                        A single team can have anywhere between 1 and 4 members and should expect to submit one project per team. 
+                        <br></br>
+                        It's okay to participate by yourself, but we recommend finding or creating a team for the full BeeLikeCoders experience.
+                        <br></br>
+                      </div>
+                    </div>
+                    
+
+                    {/* Do I have to submit a project? */}
+                    <div className="h-full">
+                      <div onClick={()=>setGenOpen6(!genOpen6)}
+                          className={`hover:text-amber-200 cursor-pointer md:text-2xl text-lg items-center flex text-amber-400 font-light-bubble font-semibold py-2 transition-all duration-300`}>
+                        <span className="text-4xl items-center mr-2">•</span> Do I have to submit a project?
+                          
+                      </div>
+                      <div className={`${genOpen6? "h-full": "h-0"} font-light-bubble ml-2 text-xl overflow-hidden pl-2 text-yellow-100`}>
+                        Nope.
+                        <br></br>
+                        While we encourage everyone to try and submit something, it's totally fine to attend the hackathon as a spectator.
+                        <br></br>
+                      </div>
+                    </div>
                   
+                  
+                    {/* How can I help? */}
+                    <div className="h-full">
+                      <div onClick={()=>setGenOpen7(!genOpen7)}
+                          className={`hover:text-amber-200 cursor-pointer md:text-2xl text-lg items-center flex text-amber-400 font-light-bubble font-semibold py-2 transition-all duration-300`}>
+                        <span className="text-4xl items-center mr-2">•</span>How can I help?
+                          
+                      </div>
+                      <div className={`${genOpen7? "h-full": "h-0"} font-light-bubble ml-2 text-xl overflow-hidden pl-2 text-yellow-100`}>
+                        BeeLikeCoders is always looking for new mentors and judges!
+                        <br></br>
+                        If you're interested in helping out as either, please send us an email at  
+                        <span className="underline text-white"> beelikecoders@gmail.com.</span>
+                      </div>
+                    </div>
                   </div>
 
 
+                  {/* OTHER */}
+                  <div className="flex flex-col ml-16 w-full">
+                    <h1 className="font-bubble text-left text-4xl text-amber-400 py-4 drop-shadow-xl">OTHER</h1>
 
-              </div>
-          </div>
+                    {/* How do I register? */}
+                    <div className="h-full">
+                      <div onClick={()=>setLogOpen1(!logOpen1)}
+                          className={`hover:text-amber-200 cursor-pointer md:text-2xl text-lg items-center flex text-amber-400 font-light-bubble font-semibold py-2 transition-all duration-300`}>
+                        <span className="text-4xl items-center mr-2">•</span> How do I register?
+                          
+                      </div>
+                      <div className={`${logOpen1? "h-full": "h-0"} font-light-bubble ml-2 text-xl overflow-hidden pl-2 text-yellow-100`}>
+                        Simple!
+                        <br></br>
+                        Click <span className="cursor-pointer text-3xl text-white">here</span> to register and fill out the form. Easy peasy.
+                        <br></br>
+                      </div>
+                    </div>
+                    
 
-        {/* GET HYPE TIMER */}
+
+                    {/* How much will it cost? */}
+                    <div className="h-full">
+                      <div onClick={()=>setLogOpen2(!logOpen2)}
+                          className={`hover:text-amber-200 cursor-pointer md:text-2xl text-lg items-center flex text-amber-400 font-light-bubble font-semibold py-2 transition-all duration-300`}>
+                        <span className="text-4xl items-center mr-2">•</span> How much will it cost?
+                          
+                      </div>
+                      <div className={`${logOpen2? "h-full": "h-0"} font-light-bubble ml-2 text-xl overflow-hidden pl-2 text-yellow-100`}>
+                        Absolutely nothing.
+                        <br></br>
+                        BeeLikeCoders is proud to be a completely free hackathon. As long as you can make it here, we'll cover everything else.
+                        <br></br>
+                      </div>
+                    </div>
+                    
+                    {/* Where is BeeLikeCoders? */}
+                    <div className="h-full">
+                      <div onClick={()=>setLogOpen3(!logOpen3)}
+                          className={`hover:text-amber-200 cursor-pointer md:text-2xl text-lg items-center flex text-amber-400 font-light-bubble font-semibold py-2 transition-all duration-300`}>
+                        <span className="text-4xl items-center mr-2">•</span> Where is BeeLikeCoders?
+                          
+                      </div>
+                      <div className={`${logOpen3? "h-full": "h-0"} font-light-bubble ml-2 text-xl overflow-hidden pl-2 text-yellow-100`}>
+                        This year, BeeLikeCoders will be held at _____.
+                      </div>
+                    </div>
+                    {/* When is the application deadline? */}
+                    <div className="h-full">
+                      <div onClick={()=>setLogOpen4(!logOpen4)}
+                          className={`hover:text-amber-200 cursor-pointer md:text-2xl text-lg items-center flex text-amber-400 font-light-bubble font-semibold py-2 transition-all duration-300`}>
+                        <span className="text-4xl items-center mr-2">•</span> When is the application deadline?
+                          
+                      </div>
+                      <div className={`${logOpen4? "h-full": "h-0"} font-light-bubble ml-2 text-xl overflow-hidden pl-2 text-yellow-100`}>
+                        This year, registration is due by _____.
+                      </div>
+                    </div>
+
+
+                  </div>
+
+                
+                </div>
+
+
+
+            </div>
+        </div>
+
+        <div class="x5">
+              <div class="cloud"></div>
+        </div>
+        <div class="x2">
+              <div class="cloud"></div>
+        </div>
+
+        {/* TIMER */}
         <div className="mt-24 -mb-96">
           {/* SPEECH BUBBLE */}
           <div className="relative w-8/12 border-8 py-16 border-black mx-auto bg-white rounded-3xl text-gray-800" id="schedule">
