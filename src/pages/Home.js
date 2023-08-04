@@ -182,7 +182,7 @@ const Home = () => {
           <div className="md:grid grid-cols-3 w-10/12 mx-auto text-center">
             <div></div>
             <div className="relative flex flex-col col-span-2 w-10/12 mx-auto ml-auto mr-0">
-                <h1 className=" font-bubble text-yellow-800 hover:animate-wiggle text-right drop-shadow-xl 2xl:text-9xl xl:text-8xl text-7xl">
+                <h1 className=" font-bubble text-yellow-800 hover:animate-wiggle text-right drop-shadow-xl 2xl:text-9xl xl:text-8xl md:text-7xl text-6xl">
                   BeeLikeCoders 
                   <br></br>
                   2024
