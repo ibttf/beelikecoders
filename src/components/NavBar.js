@@ -38,7 +38,7 @@ const NavBar = () => {
           <Link to ="/" className="px-4 hover:text-yellow-900 hover:scale-110 duration-200">
             Home
           </Link>
-          <Link to ="/about" className="px-4 hover:text-yellow-900 hover:scale-110 duration-200">
+          <Link to ="/#about" className="px-4 hover:text-yellow-900 hover:scale-110 duration-200">
             About
           </Link>
           <Link to ="/schedule" className="px-4 hover:text-yellow-900 hover:scale-110 duration-200">
