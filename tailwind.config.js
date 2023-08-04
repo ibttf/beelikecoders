@@ -28,7 +28,8 @@ module.exports = {
     animation: {
       wiggle: 'wiggle 0.1s infinite',
       drop: 'drop 3s',
-      hover: 'hover 3s infinite ease-in-out'
+      hover: 'hover 3s infinite ease-in-out',
+      updown: 'updown 2s infinite ease-in-out'
     },
     extend: {
       keyframes: {
@@ -38,6 +39,13 @@ module.exports = {
           '50%': {transform: 'rotate(0deg)'},
           '75%': { transform: 'rotate(-1deg)' },
           '100%': { transform: 'rotate(0)' },
+        },
+        updown:{
+          '0%': { transform: 'translateY(0) rotate(16deg)' },
+          '25%': { transform: 'translateY(8px) rotate(16deg)' },
+          '50%': {transform: 'translateY(0) rotate(16deg)'},
+          '75%': { transform: 'translateY(-8px) rotate(16deg)' },
+          '100%': { transform: 'translateY(0) rotate(16deg)' },
         },
         wiggle: {
           '0%': { transform: 'rotate(0)' },

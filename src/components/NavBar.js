@@ -19,7 +19,7 @@ const NavBar = () => {
 
 
   return (
-    <div className="relative h-60 z-10">
+    <div className="relative h-60 z-20 overflow-x-hidden">
     {sticky ? 
     <div></div>
     :
@@ -29,7 +29,7 @@ const NavBar = () => {
     }
 
     <div className={`fixed top-0 w-screen ${sticky ? "bg-yellow-400" : ""}`}>
-      <div className="w-10/12 mx-auto grid grid-flow-row grid-cols-12 text-center justify-center items-center py-1 ">
+      <div className="w-8/12 mx-auto grid grid-flow-row grid-cols-12 text-center justify-center items-center py-1 ">
         <Link to ="/" className={`col-span-7 text-center`}>
           <img src={logo} className={`${sticky? "w-12" : "w-24"} duration-300`}></img>
         </Link>
@@ -50,8 +50,8 @@ const NavBar = () => {
           <Link to ="/sponsors" className="px-4 hover:text-yellow-900 hover:scale-110 duration-200">
             Sponsors
           </Link>
-          <button onClick={()=>{navigate("/apply")}}className="mx-4 bg-yellow-100 text-yellow-800 rounded-3xl px-4 py-2 hover:bg-yellow-50">
-            Apply
+          <button onClick={()=>{navigate("/apply")}}className="mx-4 bg-yellow-800 text-yellow-100 rounded-3xl px-4 py-2 hover:bg-yellow-900">
+            Register
           </button>
         </div>
       </div>

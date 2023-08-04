@@ -1,4 +1,6 @@
 
+/* CLOUDS */
+/* ========================================================================================================= */
 /* KEYFRAMES */
 
 @-webkit-keyframes animateCloud {
@@ -97,7 +99,7 @@
 
 	height: 120px;
 	position: relative;
-
+	z-index:-1;
 	width: 350px;
 }
 
@@ -105,7 +107,7 @@
     background: #fff;
 	content: '';
 	position: absolute;
-	z-index: -100;
+	z-index: -10;
 }
 
 .cloud:after {
@@ -126,3 +128,15 @@
 	right: 50px;
 	top: -90px;
 }
+/* ========================================================================================================= */
+
+/* TRIANGLES FOR HEXAGON DIVS */
+/* ========================================================================================================= */
+.arrow-left {
+	width:0;
+	height: 0;
+	border-top: 3rem solid transparent;
+	border-bottom: 3rem solid transparent; 
+	border-right:3rem solid blue; 
+  }
+

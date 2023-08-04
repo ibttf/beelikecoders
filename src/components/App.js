@@ -32,15 +32,20 @@ function App() {
 
         {/* HOME PAGE */}
         <Route path="/" element={
-          <>
+          <div className="max-w-screen overflow-x-hidden">
             <NavBar />
             <Home/>
             <Footer />
-          </>
+          </div>
         } />
 
         {/* NOT FOUND */}
-        <Route path="*" element={<NotFound />} />
+        <Route path="*" element={
+        <>
+          <NavBar />
+          <NotFound/>
+          <Footer />
+        </>} />
       </Routes>
     </main>
   </>)
