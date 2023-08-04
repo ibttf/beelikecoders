@@ -32,6 +32,27 @@ module.exports = {
       updown: 'updown 2s infinite ease-in-out'
     },
     extend: {
+      borderWidth: {
+        DEFAULT: '1px',
+        '0': '0',
+        '2': '2px',
+        '3': '3px',
+        '4': '4px',
+        '6': '6px',
+        '8': '8px',
+        '80':'80px',
+        '40':'40px'
+      },
+      scale: {
+        '10': '0.10',
+        '20': '0.20',
+        '30': '0.30',
+        '40': '0.40',
+        '60': '0.60',
+        '70': '0.70',
+        '80': '0.80',
+        '90': '0.90',
+      },
       keyframes: {
         hover: {
           '0%': { transform: 'rotate(0)' },

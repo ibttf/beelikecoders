@@ -1,4 +1,47 @@
 
+.row {
+    display: block;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: -35px;
+    margin-left: -33px;
+}
+  
+.hex {
+      position: relative;
+      width: 100px;
+      height: 57.74px;
+      background-color: #d18d17;
+      margin: 32.87px 2px;
+      display: block;
+    }
+  
+.hex::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    top: 100%;
+    width: 0;
+    border-top: 28.87px solid #d18d17;
+    transition: all .2s linear;
+    }
+
+.hex::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    bottom: 100%;
+    border-bottom: 28.87px solid #d18d17;
+    transition: all .2s linear;
+    }
+    
 /* CLOUDS */
 /* ========================================================================================================= */
 /* KEYFRAMES */
