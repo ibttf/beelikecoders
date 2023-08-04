@@ -64,7 +64,7 @@ const NavBar = () => {
             <a href="#judges" className="px-9 py-2 text-yellow-800 font-bold cursor-pointer font-light-bubble text-xl">Judges</a>
             <a href="#sponsors" className="px-9 py-2 text-yellow-800 font-bold cursor-pointer font-light-bubble text-xl">Sponsors</a>
             <a href="#faq" className="px-9 py-2 pb-4 text-yellow-800 font-bold cursor-pointer font-light-bubble text-xl">FAQ</a>
-            <a href="" target="_blank" className="px-9 py-2 pb-4 text-yellow-800 font-bold cursor-pointer font-light-bubble text-xl">Register</a>
+            <a href="https://google.com" target="_blank" className="px-9 py-2 pb-4 text-yellow-800 font-bold cursor-pointer font-light-bubble text-xl">Register</a>
 
         </div>
       </div>

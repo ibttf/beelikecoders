@@ -192,10 +192,10 @@ const Home = () => {
                 </h2>
                 {/* BUTTONS */}
                 <div className="pt-16 grid grid-cols-2 grid-flow-col gap-4 xl:w-8/12 ml-auto whitespace-nowrap text-center ">
-                  <button className="lg:px-6 py-4 border-4 border-yellow-800 xl:text-xl text-lg font-extrabold font-light-bubble bg-yellow-800 text-yellow-200
-                                    hover:bg-yellow-900 hover:border-yellow-900 rounded-xl w-full">Register Now</button>
-                  <button className="lg:px-6 py-4 border-4 border-yellow-800 xl:text-xl text-lg font-extrabold font-light-bubble bg-yellow-200 text-yellow-800
-                                    hover:bg-yellow-300 rounded-xl">Sponsor Us</button>
+                  <a href="https://google.com" target="_blank" className="lg:px-6 py-4 border-4 border-yellow-800 xl:text-xl text-lg font-extrabold font-light-bubble bg-yellow-800 text-yellow-200
+                                    hover:bg-yellow-900 hover:border-yellow-900 rounded-xl w-full">Register Now</a>
+                  <a href="https://google.com" target="_blank" className="lg:px-6 py-4 border-4 border-yellow-800 xl:text-xl text-lg font-extrabold font-light-bubble bg-yellow-200 text-yellow-800
+                                    hover:bg-yellow-300 rounded-xl">Sponsor Us</a>
                 
                 </div>
             </div>
@@ -469,9 +469,9 @@ const Home = () => {
 
             
                 
-                <div className="lg:flex items-start xl:w-9/12 mx-auto">
+                <div className="lg:flex lg:items-start xl:w-9/12 mx-auto">
                   {/* GENERAL QUESTIONS */}
-                  <div className="flex flex-col mr-16">
+                  <div className="flex flex-col w-full mr-4">
                     <h1 className="font-bubble text-4xl text-amber-400 py-4 drop-shadow-xl">GENERAL</h1>
                     {/* WHAT IS A HACKATHON? */}
                     <div className="h-full">
@@ -498,8 +498,6 @@ const Home = () => {
 
                       </div>
                     </div>
-
-
                     {/* Is it ok if I don't know how to code? */}
                     <div className="h-full">
                       <div onClick={()=>setGenOpen3(!genOpen3)}
@@ -583,7 +581,7 @@ const Home = () => {
 
 
                   {/* OTHER */}
-                  <div className="flex flex-col xl:ml-16 w-full">
+                  <div className="flex flex-col xl:ml-16 w-full mr-4">
                     <h1 className="font-bubble text-left text-4xl text-amber-400 py-4 drop-shadow-xl">OTHER</h1>
 
                     {/* How do I register? */}
