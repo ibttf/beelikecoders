@@ -76,11 +76,11 @@ module.exports = {
           '100%': { transform: 'rotate(0)' },
         },
         updown:{
-          '0%': { transform: 'translateY(0)' },
-          '25%': { transform: 'translateY(8px)' },
-          '50%': {transform: 'translateY(0)'},
-          '75%': { transform: 'translateY(-8px)' },
-          '100%': { transform: 'translateY(0)' },
+          '0%': { transform: 'translateY(0) rotate(16deg)' },
+          '25%': { transform: 'translateY(8px) rotate(16deg)' },
+          '50%': {transform: 'translateY(0) rotate(16deg)'},
+          '75%': { transform: 'translateY(-8px) rotate(16deg)' },
+          '100%': { transform: 'translateY(0) rotate(16deg)' },
         },
         wiggle: {
           '0%': { transform: 'rotate(0)' },

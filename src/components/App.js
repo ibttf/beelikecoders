@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import NavBar from "./NavBar";
-import Home from "../pages/Home";
 import NotFound from "../pages/NotFound";
-
-
-
+import Footer from "./Footer";
+import Hero from "./Hero";
+import About from "./About"
+import Schedule from "./Schedule";
+import Judges from "./Judges";
+import Sponsors from "./Sponsors";
 
 function App() {
 
@@ -17,14 +19,19 @@ function App() {
 
   return(
   <>
-    <main className="bg-yellow-100 overflow-x-hidden max-w-screen">
+    <main className="bg-blue-100 overflow-x-hidden max-w-screen">
     <Routes>
 
         {/* HOME PAGE */}
         <Route path="/" element={
           <div className="">
             <NavBar />
-            <Home/>
+            <Hero />
+            <About />
+            <Schedule />
+            <Judges />
+            <Sponsors />
+            {/* <Footer /> */}
           </div>
         } />
 
@@ -33,6 +40,7 @@ function App() {
         <>
           <NavBar />
           <NotFound/>
+          <Footer />
         </>} />
       </Routes>
     </main>
