@@ -2,8 +2,6 @@ import React, { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import NavBar from "./NavBar";
 import Home from "../pages/Home";
-import Footer from "./Footer";
-import Loading from "../pages/Loading"
 import NotFound from "../pages/NotFound";
 
 
@@ -19,23 +17,14 @@ function App() {
 
   return(
   <>
-    <main className="bg-yellow-100">
+    <main className="bg-yellow-100 overflow-x-hidden max-w-screen">
     <Routes>
-
-        {/* CONTACT PAGE */}
-        <Route path="/contact" element={
-          <>
-            <NavBar/>
-            <Footer />
-          </>
-        } />
 
         {/* HOME PAGE */}
         <Route path="/" element={
-          <div className="max-w-screen overflow-x-hidden">
+          <div className="">
             <NavBar />
             <Home/>
-            <Footer />
           </div>
         } />
 
@@ -44,7 +33,6 @@ function App() {
         <>
           <NavBar />
           <NotFound/>
-          <Footer />
         </>} />
       </Routes>
     </main>

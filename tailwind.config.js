@@ -19,7 +19,8 @@ module.exports = {
       // => @media (min-width: 1280px) { ... }
 
       '2xl': '1536px',
-      // => @media (min-width: 1536px) { ... }
+      // => @media (min-width: 1536px) { ... },
+      '3xl': '1800px'
     },
     fontFamily: {
       'bubble': ['Lilita One', 'cursive'],
@@ -35,6 +36,8 @@ module.exports = {
     },
     extend: {
       height: {
+        '108': '36rem',
+        '116': '42rem',
         '128': '50rem',
       },
       spacing: {
