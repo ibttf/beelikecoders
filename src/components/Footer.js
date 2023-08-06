@@ -45,10 +45,10 @@ const Footer = () => {
 
   
     return (
-    <div>
-        <div className="overscroll-y-none">
+    <div className="overflow-x-hidden mt-48">
+        
         {/* SPEECH BUBBLE */}
-        <div className="relative lg:w-8/12 w-11/12 border-8 py-16 border-black mx-auto bg-white rounded-3xl text-gray-800 mb-128" id="schedule">
+        <div className="relative lg:w-8/12 w-11/12 border-8 py-16 border-black mx-auto bg-white rounded-3xl text-gray-800" id="schedule">
             <h1 className="lg:text-9xl md:text-8xl text-6xl font-bubble font-extrabold text-center pb-12">
             GET HYPE!!!
             <br></br>
@@ -78,16 +78,17 @@ const Footer = () => {
                 <br></br>
                 </h1>}
             </div>
-        <div className="relative w-0 h-0 border-t-black lg:border-t-80 lg:border-x-80 border-t-40 border-x-40 border-x-transparent left-2/3 top-36">
-        </div>
-        </div>
 
         </div>
+
+        <div className="relative w-0 h-0 border-t-black lg:border-t-80 lg:border-x-40 border-t-40 border-x-40 border-x-transparent left-3/4">
+        </div>
+
 
         {/* FOOTER */}
-        <div className="w-screen max-w-screen max-h-96 absolute bottom-0 bg-yellow-100 -z-10 overflow-hidden ">
+        <div className="max-w-screen bg-blue-100 -z-10 overflow-hidden -mt-108">
             {/* SUPER SAIYAN BEE */}
-            <svg className="relative"  width="0px" height="0px" viewBox="0 0 256 256" >
+            <svg className="relative z-30 left-3/4 top-108 w-96" viewBox="0 0 256 256" >
             <g fill="#ffffff">
             <path d="M98.50 198.25 c0 -1.65 0.10 -1.75 1.75 -1.75 1.65 0 1.75 0.10 1.75 1.75 0 1.65 -0.10 1.75 -1.75 1.75 -1.65 0 -1.75 -0.10 -1.75 -1.75z"/>
             <path d="M93.75 190.05 c-0.75 -4.45 0.90 -8.80 4.15 -10.80 1.50 -0.95 1.55 -1.10 1.20 -3 -0.45 -2.60 -0.45 -11.60 0.05 -13.35 0.30 -1.20 0.65 -1.40 2.20 -1.40 l1.80 0 -0.30 4.15 c-0.25 3.05 -0.15 4.90 0.45 6.90 0.40 1.50 0.90 3.75 1.05 5.10 0.25 1.95 0.15 2.35 -0.55 2.35 -0.45 0 -0.80 0.40 -0.80 0.95 0 0.50 -0.55 1.30 -1.20 1.70 -1.35 0.90 -4.30 6.60 -4.30 8.25 0 0.90 -0.30 1.10 -1.70 1.10 -1.60 0 -1.75 -0.15 -2.05 -1.95z"/>
@@ -628,20 +629,20 @@ const Footer = () => {
             </svg>
             {/* WAVE */}
             <svg viewBox="0 0 1440 320">
-                <path fill="#facc15" fill-opacity="1" d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,250.7C1248,256,1344,288,1392,304L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+                <path className="fill-green-700" fill-opacity="1" d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,250.7C1248,256,1344,288,1392,304L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
             </svg>
-            <div className="pb-12 -mt-1 md:pt-8" style={{"background-color":"#facc15"}}>
+            <div className="pb-12 -mt-1 bg-green-700">
                 <div className="grid grid-flow-row grid-cols-5 lg:w-4/12 md:w-8/12 w-10/12 mx-auto pb-6">
-                    <FaFacebookF className="w-16 h-16 text-amber-200 border-2 border-amber-700 rounded-full p-2 bg-amber-700 cursor-pointer hover:bg-amber-900 hover:border-amber-900"/>
-                    <AiOutlineInstagram className="w-16 h-16 text-amber-200 border-2 border-amber-700 rounded-full p-2 bg-amber-700 cursor-pointer hover:bg-amber-900 hover:border-amber-900"/>
-                    <BsTwitter className="w-16 h-16 text-amber-200 border-2 border-amber-700 rounded-full p-2 bg-amber-700 cursor-pointer hover:bg-amber-900 hover:border-amber-900"/>
-                    <AiFillGithub className="w-16 h-16 text-amber-200 border-2 border-amber-700 rounded-full p-2 bg-amber-700 cursor-pointer hover:bg-amber-900 hover:border-amber-900"/>
-                    <AiOutlineMail className="w-16 h-16 text-amber-200 border-2 border-amber-700 rounded-full p-2 bg-amber-700 cursor-pointer hover:bg-amber-900 hover:border-amber-900"/>
+                    <FaFacebookF className="w-16 h-16 text-yellow-800 border-2 border-amber-200 rounded-full p-2 bg-amber-200 cursor-pointer hover:bg-amber-300 hover:border-amber-300"/>
+                    <AiOutlineInstagram className="w-16 h-16 text-yellow-800 border-2 border-amber-200 rounded-full p-2 bg-amber-200 cursor-pointer hover:bg-amber-300 hover:border-amber-300"/>
+                    <BsTwitter className="w-16 h-16 text-yellow-800 border-2 border-amber-200 rounded-full p-2 bg-amber-200 cursor-pointer hover:bg-amber-300 hover:border-amber-300"/>
+                    <AiFillGithub className="w-16 h-16 text-yellow-800 border-2 border-amber-200 rounded-full p-2 bg-amber-200 cursor-pointer hover:bg-amber-300 hover:border-amber-300"/>
+                    <AiOutlineMail className="w-16 h-16 text-yellow-800 border-2 border-amber-200 rounded-full p-2 bg-amber-200 cursor-pointer hover:bg-amber-300 hover:border-amber-300"/>
                 </div>
-                <h2 className="text-center text-2xl font-bold text-amber-800 py-2">
+                <h2 className="text-center text-2xl font-bold text-amber-200 py-2">
                     Made with <span className="">❤️</span> by the BeeLikeCoders Team
                 </h2>
-                <h4 className="text-center text-lg font-normal text-amber-800">
+                <h4 className="text-center text-lg font-normal text-amber-200">
                     Copyright © 2023 BeeLikeCoders
                 </h4>
             </div>

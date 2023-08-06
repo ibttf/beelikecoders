@@ -5,7 +5,7 @@ const About = () => {
         <div className=" text-center relative mt-12 flex flex-col xl:w-9/12 w-11/12 mx-auto justify-between" id="about">
           {/* DRIPPING HONEY */}
           <div>
-          <svg className="absolute  -top-72 -left-24 lg:scale-100 scale-70"  width="512px" height="512px" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet">
+          <svg className="absolute -top-72 -left-24 lg:scale-100 scale-70"  width="512px" height="512px" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet">
             <g fill="#ff9e00">
               <path d="M30.1 499.4 c-11.9 -12.2 -13.1 -14.6 -8.2 -17.1 3.4 -1.6 250 -248.2 251.2 -251 0.7 -1.9 1.6 -2.3 5.6 -2.3 4.8 0 4.9 0.1 15.1 10.3 8.7 8.7 10.2 10.7 10.2 13.5 0 2.2 -0.5 3.2 -1.5 3.2 -0.8 0 -1.5 -0.8 -1.5 -1.7 0 -1.1 -54.8 53 -129.3 127.5 -71 71 -129.5 129.2 -129.8 129.2 -0.4 0 -5.7 -5.2 -11.8 -11.6z"/>
               <path d="M404 272.9 c-5 -1.9 -9.2 -5.8 -44.7 -41.7 -41.7 -42 -40.9 -41 -38.3 -47.6 0.5 -1.4 1.5 -2.6 2.2 -2.6 1.6 0 25.8 -24 25.8 -25.5 0 -0.6 2.4 -3.4 5.3 -6.3 4.8 -4.7 5.7 -5.2 9.8 -5.2 l4.5 0 39.6 39.8 c45.7 45.9 43.4 42.6 42.6 60.6 -0.6 11.9 -2.2 16 -9.3 22.5 -6.5 6 -10.3 7.3 -22 7.8 -8.4 0.3 -10.9 0 -15.5 -1.8z"/>
@@ -24,7 +24,7 @@ const About = () => {
             </g>
           </svg>
           </div>
-          <div className="m-0 border-2 py-12 lg:px-16 bg-yellow-300 w-full rounded-3xl relative z-20">
+          <div className="m-0 border-2 py-12 lg:px-16 bg-yellow-50 w-full rounded-3xl relative z-20">
             <h1 className="text-yellow-900 font-bubble text-7xl">
               ABOUT
             </h1>

@@ -31,7 +31,7 @@ function App() {
             <Schedule />
             <Judges />
             <Sponsors />
-            {/* <Footer /> */}
+            <Footer />
           </div>
         } />
 
