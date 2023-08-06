@@ -24,6 +24,8 @@ module.exports = {
     fontFamily: {
       'bubble': ['Lilita One', 'cursive'],
       'light-bubble': ['Noto Sans Vithkuqi', 'sans-serif'],
+      'big-bubble': ['Sniglet', 'cursive'],
+      'ballon': ['Nunito', 'sans-serif']
     },
     animation: {
       wiggle: 'wiggle 0.1s infinite',
@@ -32,6 +34,12 @@ module.exports = {
       updown: 'updown 2s infinite ease-in-out'
     },
     extend: {
+      height: {
+        '128': '50rem',
+      },
+      spacing: {
+        '108': '36rem',
+      },
       borderWidth: {
         DEFAULT: '1px',
         '0': '0',
@@ -40,6 +48,7 @@ module.exports = {
         '4': '4px',
         '6': '6px',
         '8': '8px',
+        '16': '16px',
         '80':'80px',
         '40':'40px'
       },
@@ -52,6 +61,8 @@ module.exports = {
         '70': '0.70',
         '80': '0.80',
         '90': '0.90',
+        '120': '1.20',
+        '175':'1.75',
       },
       keyframes: {
         hover: {
@@ -62,11 +73,11 @@ module.exports = {
           '100%': { transform: 'rotate(0)' },
         },
         updown:{
-          '0%': { transform: 'translateY(0) rotate(16deg)' },
-          '25%': { transform: 'translateY(8px) rotate(16deg)' },
-          '50%': {transform: 'translateY(0) rotate(16deg)'},
-          '75%': { transform: 'translateY(-8px) rotate(16deg)' },
-          '100%': { transform: 'translateY(0) rotate(16deg)' },
+          '0%': { transform: 'translateY(0)' },
+          '25%': { transform: 'translateY(8px)' },
+          '50%': {transform: 'translateY(0)'},
+          '75%': { transform: 'translateY(-8px)' },
+          '100%': { transform: 'translateY(0)' },
         },
         wiggle: {
           '0%': { transform: 'rotate(0)' },
