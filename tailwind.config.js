@@ -42,6 +42,7 @@ module.exports = {
       },
       spacing: {
         '108': '36rem',
+        '128': '44rem',
       },
       borderWidth: {
         DEFAULT: '1px',
@@ -101,6 +102,9 @@ module.exports = {
       },
       colors: {
         yellow:{
+          5: "#3b484a",
+          10: "#F0CF93",
+          25: "#e89d43",
           50: '#ffd300',
           100: "#fffff0",
           150: "#ffd15b",

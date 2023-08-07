@@ -19,7 +19,7 @@ function App() {
 
   return(
   <>
-    <main className="bg-blue-100 overflow-x-hidden max-w-screen">
+    <main className=" overflow-x-hidden max-w-screen" style={{"background-color":"white"}}>
     <Routes>
 
         {/* HOME PAGE */}

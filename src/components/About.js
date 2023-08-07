@@ -2,7 +2,7 @@ import React from 'react';
 
 const About = () => {
     return (
-        <div className=" text-center relative mt-12 flex flex-col xl:w-9/12 w-11/12 mx-auto justify-between" id="about">
+        <div className=" text-center relative mt-72 flex flex-col xl:w-9/12 w-11/12 mx-auto justify-between " id="about">
           {/* DRIPPING HONEY */}
           <div>
           <svg className="absolute -top-72 -left-24 lg:scale-100 scale-70"  width="512px" height="512px" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet">
