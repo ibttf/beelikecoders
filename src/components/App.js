@@ -19,7 +19,7 @@ function App() {
 
   return(
   <>
-    <main className=" overflow-x-hidden max-w-screen" style={{"background-color":"white"}}>
+    <main className=" overflow-x-hidden max-w-screen" style={{'background-color':"#9fb12a"}}>
     <Routes>
 
         {/* HOME PAGE */}
