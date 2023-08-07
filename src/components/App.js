@@ -8,7 +8,7 @@ import About from "./About"
 import Schedule from "./Schedule";
 import Judges from "./Judges";
 import Sponsors from "./Sponsors";
-
+import FAQ from "./FAQ";
 function App() {
 
 
@@ -31,6 +31,7 @@ function App() {
             <Schedule />
             <Judges />
             <Sponsors />
+            <FAQ />
             <Footer />
           </div>
         } />

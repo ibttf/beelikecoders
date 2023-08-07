@@ -76,11 +76,11 @@ module.exports = {
           '100%': { transform: 'rotate(0)' },
         },
         updown:{
-          '0%': { transform: 'translateY(0) rotate(16deg)' },
-          '25%': { transform: 'translateY(8px) rotate(16deg)' },
-          '50%': {transform: 'translateY(0) rotate(16deg)'},
-          '75%': { transform: 'translateY(-8px) rotate(16deg)' },
-          '100%': { transform: 'translateY(0) rotate(16deg)' },
+          '0%': { transform: 'translateY(0)' },
+          '25%': { transform: 'translateY(8px)' },
+          '50%': {transform: 'translateY(0)'},
+          '75%': { transform: 'translateY(-8px)' },
+          '100%': { transform: 'translateY(0)' },
         },
         wiggle: {
           '0%': { transform: 'rotate(0)' },
@@ -103,6 +103,7 @@ module.exports = {
         yellow:{
           50: '#ffd300',
           100: "#fffff0",
+          150: "#ffd15b",
           200: "#fefcbf",
           300: "#faf089",
           400: "#facc15",

@@ -60,7 +60,7 @@ const NavBar = () => {
         </div>
       </div>
       {/* MOBILE NAVBAR */}
-      <div className="xl:hidden grid relative z-10 ml-12 my-2">
+      <div className="xl:hidden grid relative z-10 ml-12 my-2 shadow-2xl">
         <VscThreeBars className={`${open ? "rotate-90" : ""} scale-x-150 duration-300 cursor-pointer text-yellow-800 md:w-12 md:h-12 h-8 w-8`} onClick={()=>{setOpen(!open)}}/>
         <div className={`${open ? "2xl:hidden flex": "hidden"} absolute top-12 -left-6 z-20 bg-yellow-400 flex-col rounded-xl border-6 border-yellow-800` }>
             <a href="#home" className="px-9 py-2 pt-4 text-yellow-800 font-bold cursor-pointer font-light-bubble text-xl">Home</a>
