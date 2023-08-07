@@ -1,4 +1,52 @@
-
+.curved-div {
+    background: #93c5fd;
+    color: #FFF;
+    text-align: center;
+  }
+  .curve-div svg {
+    display: block;
+  }
+.gallery {
+    --s: 250px; /* control the size */
+    --g: 10px;  /* control the gap */
+    display: grid;
+    margin: calc(var(--s) + var(--g));
+  }
+  
+  .gallery > img {
+    grid-area: 1/1;
+    width: var(--s);
+    aspect-ratio: 0.866;
+    clip-path: polygon(0% 25%,0% 75%,50% 100%,100% 75%,100% 25%,50% 0);
+    transform: translate(var(--_x,0),var(--_y,0)) scale(var(--_t,1));
+    cursor: pointer;
+    transition: .2s linear;
+    background-color: #e89d43;
+  }
+  .gallery > img:hover {
+    cursor:pointer;
+    scale:1.1;
+  }
+  
+  .gallery > img:nth-child(1) {--_x: calc(-100% - var(--g))}
+  .gallery > img:nth-child(7) {--_x: calc( 100% + var(--g))}
+  .gallery > img:nth-child(3),
+  .gallery > img:nth-child(5) {--_y: calc(-75% - .87*var(--g))}
+  .gallery > img:nth-child(4),
+  .gallery > img:nth-child(6) {--_y: calc( 75% + .87*var(--g))}
+  .gallery > img:nth-child(3),
+  .gallery > img:nth-child(4) {--_x: calc(-50% - .5*var(--g))}
+  .gallery > img:nth-child(5), 
+  .gallery > img:nth-child(6) {--_x: calc( 50% + .5*var(--g))}
+  
+  
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+    background: #aabbfb;
+  }
 @-webkit-keyframes animateCloud {
     0% {
         margin-left: 10vw;

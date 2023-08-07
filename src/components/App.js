@@ -5,7 +5,7 @@ import NotFound from "../pages/NotFound";
 import Footer from "./Footer";
 import Hero from "./Hero";
 import About from "./About"
-import Schedule from "./Schedule";
+import Events from "./Events";
 import Judges from "./Judges";
 import Sponsors from "./Sponsors";
 import FAQ from "./FAQ";
@@ -19,7 +19,7 @@ function App() {
 
   return(
   <>
-    <main className=" overflow-x-hidden max-w-screen" style={{'background-color':"#9fb12a"}}>
+    <main className=" overflow-x-hidden max-w-screen bg-yellow-200">
     <Routes>
 
         {/* HOME PAGE */}
@@ -28,7 +28,7 @@ function App() {
             <NavBar />
             <Hero />
             <About />
-            <Schedule />
+            <Events />
             <Judges />
             <Sponsors />
             <FAQ />

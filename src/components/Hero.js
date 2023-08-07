@@ -5,7 +5,7 @@ const Hero = () => {
     const [isCombClicked,setIsCombClicked]=useState(false);
   
     return (
-        <div className="xl:mb-128 pt-36 overscroll-x-none max-w-screen bg-blue-100">
+        <div className=" pt-36 overscroll-x-none max-w-screen bg-blue-100">
           {/* BACKGROUND */}
           <svg className="absolute xl:top-24 bottom-0 z-10 overflow-x-hidden" style={{"width":"99vw"}} viewBox="0 0 3334 2000">
 
@@ -41,7 +41,7 @@ const Hero = () => {
               </g>
           </svg>
           {/* HONEYCOMB */}
-         <svg className=" absolute left-0 right-36 mx-auto top-100 z-10"  width="30vw" viewBox="0 0 512 512"> <g fill="#454545">
+         <svg className="animate-hover absolute left-0 right-36 mx-auto top-100 z-10"  width="25vw" viewBox="0 0 512 512"> <g fill="#454545">
   <path d="M245.2 253.6 c-5.5 -1.8 -11.2 -5.7 -14.3 -9.9 -1.9 -2.6 -2.4 -4.4 -2.4 -9.5 0 -8.2 2 -10.2 10.2 -10.2 5 0 5.7 0.3 10.1 4.4 6.9 6.5 9.6 6.5 15.8 0.1 4.1 -4.3 4.6 -4.5 9.9 -4.5 7.6 0 10.5 2.7 10.5 10 0 8.1 -3.9 13.4 -13 18.1 -5.7 2.9 -20.1 3.7 -26.8 1.5z"/>
   <path d="M182.6 222.7 c-2.5 -2.5 -2.6 -3.1 -2.6 -14.2 0 -11 0.1 -11.7 2.5 -14 2 -2.1 3.4 -2.5 8 -2.5 4.7 0 6 0.4 8.1 2.5 2.5 2.5 2.6 2.9 2.2 14.5 -0.4 14.3 -0.9 15.2 -9.7 15.8 -5.4 0.4 -6.2 0.2 -8.5 -2.1z"/>
   <path d="M315.2 224 c-3.3 -1.4 -4.2 -4.9 -4.2 -16.6 0 -9.8 0.2 -10.7 2.5 -12.9 2 -2.1 3.4 -2.5 8 -2.5 4.6 0 6 0.4 8 2.5 2.4 2.3 2.5 3 2.5 14 0 11 -0.1 11.7 -2.5 14 -1.9 2 -3.4 2.5 -7.2 2.4 -2.6 0 -5.8 -0.4 -7.1 -0.9z"/>
