@@ -42,6 +42,9 @@ module.exports = {
       },
       spacing: {
         '22px':'22px',
+        '66px':'66px',
+        '90':'22rem',
+        '98':'26rem',
         '100':'28rem',
         '108': '36rem',
         '128': '44rem',
@@ -105,6 +108,7 @@ module.exports = {
       },
       colors: {
         yellow:{
+          1:"#fbeaab",
           5: "#3b484a",
           10: "#F0CF93",
           25: "#e89d43",

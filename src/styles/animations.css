@@ -300,6 +300,9 @@
   }
 
   @media only screen and (max-width: 1800px) {
+    .gallery {
+        --s: 200px; /* control the size */
+      }
     .tree{
         height:120vh;
     }

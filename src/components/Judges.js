@@ -2,7 +2,7 @@ import React from 'react';
 import question from "../styles/fp-question.png" 
 const Judges = () => {
     return (
-        <div className="relative text-center mt-72 pb-48 flex flex-col w-8/12 border-8 rounded-xl bg-amber-200
+        <div className="relative text-center mt-72 pb-48 flex flex-col xl:w-8/12 w-11/12 border-8 rounded-xl bg-amber-200
                       border-amber-400 mx-auto justify-between" id="judges"
                     >
             

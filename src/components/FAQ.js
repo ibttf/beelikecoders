@@ -30,11 +30,11 @@ const FAQ = () => {
                 {/* WHAT IS A HACKATHON? */}
                 <div className="h-full">
                   <div onClick={()=>setGenOpen1(!genOpen1)}
-                      className={`hover:text-red-900 cursor-pointer 2xl:text-4xl xl:text-3xl md:text-xl text-lg items-center flex  font-light-bubble font-semibold 2xl:py-6 py-3 transition-all duration-100`}>
+                      className={`hover:text-red-900 cursor-pointer 2xl:text-4xl xl:text-3xl text-2xl items-center flex  font-light-bubble font-semibold 2xl:py-6 py-3 transition-all duration-100`}>
                     <span className="text-4xl items-center mr-2">•</span> What is a hackathon?
                       
                   </div>
-                  <div className={`${genOpen1? "h-full": "h-0"} font-light-bubble ml-2 xl:text-3xl text-xl overflow-hidden pl-2 text-red-900`}>
+                  <div className={`${genOpen1? "h-full": "h-0"} font-light-bubble ml-2 2xl:text-3xl xl:2xl text-xl overflow-hidden pl-2 text-red-900`}>
                   A hackathon is where you transform your crazy ideas into real projects. 
                   <br></br>Hundreds of students from across California form teams around an idea and collaboratively create technical solutions to various problems and challenges. 
                   <br></br>These ideas turn into websites, mobile apps, hardware, and more!
@@ -43,11 +43,11 @@ const FAQ = () => {
                 {/* CAN I ATTEND? */}
                 <div className="h-full">
                   <div onClick={()=>setGenOpen2(!genOpen2)}
-                      className={`hover:text-red-900 cursor-pointer 2xl:text-4xl xl:text-3xl md:text-xl text-lg items-center flex  font-light-bubble font-semibold 2xl:py-6 py-3 transition-all duration-100`}>
+                      className={`hover:text-red-900 cursor-pointer 2xl:text-4xl xl:text-3xl text-2xl items-center flex  font-light-bubble font-semibold 2xl:py-6 py-3 transition-all duration-100`}>
                     <span className="text-4xl items-center mr-2">•</span> Can I attend?
                       
                   </div>
-                  <div className={`${genOpen2? "h-full": "h-0"} font-light-bubble ml-2 xl:text-3xl text-xl overflow-hidden pl-2 text-red-900`}>
+                  <div className={`${genOpen2? "h-full": "h-0"} font-light-bubble ml-2 2xl:text-3xl xl:2xl text-xl overflow-hidden pl-2 text-red-900`}>
                   BeeLikeCoders is open to all two-year, four-year, and high-school students over the age of 18 from any majors and any schools, as well as graduates who have completed their degrees within the past year. 
 
                   </div>
@@ -55,11 +55,11 @@ const FAQ = () => {
                 {/* Is it ok if I don't know how to code? */}
                 <div className="h-full">
                   <div onClick={()=>setGenOpen3(!genOpen3)}
-                      className={`hover:text-red-900 cursor-pointer 2xl:text-4xl xl:text-3xl md:text-xl text-lg items-center flex  font-light-bubble font-semibold 2xl:py-6 py-3 transition-all duration-100`}>
+                      className={`hover:text-red-900 cursor-pointer 2xl:text-4xl xl:text-3xl text-2xl items-center flex  font-light-bubble font-semibold 2xl:py-6 py-3 transition-all duration-100`}>
                     <span className="text-4xl items-center mr-2">•</span> Is it ok if I don't know how to code?
                       
                   </div>
-                  <div className={`${genOpen3? "h-full": "h-0"} font-light-bubble ml-2 xl:text-3xl text-xl overflow-hidden pl-2 text-red-900`}>
+                  <div className={`${genOpen3? "h-full": "h-0"} font-light-bubble ml-2 2xl:text-3xl xl:2xl text-xl overflow-hidden pl-2 text-red-900`}>
                     Absolutely! BeeLikeCoders is proud to be a beginner-friendly hackathon.
                     <br></br>
                     You don't need to know any code, but you should be willing to learn.
@@ -71,11 +71,11 @@ const FAQ = () => {
                 {/* What am I even supposed to make? */}
                 <div className="h-full">
                   <div onClick={()=>setGenOpen4(!genOpen4)}
-                      className={`hover:text-red-900 cursor-pointer 2xl:text-4xl xl:text-3xl md:text-xl text-lg items-center flex  font-light-bubble font-semibold 2xl:py-6 py-3 transition-all duration-100`}>
+                      className={`hover:text-red-900 cursor-pointer 2xl:text-4xl xl:text-3xl text-2xl items-center flex  font-light-bubble font-semibold 2xl:py-6 py-3 transition-all duration-100`}>
                     <span className="text-4xl items-center mr-2">•</span> What am I even supposed to make?
                       
                   </div>
-                  <div className={`${genOpen4? "h-full": "h-0"} font-light-bubble ml-2 xl:text-3xl text-xl overflow-hidden pl-2 text-red-900`}>
+                  <div className={`${genOpen4? "h-full": "h-0"} font-light-bubble ml-2 2xl:text-3xl xl:2xl text-xl overflow-hidden pl-2 text-red-900`}>
                     Every year we have a general problem for our applicants to try and tackle any way they see fit.
                     <br></br>
                     For example, last year, we asked participants to 
@@ -88,11 +88,11 @@ const FAQ = () => {
                 {/* How do teams work? */}
                 <div className="h-full">
                   <div onClick={()=>setGenOpen5(!genOpen5)}
-                      className={`hover:text-red-900 cursor-pointer 2xl:text-4xl xl:text-3xl md:text-xl text-lg items-center flex  font-light-bubble font-semibold 2xl:py-6 py-3 transition-all duration-100`}>
+                      className={`hover:text-red-900 cursor-pointer 2xl:text-4xl xl:text-3xl text-2xl items-center flex  font-light-bubble font-semibold 2xl:py-6 py-3 transition-all duration-100`}>
                     <span className="text-4xl items-center mr-2">•</span> How do teams work?
                       
                   </div>
-                  <div className={`${genOpen5? "h-full": "h-0"} font-light-bubble ml-2 xl:text-3xl text-xl overflow-hidden pl-2 text-red-900`}>
+                  <div className={`${genOpen5? "h-full": "h-0"} font-light-bubble ml-2 2xl:text-3xl xl:2xl text-xl overflow-hidden pl-2 text-red-900`}>
                     A single team can have anywhere between 1 and 4 members and should expect to submit one project per team. 
                     <br></br>
                     It's okay to participate by yourself, but we recommend finding or creating a team for the full BeeLikeCoders experience.
@@ -104,11 +104,11 @@ const FAQ = () => {
                 {/* Do I have to submit a project? */}
                 <div className="h-full">
                   <div onClick={()=>setGenOpen6(!genOpen6)}
-                      className={`hover:text-red-900 cursor-pointer 2xl:text-4xl xl:text-3xl md:text-xl text-lg items-center flex  font-light-bubble font-semibold 2xl:py-6 py-3 transition-all duration-100`}>
+                      className={`hover:text-red-900 cursor-pointer 2xl:text-4xl xl:text-3xl text-2xl items-center flex  font-light-bubble font-semibold 2xl:py-6 py-3 transition-all duration-100`}>
                     <span className="text-4xl items-center mr-2">•</span> Do I have to submit a project?
                       
                   </div>
-                  <div className={`${genOpen6? "h-full": "h-0"} font-light-bubble ml-2 xl:text-3xl text-xl overflow-hidden pl-2 text-red-900`}>
+                  <div className={`${genOpen6? "h-full": "h-0"} font-light-bubble ml-2 2xl:text-3xl xl:2xl text-xl overflow-hidden pl-2 text-red-900`}>
                     Nope.
                     <br></br>
                     While we encourage everyone to try and submit something, it's totally fine to attend the hackathon as a spectator.
@@ -120,11 +120,11 @@ const FAQ = () => {
                 {/* How can I help? */}
                 <div className="h-full">
                   <div onClick={()=>setGenOpen7(!genOpen7)}
-                      className={`hover:text-red-900 cursor-pointer 2xl:text-4xl xl:text-3xl md:text-xl text-lg items-center flex  font-light-bubble font-semibold 2xl:py-6 py-3 transition-all duration-100`}>
+                      className={`hover:text-red-900 cursor-pointer 2xl:text-4xl xl:text-3xl text-2xl items-center flex  font-light-bubble font-semibold 2xl:py-6 py-3 transition-all duration-100`}>
                     <span className="text-4xl items-center mr-2">•</span>How can I help?
                       
                   </div>
-                  <div className={`${genOpen7? "h-full": "h-0"} font-light-bubble ml-2 xl:text-3xl text-xl overflow-hidden pl-2 text-red-900`}>
+                  <div className={`${genOpen7? "h-full": "h-0"} font-light-bubble ml-2 2xl:text-3xl xl:2xl text-xl overflow-hidden pl-2 text-red-900`}>
                     BeeLikeCoders is always looking for new mentors and judges!
                     <br></br>
                     If you're interested in helping out as either, please send us an email at  
@@ -141,11 +141,11 @@ const FAQ = () => {
                 {/* How do I register? */}
                 <div className="h-full">
                   <div onClick={()=>setLogOpen1(!logOpen1)}
-                      className={`hover:text-red-900 cursor-pointer 2xl:text-4xl xl:text-3xl md:text-xl text-lg items-center flex  font-light-bubble font-semibold 2xl:py-6 py-3 transition-all duration-100`}>
+                      className={`hover:text-red-900 cursor-pointer 2xl:text-4xl xl:text-3xl text-2xl items-center flex  font-light-bubble font-semibold 2xl:py-6 py-3 transition-all duration-100`}>
                     <span className="text-4xl items-center mr-2">•</span> How do I register?
                       
                   </div>
-                  <div className={`${logOpen1? "h-full": "h-0"} font-light-bubble ml-2 xl:text-3xl text-xl overflow-hidden pl-2 text-red-900`}>
+                  <div className={`${logOpen1? "h-full": "h-0"} font-light-bubble ml-2 2xl:text-3xl xl:2xl text-xl overflow-hidden pl-2 text-red-900`}>
                     Simple!
                     <br></br>
                     Click <span className="cursor-pointer text-3xl text-red-500">here</span> to register and fill out the form. Easy peasy.
@@ -158,11 +158,11 @@ const FAQ = () => {
                 {/* How much will it cost? */}
                 <div className="h-full">
                   <div onClick={()=>setLogOpen2(!logOpen2)}
-                      className={`hover:text-red-900 cursor-pointer 2xl:text-4xl xl:text-3xl md:text-xl text-lg items-center flex  font-light-bubble font-semibold 2xl:py-6 py-3 transition-all duration-100`}>
+                      className={`hover:text-red-900 cursor-pointer 2xl:text-4xl xl:text-3xl text-2xl items-center flex  font-light-bubble font-semibold 2xl:py-6 py-3 transition-all duration-100`}>
                     <span className="text-4xl items-center mr-2">•</span> How much will it cost?
                       
                   </div>
-                  <div className={`${logOpen2? "h-full": "h-0"} font-light-bubble ml-2 xl:text-3xl text-xl overflow-hidden pl-2 text-red-900`}>
+                  <div className={`${logOpen2? "h-full": "h-0"} font-light-bubble ml-2 2xl:text-3xl xl:2xl text-xl overflow-hidden pl-2 text-red-900`}>
                     Absolutely nothing.
                     <br></br>
                     BeeLikeCoders is proud to be a completely free hackathon. As long as you can make it here, we'll cover everything else.
@@ -173,22 +173,22 @@ const FAQ = () => {
                 {/* Where is BeeLikeCoders? */}
                 <div className="h-full">
                   <div onClick={()=>setLogOpen3(!logOpen3)}
-                      className={`hover:text-red-900 cursor-pointer 2xl:text-4xl xl:text-3xl md:text-xl text-lg items-center flex  font-light-bubble font-semibold 2xl:py-6 py-3 transition-all duration-100`}>
+                      className={`hover:text-red-900 cursor-pointer 2xl:text-4xl xl:text-3xl text-2xl items-center flex  font-light-bubble font-semibold 2xl:py-6 py-3 transition-all duration-100`}>
                     <span className="text-4xl items-center mr-2">•</span> Where is BeeLikeCoders?
                       
                   </div>
-                  <div className={`${logOpen3? "h-full": "h-0"} font-light-bubble ml-2 xl:text-3xl text-xl overflow-hidden pl-2 text-red-900`}>
+                  <div className={`${logOpen3? "h-full": "h-0"} font-light-bubble ml-2 2xl:text-3xl xl:2xl text-xl overflow-hidden pl-2 text-red-900`}>
                     This year, BeeLikeCoders will be held at _____.
                   </div>
                 </div>
                 {/* When is the application deadline? */}
                 <div className="h-full">
                   <div onClick={()=>setLogOpen4(!logOpen4)}
-                      className={`hover:text-red-900 cursor-pointer 2xl:text-4xl xl:text-3xl md:text-xl text-lg items-center flex  font-light-bubble font-semibold 2xl:py-6 py-3 transition-all duration-100`}>
+                      className={`hover:text-red-900 cursor-pointer 2xl:text-4xl xl:text-3xl text-2xl items-center flex  font-light-bubble font-semibold 2xl:py-6 py-3 transition-all duration-100`}>
                     <span className="text-4xl items-center mr-2">•</span> When is the application deadline?
                       
                   </div>
-                  <div className={`${logOpen4? "h-full": "h-0"} font-light-bubble ml-2 xl:text-3xl text-xl overflow-hidden pl-2 text-red-900`}>
+                  <div className={`${logOpen4? "h-full": "h-0"} font-light-bubble ml-2 2xl:text-3xl xl:2xl text-xl overflow-hidden pl-2 text-red-900`}>
                     This year, registration is due by _____.
                   </div>
                 </div>

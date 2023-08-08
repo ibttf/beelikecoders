@@ -7,7 +7,7 @@ const Events = () => {
       <div className=" pt-16 pb-48 bg-no-repeat bg-yellow-200" style={{ backgroundImage: `url(${""})`, backgroundSize: '100vw' }}>
         <div className="relative z-10 text-center mt-48 flex flex-col w-8/12 border-8 rounded-xl border-black  bg-black mx-auto justify-between" id="Events">
           {/* winking bee face */}
-          <svg className="absolute left-0 right-0 mx-auto -top-36 w-48 z-20"  viewBox="0 0 512 512">
+          <svg className="absolute left-0 right-0 mx-auto lg:-top-36 -top-20 lg:w-48 w-24 z-20"  viewBox="0 0 512 512">
             <g fill="#000000" stroke="#000000" stroke-width="1">
               <path d="M240.5 511 c-90.9 -6.9 -167.7 -72.4 -188.4 -160.7 -5.4 -23.1 -6.8 -54.5 -3.5 -77.4 8.9 -61.9 44.1 -115.8 97.8 -149.3 4.9 -3.1 9.3 -5.6 9.8 -5.6 0.4 0 0.8 1 0.8 2.3 0 1.6 -2.6 4.2 -9.6 9.7 -48.3 37.9 -78.3 99.1 -78.4 160 0 8 0.5 18.4 1.1 23 9.2 74.2 56.9 137.9 125.3 167.6 26.7 11.5 51.7 16.7 80.1 16.8 20.8 0 35.3 -2.1 55.4 -7.9 13.3 -3.8 20.1 -4.5 20.1 -2 0 1.8 -3.1 3.4 -17.4 9.2 -28 11.2 -62.9 16.6 -93.1 14.3z"/>
               <path d="M241.3 318.1 c-5.9 -2.2 -9.5 -4.5 -13.7 -9 -2.3 -2.4 -3 -4.2 -3.4 -8.5 -0.4 -5.1 -0.2 -5.7 2.6 -8.6 4.1 -4 11.2 -4.3 16.3 -0.5 7.5 5.5 9.5 6.5 13 6.5 2.3 0 4.9 -0.9 7 -2.5 8 -5.8 9.4 -6.5 14.1 -6.5 3.5 0 5.4 0.6 7.5 2.4 2.5 2.2 2.8 3.1 2.8 8.5 0 5.7 -0.2 6.2 -4 10.1 -2.2 2.2 -6.5 5.3 -9.5 6.7 -4.7 2.3 -7 2.8 -16.5 3 -9 0.3 -12 0 -16.2 -1.6z"/>
@@ -209,7 +209,7 @@ const Events = () => {
         </div>
       {/* ARROW */}
     
-      <svg className="w-128 absolute left-0 right-0 mx-auto z-0 -scale-x-100 -rotate-16" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet">
+      <svg className="w-128 absolute md:left-0 md:right-0 right-24 md:mx-auto z-0 lg:-scale-x-100 -scale-x-90 -rotate-16" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet">
         <g fill="#000000">
           <path d="M261.8 506.5 c-3.7 -0.7 -10.7 -3.2 -15.5 -5.5 -12 -5.5 -24.4 -14 -20.6 -14 0.3 0 2.5 1.1 4.8 2.5 2.4 1.3 7.8 3.6 12.1 5.1 7.5 2.5 8.8 2.6 26.8 2.5 19.9 -0.2 21.6 0.2 21.6 4.4 0 4.7 -16.8 7.6 -29.2 5z"/>
           <path d="M188.2 472.8 c-5.8 -1.3 -11.3 -6.9 -14.1 -14.3 -3.5 -9.4 -4.6 -29.5 -1.7 -29.5 0.9 0 1.6 2.1 2.1 6.4 1.7 16.2 5.7 22.7 18.3 29.6 4.7 2.6 5.7 6.1 2.3 8 -1.1 0.5 -2.1 1 -2.3 0.9 -0.2 -0.1 -2.2 -0.5 -4.6 -1.1z"/>
