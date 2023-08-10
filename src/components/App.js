@@ -5,7 +5,7 @@ import NotFound from "../pages/NotFound";
 import Footer from "./Footer";
 import Hero from "./Hero";
 import About from "./About"
-import Schedule from "./Schedule";
+import Events from "./Events";
 import Judges from "./Judges";
 import Sponsors from "./Sponsors";
 import FAQ from "./FAQ";
@@ -18,34 +18,26 @@ function App() {
 
 
   return(
-  <>
-    <main className="bg-blue-100 overflow-x-hidden max-w-screen">
-    <Routes>
+  <main className=" bg-yellow-200" >
+  <Routes>
 
-        {/* HOME PAGE */}
-        <Route path="/" element={
-          <div className="">
-            <NavBar />
-            <Hero />
-            <About />
-            <Schedule />
-            <Judges />
-            <Sponsors />
-            <FAQ />
-            <Footer />
-          </div>
-        } />
-
-        {/* NOT FOUND */}
-        <Route path="*" element={
-        <>
+      {/* HOME PAGE */}
+      <Route path="*" element={
+        <div>
           <NavBar />
-          <NotFound/>
+          <Hero />
+          <About />
+          <Events />
+          <Judges />
+          <Sponsors />
+          <FAQ />
           <Footer />
-        </>} />
-      </Routes>
-    </main>
-  </>)
+        </div>
+      } />
+
+    </Routes>
+  </main>
+  )
   
 }
 
