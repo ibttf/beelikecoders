@@ -80,6 +80,10 @@ main{
 }
 
   @media only screen and (max-width: 1800px) {
+    .header{
+      font-size: 8vh;
+      line-height: 100%;
+    }
     .gallery {
         --s: 200px; /* control the size */
       }
