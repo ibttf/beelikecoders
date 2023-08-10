@@ -32,13 +32,14 @@ module.exports = {
       wiggle: 'wiggle 0.1s infinite',
       drop: 'drop 3s',
       hover: 'hover 3s infinite ease-in-out',
-      updown: 'updown 2s infinite ease-in-out'
+      updown: 'updown 4s infinite ease-in-out'
     },
     extend: {
       height: {
         '108': '36rem',
         '116': '42rem',
         '128': '50rem',
+        '140': '60rem',
       },
       spacing: {
         '22px':'22px',
@@ -48,6 +49,7 @@ module.exports = {
         '100':'28rem',
         '108': '36rem',
         '128': '44rem',
+        '140': '46rem',
       },
       borderWidth: {
         DEFAULT: '1px',
@@ -84,9 +86,9 @@ module.exports = {
         },
         updown:{
           '0%': { transform: 'translateY(0)' },
-          '25%': { transform: 'translateY(8px)' },
+          '25%': { transform: 'translateY(4px)' },
           '50%': {transform: 'translateY(0)'},
-          '75%': { transform: 'translateY(-8px)' },
+          '75%': { transform: 'translateY(-4px)' },
           '100%': { transform: 'translateY(0)' },
         },
         wiggle: {

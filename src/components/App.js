@@ -18,34 +18,26 @@ function App() {
 
 
   return(
-  <>
-    <main className=" overflow-x-hidden max-w-screen bg-yellow-200">
-    <Routes>
+  <main className=" bg-yellow-200" >
+  <Routes>
 
-        {/* HOME PAGE */}
-        <Route path="/" element={
-          <div className="">
-            <NavBar />
-            <Hero />
-            <About />
-            <Events />
-            <Judges />
-            <Sponsors />
-            <FAQ />
-            <Footer />
-          </div>
-        } />
-
-        {/* NOT FOUND */}
-        <Route path="*" element={
-        <>
+      {/* HOME PAGE */}
+      <Route path="*" element={
+        <div>
           <NavBar />
-          <NotFound/>
+          <Hero />
+          <About />
+          <Events />
+          <Judges />
+          <Sponsors />
+          <FAQ />
           <Footer />
-        </>} />
-      </Routes>
-    </main>
-  </>)
+        </div>
+      } />
+
+    </Routes>
+  </main>
+  )
   
 }
 
