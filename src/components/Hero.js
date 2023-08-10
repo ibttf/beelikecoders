@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 const Hero = () => {
   
     return (
-        <div className="bg-blue-100 m-0 h-screen flex flex-col w-screen" >
+        <div className="bg-blue-100 m-0 h-screen flex flex-col" >
         
           {/* TEXT */}
           <div className="relative z-20 header-container">
@@ -26,7 +26,7 @@ const Hero = () => {
                   <a href="https://google.com" target="_blank" className="w-full lg:mr-4 mr-2  border-4 border-gray-600 font-extrabold font-bubble bg-gray-600 text-yellow-400
                                      hover:text-yellow-200 py-4 rounded-xl" style={{fontSize: "2.5vh", paddingLeft: "3vh", paddingRight:"3vh"}}>Register Now</a>
                   <a href="https://google.com" target="_blank" className="w-full  border-4 border-gray-600 font-extrabold font-bubble text-gray-600 bg-yellow-400
-                                    hover:bg-yellow-300 py-4 rounded-xl" style={{fontSize: "3vh",  paddingLeft: "3vh", paddingRight:"3vh"}}>Sponsor Us</a>
+                                    hover:bg-yellow-300 py-4 rounded-xl" style={{fontSize: "2.5vh",  paddingLeft: "3vh", paddingRight:"3vh"}}>Sponsor Us</a>
                 
                 </div>
             </div>
