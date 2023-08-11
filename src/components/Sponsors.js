@@ -35,7 +35,7 @@ const Sponsors = () => {
                     <div className=" mx-auto h-full lg:p-6 p-3 rounded-3xl bg-amber-200 -mt-24">
                         <div className="mx-auto bg-yellow-200 rounded-xl">
                             <h2 className="relative  font-light-bubble text-blue-950 lg:w-10/12 w-11/12 py-8 mx-auto z-10" style={{fontSize: "3vh"}}>
-                                Interested in sponsoring BeeLikeCoders? Email us at <span className="hover:underline cursor-pointer">beelikecoders@gmail.com</span>
+                                Interested in sponsoring BeeLikeCoders? Email us at <a href="mailto:beelikecoders@gmail.com?subject=Sponsoring BeeLikeCoders 2024" className="hover:underline cursor-pointer">beelikecoders@gmail.com</a >
                             </h2>
                             <div className="flex justify-center w-full text-center items-center">
                                 <a className="cursor-pointer group flex justify-center" href="https://laney.edu/studentgovernment/" target="_blank">

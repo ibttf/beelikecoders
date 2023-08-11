@@ -129,7 +129,7 @@ const FAQ = () => {
                     BeeLikeCoders is always looking for new mentors, judges, and volunteers!
                     <br></br>
                     If you're interested in helping out as either, please send us an email at  
-                    <span className="hover:underline text-red-500 cursor-pointer"> beelikecoders@gmail.com.</span>
+                    <a href="mailto:beelikecoders@gmail.com?subject=Sponsoring BeeLikeCoders 2024" className="hover:underline text-red-500 cursor-pointer"> beelikecoders@gmail.com.</a>
                   </div>
                 </div>
               </div>
@@ -149,7 +149,7 @@ const FAQ = () => {
                   <div className={`${logOpen1? "h-full": "h-0"} font-light-bubble ml-2 2xl:text-3xl xl:2xl lg:text-xl text-md overflow-hidden lg:pl-2 pl-1 text-red-900`}>
                     Simple!
                     <br></br>
-                    Click <span className="cursor-pointer lg:text-3xl text-lg text-red-500">here</span> to register and fill out the form. Easy peasy.
+                    Click <a target="_blank" href="https://forms.gle/haL1cPuESH5jJgdB9" className="cursor-pointer lg:text-3xl text-lg text-red-500">here</a> to register and fill out the form. Easy peasy.
                     <br></br>
                   </div>
                 </div>

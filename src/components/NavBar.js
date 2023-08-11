@@ -44,7 +44,7 @@ const NavBar = () => {
               <a href="/#faq" className="px-4 hover:text-yellow-1 hover:scale-110 duration-200">
                 FAQ
               </a>
-              <a href="https://google.com" target="_blank" className="mx-4 bg-yellow-600 text-amber-200 rounded-3xl px-4 py-2 hover:bg-yellow-700 cursor-pointer">
+              <a href="https://forms.gle/haL1cPuESH5jJgdB9" target="_blank" className="mx-4 bg-yellow-600 text-amber-200 rounded-3xl px-4 py-2 hover:bg-yellow-700 cursor-pointer">
                 Register
               </a>
             </div>
@@ -59,7 +59,7 @@ const NavBar = () => {
                 <a href="#judges" className="px-9 py-2 text-yellow-800 font-bold cursor-pointer font-light-bubble text-xl">Judges</a>
                 <a href="#sponsors" className="px-9 py-2 text-yellow-800 font-bold cursor-pointer font-light-bubble text-xl">Sponsors</a>
                 <a href="#faq" className="px-9 py-2 pb-4 text-yellow-800 font-bold cursor-pointer font-light-bubble text-xl">FAQ</a>
-                <a href="https://google.com" target="_blank" className="px-9 py-2 pb-4 text-yellow-800 font-bold cursor-pointer font-light-bubble text-xl">Register</a>
+                <a href="https://forms.gle/haL1cPuESH5jJgdB9" target="_blank" className="px-9 py-2 pb-4 text-yellow-800 font-bold cursor-pointer font-light-bubble text-xl">Register</a>
 
             </div>
           </div>

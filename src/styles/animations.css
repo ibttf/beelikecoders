@@ -14,8 +14,11 @@ main{
   top: 15vh;
 }
 .header{
-  font-size: 9vh;
+  font-size: 8vh;
   line-height: 100%;
+}
+.header2{
+  font-size:7vh;
 }
 .arrow{
   width:30vw;
@@ -78,10 +81,26 @@ main{
 .tree{
     height:100%;
 }
+.hero-btn{
+  padding-left:2.5vh;
+  padding-right:2.5vh;
+  font-size:2.5vh;
+}
 
-  @media only screen and (max-width: 1800px) {
+  @media only screen and (max-width: 1650px) {
     .gallery {
         --s: 200px; /* control the size */
+      }
+      .header{
+        font-size:5vw;
+      }
+      .header2{
+        font-size:3.5vw;
+      }
+      .hero-btn{
+        padding-left:1vh;
+        padding-right:1vh;
+        font-size:1.5vh;
       }
   }
 

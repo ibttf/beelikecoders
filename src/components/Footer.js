@@ -96,15 +96,15 @@ const Footer = () => {
 
 
                 <div className="grid grid-flow-row grid-cols-3 text-center lg:w-3/12 md:w-4/12 w-8/12 mx-auto pb-6">
-                    <div className="flex justify-center w-full">
+                    <a className="flex justify-center w-full">
                         <AiOutlineInstagram className="lg:w-16 lg:h-16 h-12 w-12 text-yellow-200 border-2 border-amber-800 rounded-full lg:p-2 p-1 bg-amber-800 cursor-pointer hover:bg-amber-900 hover:border-amber-900"/>
-                    </div> 
-                    <div className="flex justify-center w-full">
+                    </a> 
+                    <a className="flex justify-center w-full">
                         <AiFillGithub className="lg:w-16 lg:h-16 h-12 w-12 text-yellow-200 border-2 border-amber-800 rounded-full lg:p-2 p-1 bg-amber-800 cursor-pointer hover:bg-amber-900 hover:border-amber-900"/>
-                    </div> 
-                    <div className="flex justify-center w-full">
+                    </a> 
+                    <a href="mailto:beelikecoders@gmail.com?subject=Sponsoring BeeLikeCoders 2024" className="flex justify-center w-full">
                         <AiOutlineMail className="lg:w-16 lg:h-16 h-12 w-12 text-yellow-200 border-2 border-amber-800 rounded-full lg:p-2 p-1 bg-amber-800 cursor-pointer hover:bg-amber-900 hover:border-amber-900"/>
-                    </div>
+                    </a>
                     </div>
                 <div className="mx-auto w-10/12">
                 <h2 className="text-center lg:text-2xl text-lg font-bold text-amber-800 py-2">
