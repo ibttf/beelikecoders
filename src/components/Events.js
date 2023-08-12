@@ -4,7 +4,7 @@ import bg from "../styles/fp-bg-honeycomb.jpeg"
 
 const Events = () => {
     return (
-      <div className="bg-yellow-200 bg-[url('../styles/fp-bg-19.png')]" style={{backgroundSize:"100%",paddingBottom: "30%"}}>
+      <div className="bg-yellow-200 bg-[url('../styles/fp-bg-19.png')]" style={{backgroundSize:"100%",paddingTop:"10%",paddingBottom: "30%"}}>
         <div className="relative z-10 text-center mt-48 flex flex-col w-8/12 border-8 border-yellow-50  rounded-xl bg-black mx-auto justify-between" id="events">
           {/* winking bee face */}
           <svg className="absolute left-0 right-0 mx-auto lg:-top-36 -top-20 lg:w-48 w-24 z-20"  viewBox="0 0 512 512">
@@ -45,15 +45,15 @@ const Events = () => {
             </g>
           </svg>
 
-          <div className="m-0 lg:py-12 py-10">
-            <h1 className="text-yellow-400 font-bubble" style={{fontSize: "6vh"}}>
+          <div className="m-0 lg:py-12 py-4">
+            <h1 className="text-yellow-400 font-bubble header3">
               EVENTS
             </h1>
           </div>
           <div className="w-full bg-yellow-400">
                 <h2 className="w-11/12 mx-auto lg:py-12 py-3 font-light-bubble lg:text-3xl text-xl">
                   <div className="flex justify-center items-center lg:text-4xl text-3xl">
-                    <h2 className="font-bubble xl:text-4xl text-2xl text-black">COMING SOON...</h2>
+                    <h2 className="font-bubble text-black header4">COMING SOON...</h2>
           
                   </div>
 

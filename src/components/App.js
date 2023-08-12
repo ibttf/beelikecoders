@@ -18,7 +18,7 @@ function App() {
 
 
   return(
-  <main className=" bg-yellow-200" >
+  <main className=" bg-green-50" >
   <Routes>
 
       {/* HOME PAGE */}

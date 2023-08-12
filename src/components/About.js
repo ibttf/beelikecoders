@@ -3,12 +3,12 @@ import bg from "../styles/fp-bg-10.png"
 const About = () => {
 
     return (
-      <div className="relative -mt-1 bg-[url('../styles/fp-bg-10.png')]" style={{'background-color':"#9fb12a", backgroundSize: "contain", paddingTop:"33%", paddingBottom: "20vw"}}>
+      <div className="relative -mt-1 bg-[url('../styles/fp-bg-10.png')] bg-green-50" style={{backgroundSize: "contain", paddingTop:"35%", marginBottom: "20vw"}}>
         
         <div className=" text-center relative flex flex-col xl:w-9/12 w-11/12 mx-auto justify-between" id="about">
           {/* DRIPPING HONEY */}
           <div>
-          <svg className="absolute -left-24 2xl:scale-125 lg:scale-100 md:scale-50 scale-40" style={{top:"-17rem"}} width="512px" height="512px" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet">
+          <svg className="absolute -left-24 2xl:scale-125 lg:scale-100 md:scale-50 scale-40 z-10" style={{top:"-17rem"}} width="512px" height="512px" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet">
             <g fill="#ff9e00">
               <path d="M30.1 499.4 c-11.9 -12.2 -13.1 -14.6 -8.2 -17.1 3.4 -1.6 250 -248.2 251.2 -251 0.7 -1.9 1.6 -2.3 5.6 -2.3 4.8 0 4.9 0.1 15.1 10.3 8.7 8.7 10.2 10.7 10.2 13.5 0 2.2 -0.5 3.2 -1.5 3.2 -0.8 0 -1.5 -0.8 -1.5 -1.7 0 -1.1 -54.8 53 -129.3 127.5 -71 71 -129.5 129.2 -129.8 129.2 -0.4 0 -5.7 -5.2 -11.8 -11.6z"/>
               <path d="M404 272.9 c-5 -1.9 -9.2 -5.8 -44.7 -41.7 -41.7 -42 -40.9 -41 -38.3 -47.6 0.5 -1.4 1.5 -2.6 2.2 -2.6 1.6 0 25.8 -24 25.8 -25.5 0 -0.6 2.4 -3.4 5.3 -6.3 4.8 -4.7 5.7 -5.2 9.8 -5.2 l4.5 0 39.6 39.8 c45.7 45.9 43.4 42.6 42.6 60.6 -0.6 11.9 -2.2 16 -9.3 22.5 -6.5 6 -10.3 7.3 -22 7.8 -8.4 0.3 -10.9 0 -15.5 -1.8z"/>
@@ -31,7 +31,7 @@ const About = () => {
           {/* HONEY COMB DESIGN */}
           <div>
             <div className="z-20 m-0 xl:py-10 lg:py-6 py-4 lg:px-16 bg-yellow-50 w-8/12 mx-auto rounded-3xl relative">
-              <h1 className="text-yellow-900 font-bubble" style={{fontSize: "6vh"}}>
+              <h1 className="text-yellow-900 font-bubble header3">
                 ABOUT
               </h1>
             </div>
@@ -39,7 +39,7 @@ const About = () => {
             <div className=" z-20 m-0 xl:py-16 lg:py-6 py-4 lg:px-16 bg-yellow-50 w-10/12 mx-auto rounded-3xl relative"></div>
             <div className="m-0  xl:py-16 lg:py-6 py-4 lg:px-16 px-4 bg-yellow-600 w-11/12 mx-auto rounded-3xl relative grid grid-cols-3 2xl:gap-16 gap-4">
                   <div className="col-span-2 flex items-center h-full">
-                    <p className="xl:w-10/12 w-11/12 mx-auto items-center font-light-bubble text-yellow-800 text-left" style={{fontSize: "2.5vw"}}>
+                    <p className="xl:w-10/12 w-11/12 mx-auto items-center font-light-bubble text-yellow-800 text-left about2">
                       <span className="text-yellow-950 font-extrabold">BeeLikeCoders</span> is the largest <span className="text-yellow-950 font-extrabold">community college hackathon</span> in California where over 150 students, creators, and leaders come together for <span className="text-yellow-950 font-extrabold">24 hours</span> to create.
                     </p>
                   </div>

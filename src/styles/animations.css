@@ -1,15 +1,28 @@
-html, body, head {
-    margin:0;
-    padding:0;
-  }
 body{
   overflow-x: hidden;
-  width: 100%
+  width: 100%;
+  margin: 0;
+  padding:0;
+  min-height: 100vh;
+  place-content: center;
+  background: #aabbfb;
+}
+main,header,html{
+  margin:0;
+  padding:0;
+}
+.navbar{
+  top:-10vw;
 }
 main{
   width: 100%;
   padding: 0 !important;
 }
+.hero-bg{
+  background: linear-gradient(to bottom, #bfdbfe 80%, #9fb12a 80%);
+}
+
+/* HERO TEXT */
 .header-container{
   top: 15vh;
 }
@@ -20,22 +33,27 @@ main{
 .header2{
   font-size:7vh;
 }
+.header3{
+  font-size:8vh
+}
+.header4{
+  font-size:4vh
+}
+.about2{
+  font-size:2.5vw;
+}
+.sponsors3{
+  font-size:2.5vw;
+}
+/* IMAGES */
 .arrow{
   width:30vw;
 }
 
-.navbar{
-    top:-10vw;
-}
 
-.curved-div {
-    background: #93c5fd;
-    color: #FFF;
-    text-align: center;
-  }
-  .curve-div svg {
-    display: block;
-  }
+
+
+/* JUDGES HEXAGON */
 .gallery {
     --s: 200px; /* control the size */
     --g: 10px;  /* control the gap */
@@ -69,14 +87,7 @@ main{
   .gallery > img:nth-child(5), 
   .gallery > img:nth-child(6) {--_x: calc( 50% + .5*var(--g))}
   
-  
-  body {
-    margin: 0;
-    min-height: 100vh;
-    display: grid;
-    place-content: center;
-    background: #aabbfb;
-  }
+
 
 .tree{
     height:100%;
@@ -87,24 +98,40 @@ main{
   font-size:2.5vh;
 }
 
-  @media only screen and (max-width: 1650px) {
-    .gallery {
-        --s: 200px; /* control the size */
-      }
-      .header{
-        font-size:5vw;
-      }
-      .header2{
-        font-size:3.5vw;
-      }
-      .hero-btn{
-        padding-left:1vh;
-        padding-right:1vh;
-        font-size:1.5vh;
-      }
-  }
 
-  @media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1650px) {
+
+  /* JUDGES HEXAGON */
+  .gallery {
+      --s: 200px; /* control the size */
+    }
+
+}
+
+  @media only screen and (max-width: 1024px) {
+    .header{
+      font-size:7vh;
+    }
+    .header2{
+      font-size:4.5vw;
+    }
+    .header3{
+      font-size:3.5vh
+    }
+    .header4{
+      font-size:2.5vh
+    }
+    .about2{
+      font-size:3.5vw;
+    }
+    .sponsors3{
+      font-size:2.5vw;
+    }
+    .hero-btn{
+      padding-left:1vh;
+      padding-right:1vh;
+      font-size:2vh;
+    }
     .tree{
         height: 95%;
     }

@@ -22,12 +22,12 @@ const FAQ = () => {
         <div className="md:w-9/12 w-10/12 mx-auto bg-white  text-red-600  lg:py-36 py-4 rounded-t-full text-left rounded-r-xl px-12 lg:border-20 md:border-16 border-8 border-red-600"
              
              >
-            <h1 className="text-center font-bubble py-4 md:py-16 drop-shadow-xl" style={{fontSize: "6vh"}}>
+            <h1 className="text-center font-bubble py-4 md:py-16 drop-shadow-xl header3">
               FAQ</h1>
             <div className="lg:flex lg:items-start xl:w-9/12 mx-auto">
               {/* GENERAL QUESTIONS */}
               <div className="flex flex-col w-full mr-4">
-                <h1 className="font-bubble xl:text-4xl text-xl  xl:py-4 py-1 drop-shadow-xl">GENERAL</h1>
+                <h1 className="font-bubble header4  xl:py-4 py-1 drop-shadow-xl">GENERAL</h1>
                 {/* WHAT IS A HACKATHON? */}
                 <div className="h-full">
                   <div onClick={()=>setGenOpen1(!genOpen1)}
@@ -137,7 +137,7 @@ const FAQ = () => {
 
               {/* OTHER */}
               <div className="flex flex-col xl:ml-16 w-full mr-4">
-                <h1 className="font-bubble text-left xl:text-4xl text-xl  xl:py-4 py-1 drop-shadow-xl">OTHER</h1>
+                <h1 className="font-bubble text-left header4  xl:py-4 py-1 drop-shadow-xl">OTHER</h1>
 
                 {/* How do I register? */}
                 <div className="h-full">
