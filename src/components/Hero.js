@@ -20,7 +20,7 @@ const Hero = () => {
               className="text-yellow-5 font-bold pt-4 font-bubble header2"
               style={{ lineHeight: "100%" }}
             >
-              April 6-7
+              April 12-13
             </span>
           </h1>
 
