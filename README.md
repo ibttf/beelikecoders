@@ -1,6 +1,6 @@
-Frontend-only website built for BeeLikeCoders2024
+Website for BeeLikeCoders2024
 
-Site built with React and TailwindCSS
+Built with React, Javascript, and Tailwind.
 
-Deployed on https://beelikecoders.com
+Check it out: https://beelikecoders.com
 
